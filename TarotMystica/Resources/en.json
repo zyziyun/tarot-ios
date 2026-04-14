@@ -1,0 +1,1611 @@
+{
+  "meta": {
+    "title": "Tarot Mystica",
+    "description": "Explore the mysteries of fate."
+  },
+  "common": {
+    "back": "Back",
+    "share": "Share",
+    "save": "Save",
+    "tapToContinue": "Tap to continue"
+  },
+  "hero": {
+    "title": "Tarot Mystica",
+    "subtitle": "Listen to your heart, explore the whispers of destiny",
+    "tagline": "Tarot Mystica",
+    "startButton": "Begin Reading",
+    "aiReady": "AI Ready",
+    "retryLoad": "Retry Loading",
+    "collapseSettings": "Hide Settings",
+    "aiSettings": "AI Settings",
+    "localModel": "Local Model",
+    "externalAPI": "External API",
+    "provider": "Provider",
+    "model": "Model",
+    "apiKeyHint": "Enter your API Key to enable AI interpretation",
+    "baseUrl": "Base URL",
+    "customProvider": "Custom (OpenAI Compatible)",
+    "localModelDesc": "Runs entirely on your device. No API key needed, private and secure.",
+    "externalAPIDesc": "Uses cloud AI services (OpenAI, etc.). Faster and smarter, requires an API key.",
+    "chooseMode": "Choose AI Mode",
+    "chooseModeDesc": "How would you like AI to power your readings?",
+    "confirmMode": "Confirm & Continue",
+    "skipAI": "Skip AI (manual reading only)",
+    "switchModelConfirm": "Switching models will delete the current model cache (~{size}) and download the new one. Continue?",
+    "cancel": "Cancel",
+    "localDownloadConfirm": "This will download {model} ({size}) to your browser. The download may take a few minutes depending on your connection.",
+    "confirmDownload": "Download & Start",
+    "advancedLabel": "Advanced",
+    "modelDescGemma2B": "English only, poor multilingual",
+    "modelDescQwen1_5B": "Recommended · Best multilingual",
+    "modelDescQwen3B": "Balanced quality & speed",
+    "modelDescPhi": "Good reasoning ability",
+    "modelDescLlama": "Best quality, needs more RAM",
+    "setupAI": "Set Up AI",
+    "setupHint": "Choose a local model or connect an API to begin your tarot journey"
+  },
+  "question": {
+    "title": "What would you like to ask?",
+    "subtitle": "Focus your mind on what matters most",
+    "continue": "Continue",
+    "skip": "Skip, draw directly",
+    "defaultQuestion": "Please give me some guidance",
+    "defaultDailyQuestion": "Please give me today's guidance",
+    "placeholder1": "Where is my relationship heading?",
+    "placeholder2": "Is now a good time to change jobs?",
+    "placeholder3": "How should I face my current difficulties?",
+    "placeholder4": "What should I pay attention to recently?",
+    "topicCareer": "How will my career develop?",
+    "topicLove": "Where is my love life heading?",
+    "topicWealth": "What's my financial outlook?",
+    "topicHealth": "How can I improve my well-being?",
+    "topicGrowth": "What do I need to grow right now?",
+    "tagCareer": "Career",
+    "tagLove": "Love",
+    "tagWealth": "Finance",
+    "tagHealth": "Health",
+    "tagGrowth": "Growth"
+  },
+  "spreadSelector": {
+    "title": "Choose a Spread",
+    "subtitleDefault": "Choose the reading style that suits you best",
+    "aiAnalyzing": "AI is analyzing your question...",
+    "aiAnalyzingHint": "Finding the best spread for your reading",
+    "aiRecommend": "AI recommends: {name} — {reason}",
+    "aiCustomRecommend": "AI Custom Recommendation",
+    "aiRecommendBadge": "AI Pick",
+    "useThis": "Use this spread",
+    "classicDivider": "or choose a classic spread",
+    "cardCount": "{count} cards"
+  },
+  "deck": {
+    "focusInstruction": "Focus your mind on your question",
+    "shuffle": "Shuffle",
+    "drawInstruction": "Tap the deck to draw card {n} —",
+    "reversed": "Reversed",
+    "viewReading": "View Reading",
+    "tapToDraw": "Tap to draw",
+    "allDrawn": "The cards of fate have been revealed",
+    "cardsDrawn": "{count} cards drawn",
+    "allDrawnHint": "Tap a card to enlarge",
+    "viewAIReading": "✦ View AI Reading"
+  },
+  "result": {
+    "title": "Reading Interpretation",
+    "reversed": "Reversed",
+    "positionMeaning": "Position Meaning",
+    "interpretation": "Card Interpretation",
+    "upright": "Upright",
+    "reversedLabel": "Reversed",
+    "love": "Love",
+    "career": "Career",
+    "keywords": "Keywords",
+    "aiDeepReading": "AI Deep Reading",
+    "thinking": "Thinking...",
+    "aiModelLoading": "AI model is downloading, interpretation will start automatically when ready...",
+    "generating": "Generating interpretation...",
+    "aiNotConfigured": "AI is not configured. You can set it up on the home page.",
+    "aiLoadingHint": "You can read the card meanings above while waiting",
+    "retry": "Retry",
+    "footerLine1": "Tarot cards are a mirror, reflecting the wisdom deep within your heart.",
+    "footerLine2": "The guidance of the cards is not a decree of fate, but a lantern illuminating the path ahead.",
+    "restart": "Start Over",
+    "shareReading": "Share Reading",
+    "aiReadingTab": "AI Reading",
+    "cardsTab": "Cards ({count})",
+    "resetConfirmTitle": "Start Over?",
+    "resetConfirmMessage": "Your current reading will be lost. Are you sure?",
+    "resetConfirm": "Confirm"
+  },
+  "loading": {
+    "preparing": "Preparing..."
+  },
+  "ai": {
+    "notReady": "AI engine not ready, please wait for model to load",
+    "interpretError": "AI interpretation failed: {message}",
+    "browserNotSupported": "Your browser does not support WebGPU. Please use the latest version of Chrome.",
+    "cacheCleared": "Cache cleared, re-downloading...",
+    "loadFailed": "Model loading failed, please refresh and try again",
+    "loadFailedShort": "Model loading failed",
+    "configureApiKey": "Please configure your API Key",
+    "cannotReadStream": "Cannot read response stream",
+    "apiError": "API error ({status}): {error}",
+    "systemPrompt": "You are a gifted tarot reader channeling deep intuitive wisdom for a「{spreadName}」spread.\n\nCORE RULE: Every sentence must connect back to the querent's specific question. Never give generic textbook meanings.\n\nSTRUCTURE (use Markdown):\n\n### The Energy of This Reading\nOpen with the overall energetic signature: dominant suits, Major vs Minor Arcana balance, any repeating numbers or themes. 2-3 sentences setting the tone before touching individual cards.\n\n### Card-by-Card Insights\nFor each card: **Card Name** *(Position: position name)*\nInterpret what this card reveals about the querent's question IN THIS SPECIFIC POSITION. Weave traditional symbolism into personal, relevant insight. If reversed, explore the shadow or blocked energy it represents.\n\n### The Cards in Conversation\nIdentify the most important connections between 2-3 cards. How do they amplify, challenge, or transform each other's messages? This is where the reading deepens beyond individual card meanings.\n\n### The Path Forward\nSynthesize everything into clear, empowering guidance. End with one reflective question for the querent to sit with.\n\nVOICE: Speak directly to the querent (\"You...\"). Warm authority — like a wise mentor who sees clearly. Poetic but grounded. Even challenging cards (Tower, Death, 10 of Swords) carry transformative potential. Never hedge — commit to the interpretation.\n\nLENGTH: 400-800 words depending on spread complexity. Respond in English.",
+    "userPrompt": "The querent asks:「{question}」\n\nCards drawn:\n{cardDescriptions}\n\nChannel your deepest intuition. Read these cards as a living story that answers「{question}」— not as isolated meanings, but as a conversation between the cards.",
+    "cardDescUpright": "【{position}】{name} (Upright): {meaning}",
+    "cardDescReversed": "【{position}】{name} (Reversed): {meaning}",
+    "recommendSystemIntro": "You are an experienced tarot reader. Based on the querent's question, recommend the most suitable spread.",
+    "recommendChoice": "You have two options:\n1. Choose from existing spreads\n2. Design a custom spread (if none fit well enough)",
+    "recommendExistingSpreads": "Existing spreads:\n{spreadList}",
+    "recommendFormat": "Respond strictly in JSON:\nExisting: '{\"isCustom\":false,\"existingKey\":\"key\",\"reason\":\"reason (under 15 words)\"}'\nCustom (3-8 cards): '{\"isCustom\":true,\"customSpread\":{\"name\":\"Name\",\"nameEn\":\"English Name\",\"description\":\"Brief description\",\"icon\":\"emoji\",\"positions\":[{\"label\":\"Position\",\"description\":\"Meaning\"}]},\"reason\":\"reason\"}'",
+    "recommendUserPrompt": "The querent's question is:「{question}」\n\nRecommend the most suitable spread. JSON only.",
+    "style": {
+      "concise": "STYLE: Be concise and direct. Give brief, actionable insights — no flowery language, no long preambles. Focus on the key message each card brings to answer the question. Keep the total reading under 300 words.",
+      "standard": "",
+      "poetic": "STYLE: Channel a mystical, poetic voice. Use rich imagery, metaphors, and evocative language. Let the reading flow like a story told by candlelight. Weave symbolism and archetypal imagery throughout.",
+      "analytical": "STYLE: Be systematic and thorough. Structure the reading clearly with distinct sections for each card. Provide detailed analysis of card interactions, patterns, and elemental dignities. Use clear headings and organized points."
+    },
+    "followUpInstruction": "The querent wants to ask follow-up questions about the reading you just gave. Continue as the same tarot reader. Stay in character, reference the specific cards and positions from this reading. Be concise in follow-ups — 2-3 paragraphs max.",
+    "localSystemPrompt": "You are a professional tarot reader. Interpret the cards below for the querent's question.\n\nRules:\n- Card meanings are provided below — use them directly, do NOT invent or hallucinate card names or meanings\n- Every insight must connect to the querent's specific question\n- Speak directly to the querent in a warm, wise tone\n\nOutput format (Markdown):\n\n### Overall Energy\n(2-3 sentences summarizing the combined message of these cards)\n\n### Card Insights\n(For each card: **Card Name** — what it reveals about the question in this position. Use the provided meanings.)\n\n### Guidance\n(Synthesize all cards into clear, actionable advice. End with one reflective question.)\n\nLength: 200-400 words. Be concise and meaningful. Do NOT mention cards that were not drawn.",
+    "localUserPrompt": "Spread: {spreadName}\nQuestion: \"{question}\"\n\n{cardDescriptions}\n\nRead these cards for the querent. Use ONLY the card information provided above.",
+    "localCardDesc": "Card {index}: {name} at position \"{position}\" (Upright)\n  Meaning: {meaning}\n  About: {description}\n  Keywords: {keywords}",
+    "localCardDescReversed": "Card {index}: {name} at position \"{position}\" (REVERSED)\n  Meaning: {meaning}\n  About: {description}\n  Keywords: {keywords}"
+  },
+  "spreads": {
+    "single": {
+      "name": "Single Card",
+      "description": "Draw one card for instant guidance",
+      "whenToUse": "Quick guidance or yes/no questions",
+      "pos0": {
+        "label": "Guidance",
+        "description": "What the universe wants to tell you"
+      }
+    },
+    "threeCard": {
+      "name": "Past · Present · Future",
+      "description": "Insights from past, present, and future",
+      "whenToUse": "Understanding timeline development",
+      "pos0": {
+        "label": "Past",
+        "description": "Past factors influencing the current situation"
+      },
+      "pos1": {
+        "label": "Present",
+        "description": "Your current circumstances"
+      },
+      "pos2": {
+        "label": "Future",
+        "description": "Upcoming trends"
+      }
+    },
+    "mindBodySpirit": {
+      "name": "Mind · Body · Spirit",
+      "description": "Examine your state across three dimensions",
+      "whenToUse": "Self-care and inner balance",
+      "pos0": {
+        "label": "Mind",
+        "description": "Current mental state and thought patterns"
+      },
+      "pos1": {
+        "label": "Body",
+        "description": "Physical state and material life"
+      },
+      "pos2": {
+        "label": "Spirit",
+        "description": "Spiritual growth and guidance"
+      }
+    },
+    "fiveCard": {
+      "name": "Five Card Cross",
+      "description": "Classic cross — simple yet deep",
+      "whenToUse": "Clear guidance on a specific question",
+      "pos0": {
+        "label": "Current Situation",
+        "description": "Core situation you face"
+      },
+      "pos1": {
+        "label": "Challenge",
+        "description": "Main obstacle to overcome"
+      },
+      "pos2": {
+        "label": "Past Influence",
+        "description": "Past factors shaping the present"
+      },
+      "pos3": {
+        "label": "Future Direction",
+        "description": "Upcoming developments"
+      },
+      "pos4": {
+        "label": "Best Advice",
+        "description": "Best strategy for your situation"
+      }
+    },
+    "relationship": {
+      "name": "Relationship Mirror",
+      "description": "Deep insight into relationship dynamics",
+      "whenToUse": "Understanding romantic or interpersonal dynamics",
+      "pos0": {
+        "label": "Your State",
+        "description": "Your feelings and role"
+      },
+      "pos1": {
+        "label": "Their State",
+        "description": "Their feelings and role"
+      },
+      "pos2": {
+        "label": "Current Status",
+        "description": "Current state of the relationship"
+      },
+      "pos3": {
+        "label": "Strengths",
+        "description": "Positive forces"
+      },
+      "pos4": {
+        "label": "Needs Improvement",
+        "description": "Areas needing joint effort"
+      }
+    },
+    "horseshoe": {
+      "name": "Horseshoe Spread",
+      "description": "Comprehensive seven-card step-by-step analysis",
+      "whenToUse": "Thorough analysis of a specific issue",
+      "pos0": {
+        "label": "Past",
+        "description": "Past events and factors"
+      },
+      "pos1": {
+        "label": "Present",
+        "description": "Current circumstances"
+      },
+      "pos2": {
+        "label": "Hidden Influence",
+        "description": "Unseen factors"
+      },
+      "pos3": {
+        "label": "Advice",
+        "description": "Best course of action"
+      },
+      "pos4": {
+        "label": "Others",
+        "description": "Surrounding people's views and influence"
+      },
+      "pos5": {
+        "label": "Action",
+        "description": "Specific action steps"
+      },
+      "pos6": {
+        "label": "Outcome",
+        "description": "Most likely result"
+      }
+    },
+    "celtic": {
+      "name": "Celtic Cross",
+      "description": "Deep comprehensive ten-card reading",
+      "whenToUse": "Most thorough in-depth analysis",
+      "pos0": {
+        "label": "Present",
+        "description": "Your core situation"
+      },
+      "pos1": {
+        "label": "Challenge",
+        "description": "Main obstacle"
+      },
+      "pos2": {
+        "label": "Subconscious",
+        "description": "Your deepest thoughts"
+      },
+      "pos3": {
+        "label": "Past",
+        "description": "Recent influential events"
+      },
+      "pos4": {
+        "label": "Goal",
+        "description": "What you most want to achieve"
+      },
+      "pos5": {
+        "label": "Future",
+        "description": "Coming influences"
+      },
+      "pos6": {
+        "label": "Self",
+        "description": "How you see yourself"
+      },
+      "pos7": {
+        "label": "Environment",
+        "description": "Others' influence"
+      },
+      "pos8": {
+        "label": "Hopes & Fears",
+        "description": "Inner hopes and worries"
+      },
+      "pos9": {
+        "label": "Outcome",
+        "description": "Final likely outcome"
+      }
+    },
+    "twoPaths": {
+      "name": "Two Paths",
+      "description": "Analyze pros and cons of two choices",
+      "whenToUse": "Deciding between two options",
+      "pos0": {
+        "label": "Current Situation",
+        "description": "Core dilemma"
+      },
+      "pos1": {
+        "label": "Path A Development",
+        "description": "What Path A brings"
+      },
+      "pos2": {
+        "label": "Path A Outcome",
+        "description": "Path A's result"
+      },
+      "pos3": {
+        "label": "Path B Development",
+        "description": "What Path B brings"
+      },
+      "pos4": {
+        "label": "Path B Outcome",
+        "description": "Path B's result"
+      }
+    },
+    "hexagram": {
+      "name": "Hexagram Spread",
+      "description": "Six-pointed star for multi-angle analysis",
+      "whenToUse": "Multi-perspective complex issue analysis",
+      "pos0": {
+        "label": "Past",
+        "description": "Past factors"
+      },
+      "pos1": {
+        "label": "Present",
+        "description": "Core circumstances"
+      },
+      "pos2": {
+        "label": "Future",
+        "description": "Development trend"
+      },
+      "pos3": {
+        "label": "Root Cause",
+        "description": "Deep underlying reason"
+      },
+      "pos4": {
+        "label": "Environment",
+        "description": "External influences"
+      },
+      "pos5": {
+        "label": "Your Attitude",
+        "description": "Your inner approach"
+      },
+      "pos6": {
+        "label": "Final Guidance",
+        "description": "Overall advice"
+      }
+    },
+    "treeOfLife": {
+      "name": "Tree of Life",
+      "description": "Kabbalistic Tree of Life — spirit to reality",
+      "whenToUse": "Deep spiritual exploration",
+      "pos0": {
+        "label": "Highest Ideal",
+        "description": "Highest purpose and meaning"
+      },
+      "pos1": {
+        "label": "Creativity",
+        "description": "Pioneering forces"
+      },
+      "pos2": {
+        "label": "Understanding",
+        "description": "Wisdom's role in reality"
+      },
+      "pos3": {
+        "label": "Mercy",
+        "description": "Positive factors and help"
+      },
+      "pos4": {
+        "label": "Strength",
+        "description": "Challenges and discord"
+      },
+      "pos5": {
+        "label": "Harmony",
+        "description": "Core self and balance"
+      },
+      "pos6": {
+        "label": "Desire",
+        "description": "Attractions and yearnings"
+      },
+      "pos7": {
+        "label": "Intellect",
+        "description": "Communication and learning"
+      },
+      "pos8": {
+        "label": "Foundation",
+        "description": "Subconscious and intuition"
+      },
+      "pos9": {
+        "label": "Reality",
+        "description": "Material world situation"
+      }
+    },
+    "zodiac": {
+      "name": "Zodiac Wheel",
+      "description": "Twelve astrological houses — all life areas",
+      "whenToUse": "Comprehensive life overview",
+      "pos0": {
+        "label": "Self",
+        "description": "Personality and expression"
+      },
+      "pos1": {
+        "label": "Finances",
+        "description": "Material foundation and values"
+      },
+      "pos2": {
+        "label": "Communication",
+        "description": "Learning and daily interaction"
+      },
+      "pos3": {
+        "label": "Home",
+        "description": "Family and security"
+      },
+      "pos4": {
+        "label": "Creativity",
+        "description": "Romance and self-expression"
+      },
+      "pos5": {
+        "label": "Health",
+        "description": "Work and well-being"
+      },
+      "pos6": {
+        "label": "Partnership",
+        "description": "Marriage and partnerships"
+      },
+      "pos7": {
+        "label": "Transformation",
+        "description": "Deep change and intimacy"
+      },
+      "pos8": {
+        "label": "Exploration",
+        "description": "Travel and philosophy"
+      },
+      "pos9": {
+        "label": "Career",
+        "description": "Status and achievement"
+      },
+      "pos10": {
+        "label": "Community",
+        "description": "Friendships and ideals"
+      },
+      "pos11": {
+        "label": "Soul",
+        "description": "Subconscious and spiritual practice"
+      }
+    },
+    "yearAhead": {
+      "name": "Year Ahead",
+      "description": "Monthly guidance plus annual energy card",
+      "whenToUse": "New year or birthday foresight",
+      "pos0": {
+        "label": "January",
+        "description": "January's theme"
+      },
+      "pos1": {
+        "label": "February",
+        "description": "February's theme"
+      },
+      "pos2": {
+        "label": "March",
+        "description": "March's theme"
+      },
+      "pos3": {
+        "label": "April",
+        "description": "April's theme"
+      },
+      "pos4": {
+        "label": "May",
+        "description": "May's theme"
+      },
+      "pos5": {
+        "label": "June",
+        "description": "June's theme"
+      },
+      "pos6": {
+        "label": "July",
+        "description": "July's theme"
+      },
+      "pos7": {
+        "label": "August",
+        "description": "August's theme"
+      },
+      "pos8": {
+        "label": "September",
+        "description": "September's theme"
+      },
+      "pos9": {
+        "label": "October",
+        "description": "October's theme"
+      },
+      "pos10": {
+        "label": "November",
+        "description": "November's theme"
+      },
+      "pos11": {
+        "label": "December",
+        "description": "December's theme"
+      },
+      "pos12": {
+        "label": "Annual Energy",
+        "description": "Core theme for the year"
+      }
+    },
+    "career": {
+      "name": "Career Path",
+      "description": "Career focus — talents, obstacles, direction",
+      "whenToUse": "Career choices or direction",
+      "pos0": {
+        "label": "Current State",
+        "description": "Current professional energy"
+      },
+      "pos1": {
+        "label": "Core Talent",
+        "description": "Outstanding skills and gifts"
+      },
+      "pos2": {
+        "label": "Hidden Opportunity",
+        "description": "Undiscovered possibilities"
+      },
+      "pos3": {
+        "label": "Main Obstacle",
+        "description": "Factors hindering development"
+      },
+      "pos4": {
+        "label": "Action Advice",
+        "description": "Next step to take"
+      },
+      "pos5": {
+        "label": "Career Outlook",
+        "description": "Outcome following guidance"
+      }
+    },
+    "gypsyCross": {
+      "name": "Gypsy Cross",
+      "description": "Traditional Gypsy cross — quick core insight",
+      "whenToUse": "Quick situational overview",
+      "pos0": {
+        "label": "Past",
+        "description": "Past factors"
+      },
+      "pos1": {
+        "label": "Future",
+        "description": "Coming trends"
+      },
+      "pos2": {
+        "label": "Best Possibility",
+        "description": "Best possible outcome"
+      },
+      "pos3": {
+        "label": "Hidden Influence",
+        "description": "Subconscious or hidden factors"
+      },
+      "pos4": {
+        "label": "Present",
+        "description": "Core and current status"
+      }
+    },
+    "loversTree": {
+      "name": "Lovers' Tree",
+      "description": "Deep love analysis — both hearts and direction",
+      "whenToUse": "Deep understanding of a romantic relationship",
+      "pos0": {
+        "label": "Your Surface Attitude",
+        "description": "Attitude you show outwardly"
+      },
+      "pos1": {
+        "label": "Their Surface Attitude",
+        "description": "Their outward attitude"
+      },
+      "pos2": {
+        "label": "Your Inner Heart",
+        "description": "Your true feelings inside"
+      },
+      "pos3": {
+        "label": "Their Inner Heart",
+        "description": "Their true feelings inside"
+      },
+      "pos4": {
+        "label": "Relationship Status",
+        "description": "True face of the relationship"
+      },
+      "pos5": {
+        "label": "Relationship Challenge",
+        "description": "Problems to face together"
+      },
+      "pos6": {
+        "label": "Relationship Direction",
+        "description": "Where the relationship is heading"
+      }
+    },
+    "mirrorOfSelf": {
+      "name": "Mirror of Self",
+      "description": "Look inward at multiple self facets",
+      "whenToUse": "Self-knowledge and personal growth",
+      "pos0": {
+        "label": "Outer Image",
+        "description": "How you present to the world"
+      },
+      "pos1": {
+        "label": "Inner Self",
+        "description": "Your true inner world"
+      },
+      "pos2": {
+        "label": "Hidden Side",
+        "description": "What you haven't faced yet"
+      },
+      "pos3": {
+        "label": "Core Strength",
+        "description": "Greatest inner power"
+      },
+      "pos4": {
+        "label": "Growth Direction",
+        "description": "Where your soul guides you"
+      }
+    },
+    "pentagram": {
+      "name": "Pentagram Spread",
+      "description": "Five elements for holistic life balance",
+      "whenToUse": "Check balance across all life areas",
+      "pos0": {
+        "label": "Fire · Spirit",
+        "description": "Passion, drive, creativity"
+      },
+      "pos1": {
+        "label": "Water · Emotion",
+        "description": "Emotional state and relationships"
+      },
+      "pos2": {
+        "label": "Air · Mind",
+        "description": "Mental state and communication"
+      },
+      "pos3": {
+        "label": "Earth · Material",
+        "description": "Health, finances, material life"
+      },
+      "pos4": {
+        "label": "Aether · Spirit",
+        "description": "Spiritual growth and purpose"
+      }
+    }
+  },
+  "cards": {
+    "0": {
+      "name": "The Fool",
+      "upright": "The Fool represents a brand new journey, stepping into the unknown with innocence and faith. Infinite possibilities, free spirit, and desire for adventure.",
+      "reversed": "Acting recklessly, indecisiveness. May suggest unpreparedness or missing opportunities from excessive fear.",
+      "description": "The Fool represents the start of a new journey, full of possibility and faith.",
+      "keywords": "New beginnings, Adventure, Freedom, Innocence, Possibility, Leap of faith",
+      "love": "An exciting new romance or fresh energy. Embrace love's unknown journey with an open heart.",
+      "career": "New career opportunities emerging. Bold new professional directions are favored."
+    },
+    "1": {
+      "name": "The Magician",
+      "upright": "The Magician symbolizes turning ideas into reality. You possess all resources and skills for success. Creativity, focus, and confidence.",
+      "reversed": "Talents wasted or misused, deception, lack of direction.",
+      "description": "The Magician symbolizes the power to turn intention into reality.",
+      "keywords": "Creativity, Willpower, Confidence, Skill, Manifestation, Resources",
+      "love": "You can create your ideal relationship. Showing your true self leads to deep connection.",
+      "career": "You have everything needed for success. Turn ideas into action."
+    },
+    "2": {
+      "name": "The High Priestess",
+      "upright": "Deep intuition and subconscious wisdom guide you to listen to your innermost voice. Mystery, inner knowledge, spiritual awakening.",
+      "reversed": "Ignoring intuitive warnings, secrets kept, superficial approach.",
+      "description": "The High Priestess guides you to listen within, trusting intuition and inner wisdom.",
+      "keywords": "Intuition, Subconscious, Mystery, Inner wisdom, Spirituality, Silence",
+      "love": "Trust your intuitive feelings. Hidden emotional truths may lie beneath the surface.",
+      "career": "Rely on intuition and insight. Pay attention to information not yet visible."
+    },
+    "3": {
+      "name": "The Empress",
+      "upright": "The Empress embodies abundant creativity, nurturing energy, and the beauty of the natural world. She signals a time of growth, fertility, and sensual pleasure.",
+      "reversed": "Neglecting self-care, creative block, or over-dependence on others for emotional fulfillment.",
+      "description": "The Empress represents abundance, nurturing love, and the flourishing of creative energy.",
+      "keywords": "Abundance, Motherhood, Nature, Sensual pleasure, Nurturing, Growth",
+      "love": "A deeply nurturing and fertile period for love, encouraging warmth and emotional openness.",
+      "career": "Creative projects flourish now; collaborative and supportive work environments bring the best results."
+    },
+    "4": {
+      "name": "The Emperor",
+      "upright": "The Emperor stands for solid authority, structured leadership, and the power of discipline. He brings order out of chaos and offers a stable foundation to build upon.",
+      "reversed": "Rigid control, inflexibility, or abuse of authority. A need to soften and listen.",
+      "description": "The Emperor represents authority, structure, and the disciplined pursuit of stability.",
+      "keywords": "Authority, Stability, Leadership, Structure, Discipline, Control",
+      "love": "Stability and commitment are highlighted; seek a relationship built on mutual respect and reliability.",
+      "career": "Leadership roles and structured planning bring success; take command of your professional path."
+    },
+    "5": {
+      "name": "The Hierophant",
+      "upright": "The Hierophant represents spiritual guidance, tradition, and the wisdom passed down through institutions and mentors. He encourages learning through established systems and honoring shared values.",
+      "reversed": "Challenging conventions, questioning authority, or feeling stifled by rigid traditions.",
+      "description": "The Hierophant embodies tradition, spiritual teaching, and the search for deeper meaning through guidance.",
+      "keywords": "Tradition, Faith, Education, Spiritual guidance, Ritual, Mentorship",
+      "love": "Committed relationships rooted in shared beliefs and values are favored; seek meaningful spiritual connection.",
+      "career": "Mentorship or formal education advances your career; working within established structures brings reward."
+    },
+    "6": {
+      "name": "The Lovers",
+      "upright": "The Lovers signify a profound union, meaningful choices, and the harmony that arises from following your heart. This card speaks to authentic connection and aligning with your deepest values.",
+      "reversed": "Disharmony, misaligned values, or avoidance of a difficult choice in relationship or life.",
+      "description": "The Lovers represent love, choice, and the harmony of two souls aligning in truth.",
+      "keywords": "Love, Choice, Harmony, Values, Partnership, Sincerity",
+      "love": "Deep romantic connection and meaningful partnership; a pivotal choice in love may be at hand.",
+      "career": "Partnerships and collaborations thrive; align career choices with your core values for fulfillment."
+    },
+    "7": {
+      "name": "The Chariot",
+      "upright": "The Chariot charges forward with fierce determination, willpower, and disciplined action. Victory is within reach when you harness opposing forces and steer them toward a single goal.",
+      "reversed": "Loss of direction, scattered energy, or aggressive pursuit without clear purpose.",
+      "description": "The Chariot represents victory through willpower, determination, and focused action.",
+      "keywords": "Victory, Willpower, Determination, Action, Discipline, Direction",
+      "love": "Pursue love with confidence and clear intention; overcome obstacles together through shared determination.",
+      "career": "Ambitious goals are achievable now; channel your drive and discipline toward a clear professional target."
+    },
+    "8": {
+      "name": "Strength",
+      "upright": "Strength speaks to the quiet power of inner courage, patience, and compassion. True strength is not brute force but the gentle mastery of one's own fears and impulses.",
+      "reversed": "Self-doubt, lack of confidence, or struggling with inner demons and emotional vulnerability.",
+      "description": "Strength represents the quiet courage and compassion that tames even the fiercest challenges.",
+      "keywords": "Courage, Inner strength, Patience, Compassion, Confidence, Resilience",
+      "love": "Approach love with patience and gentle courage; true intimacy grows through compassionate understanding.",
+      "career": "Perseverance and emotional intelligence carry you through workplace challenges; lead with quiet confidence."
+    },
+    "9": {
+      "name": "The Hermit",
+      "upright": "The Hermit withdraws from the noise of the world to seek truth within. Through solitude and introspection, profound wisdom and spiritual insight are found. He is both the seeker and the guiding light.",
+      "reversed": "Isolation, loneliness, or withdrawal taken too far. It may be time to rejoin the world.",
+      "description": "The Hermit represents the solitary quest for inner truth and the wisdom found in stillness.",
+      "keywords": "Introspection, Solitude, Seeking truth, Wisdom, Spiritual exploration, Guiding light",
+      "love": "A period of reflection on what you truly need in love; solitude may bring clarity about relationships.",
+      "career": "Step back to reassess your career direction; quiet contemplation reveals the right professional path."
+    },
+    "10": {
+      "name": "Wheel of Fortune",
+      "upright": "The Wheel of Fortune turns, bringing change, new cycles, and the hand of fate into play. Opportunity arises as the cosmic wheel shifts, reminding you that nothing stays the same forever.",
+      "reversed": "Resistance to change, a downturn in luck, or feeling stuck in an unfavorable cycle.",
+      "description": "The Wheel of Fortune signals fate's turning point, bringing change, cycles, and new opportunity.",
+      "keywords": "Fate, Turning point, Opportunity, Cycles, Change, Good fortune",
+      "love": "A fateful turning point in love; new romantic opportunities or a significant shift in an existing relationship.",
+      "career": "A lucky break or pivotal change in your career trajectory; be ready to seize the moment."
+    },
+    "11": {
+      "name": "Justice",
+      "upright": "Justice demands truth, fairness, and accountability. Decisions made now carry karmic weight, and the scales will balance in favor of honesty and integrity.",
+      "reversed": "Dishonesty, unfairness, or avoidance of responsibility. The consequences of imbalance come due.",
+      "description": "Justice represents fairness, truth, and the karmic balance of actions and consequences.",
+      "keywords": "Fairness, Truth, Karma, Law, Balance, Responsibility",
+      "love": "Honesty and fairness strengthen relationships; address imbalances with integrity and open communication.",
+      "career": "Fair outcomes are on the horizon; ethical decisions and accountability lead to professional respect."
+    },
+    "12": {
+      "name": "The Hanged Man",
+      "upright": "The Hanged Man invites willing surrender and a shift in perspective. By letting go of control and seeing the world upside down, profound insight and spiritual growth emerge.",
+      "reversed": "Resistance to change, stalling, or needless self-sacrifice without purpose.",
+      "description": "The Hanged Man calls for surrender and a new perspective, finding wisdom in stillness.",
+      "keywords": "Letting go, New perspective, Waiting, Sacrifice, Suspension, Insight",
+      "love": "Release expectations and see your relationship from a new angle; patience reveals hidden truths.",
+      "career": "Pause and reassess before moving forward; a fresh perspective on your work opens unexpected doors."
+    },
+    "13": {
+      "name": "Death",
+      "upright": "Death marks a powerful transformation and the ending of one chapter so a new one may begin. This is not physical death but a profound metamorphosis, releasing what no longer serves you.",
+      "reversed": "Resisting necessary change, clinging to the past, or fear of letting go.",
+      "description": "Death signifies transformation, the end of a cycle, and the promise of rebirth.",
+      "keywords": "Transformation, Rebirth, Ending, Metamorphosis, Releasing the past, New chapter",
+      "love": "A relationship transforms profoundly; let go of old patterns to allow deeper connection to emerge.",
+      "career": "A major career transition is underway; embrace the ending as a doorway to a more fulfilling path."
+    },
+    "14": {
+      "name": "Temperance",
+      "upright": "Temperance blends opposites into harmony, urging patience, moderation, and the integration of all aspects of life. Balance is achieved through gentle, steady effort and a calm spirit.",
+      "reversed": "Imbalance, excess, or impatience. Losing your center or rushing ahead without care.",
+      "description": "Temperance represents balance, patience, and the harmonious blending of life's elements.",
+      "keywords": "Balance, Patience, Moderation, Harmony, Integration, Middle path",
+      "love": "Seek balance and patience in love; harmonious compromise strengthens the bond between partners.",
+      "career": "A balanced approach yields the best results; avoid extremes and integrate diverse skills for success."
+    },
+    "15": {
+      "name": "The Devil",
+      "upright": "The Devil reveals the chains of bondage, temptation, and shadow patterns that hold you captive. Yet awareness of these bonds is the first step toward liberation and authentic freedom.",
+      "reversed": "Breaking free from addiction, releasing unhealthy attachments, or reclaiming personal power.",
+      "description": "The Devil exposes bondage and shadow, challenging you to recognize and break free from what binds you.",
+      "keywords": "Bondage, Temptation, Materialism, Shadow side, Obsession, Awakening",
+      "love": "Examine unhealthy patterns or codependency in relationships; true love requires freedom, not chains.",
+      "career": "Beware of toxic work dynamics or materialistic traps; reclaim your autonomy and professional integrity."
+    },
+    "16": {
+      "name": "The Tower",
+      "upright": "The Tower strikes with sudden upheaval, tearing down false structures to reveal raw truth beneath. Though jarring, this destruction clears the way for authentic rebuilding and liberation.",
+      "reversed": "Resisting inevitable change, prolonging a crumbling situation, or a less dramatic but needed shift.",
+      "description": "The Tower signals sudden upheaval that destroys illusions and clears the ground for truth.",
+      "keywords": "Upheaval, Collapse, Awakening, Liberation, Truth, Rebuilding",
+      "love": "A sudden revelation or upheaval shakes the relationship; truth emerges, creating space for rebuilding.",
+      "career": "Unexpected disruption at work; embrace the shake-up as a chance to rebuild on a stronger foundation."
+    },
+    "17": {
+      "name": "The Star",
+      "upright": "The Star shines with hope, healing, and serene inspiration after a time of darkness. Faith is renewed, and the universe offers gentle guidance toward your highest aspirations.",
+      "reversed": "Loss of faith, discouragement, or disconnection from hope and inspiration.",
+      "description": "The Star brings hope, healing, and the quiet faith that guides you through darkness.",
+      "keywords": "Hope, Inspiration, Serenity, Faith, Healing, Guiding star",
+      "love": "A hopeful and healing time for love; open your heart to renewed faith in romantic connection.",
+      "career": "Inspiration guides your professional path; trust in your vision and let your unique talents shine."
+    },
+    "18": {
+      "name": "The Moon",
+      "upright": "The Moon casts a veil of illusion, stirring the subconscious and bringing hidden fears to the surface. Trust your intuition to navigate through uncertainty, and let truth slowly reveal itself.",
+      "reversed": "Confusion clearing, repressed fears surfacing, or deception being uncovered.",
+      "description": "The Moon illuminates the realm of illusion, intuition, and the subconscious depths.",
+      "keywords": "Illusion, Intuition, Subconscious, Anxiety, Fear, Truth",
+      "love": "Hidden emotions or misunderstandings may cloud the relationship; trust intuition to find clarity.",
+      "career": "Not everything at work is as it seems; proceed carefully and rely on your gut instincts."
+    },
+    "19": {
+      "name": "The Sun",
+      "upright": "The Sun radiates pure joy, success, and vibrant vitality. This is a time of clarity, confidence, and the warmth of life at its brightest. Celebrate your achievements and bask in optimism.",
+      "reversed": "Temporary setbacks to happiness, delayed success, or dimmed confidence needing rekindling.",
+      "description": "The Sun represents radiant joy, success, and the confident vitality of life fully embraced.",
+      "keywords": "Joy, Success, Vitality, Optimism, Confidence, Radiance",
+      "love": "Joyful, radiant love fills your life; celebrate the warmth and happiness of genuine connection.",
+      "career": "Success and recognition shine brightly in your career; confidence and clarity propel you forward."
+    },
+    "20": {
+      "name": "Judgement",
+      "upright": "Judgement sounds the call of awakening and rebirth, urging honest self-evaluation and the courage to answer your true calling. Rise to a higher version of yourself through forgiveness and purpose.",
+      "reversed": "Self-doubt, refusing the call, or harsh self-judgment blocking personal transformation.",
+      "description": "Judgement calls for awakening, honest self-reflection, and the courage to answer your higher purpose.",
+      "keywords": "Awakening, Rebirth, Calling, Self-evaluation, Purpose, Forgiveness",
+      "love": "A pivotal moment of truth in love; honest reflection and forgiveness lead to renewed partnership.",
+      "career": "Answer your professional calling; a moment of reckoning leads to a more purposeful career direction."
+    },
+    "21": {
+      "name": "The World",
+      "upright": "The World celebrates completion, fulfillment, and the successful end of a major life cycle. All pieces come together in harmony, and a new cycle of growth awaits on the horizon.",
+      "reversed": "Incompletion, delays in reaching a goal, or struggling to find closure.",
+      "description": "The World signifies completion, wholeness, and the triumphant end of a journey.",
+      "keywords": "Completion, Fulfillment, Achievement, Integration, Journey's end, New cycle",
+      "love": "A relationship reaches a beautiful sense of wholeness and fulfillment; celebrate love's full circle.",
+      "career": "A major professional milestone is achieved; savor the accomplishment before embracing the next chapter."
+    },
+    "22": {
+      "name": "Ace of Wands",
+      "upright": "The Ace of Wands ignites with a spark of pure creative inspiration and passionate new beginnings. A seed of potential is planted, urging you to act boldly on fresh ideas.",
+      "reversed": "Creative blocks, delays in starting, or a lack of motivation dampening a new venture.",
+      "description": "The Ace of Wands is a burst of creative inspiration and the spark of a bold new beginning.",
+      "keywords": "Inspiration, New opportunity, Creativity, Passion, Seed of action, New beginning",
+      "love": "A passionate new attraction or a surge of fresh energy revitalizes your romantic life.",
+      "career": "A thrilling new project or opportunity ignites your professional passion; act on inspiration now."
+    },
+    "23": {
+      "name": "Two of Wands",
+      "upright": "The Two of Wands stands at the threshold of possibility, planning the next bold move. You hold the world in your hands, weighing options and envisioning an expansive future.",
+      "reversed": "Fear of the unknown, poor planning, or reluctance to commit to a chosen direction.",
+      "description": "The Two of Wands represents planning, vision, and the decision to pursue a bold new direction.",
+      "keywords": "Planning, Decision, Vision, Ambition, Exploration, Choice",
+      "love": "Consider where your relationship is heading; a decision about the future of love awaits.",
+      "career": "Strategic planning and long-term vision set the stage for career expansion and ambitious goals."
+    },
+    "24": {
+      "name": "Three of Wands",
+      "upright": "The Three of Wands looks out over a vast horizon, watching plans take shape and opportunities expand. Foresight and confidence carry your ventures forward into broader territory.",
+      "reversed": "Delays in progress, limited vision, or frustration when plans do not unfold as expected.",
+      "description": "The Three of Wands signals expansion, foresight, and the unfolding of plans into the wider world.",
+      "keywords": "Expansion, Foresight, Opportunity, Progress, Vision, Exploration",
+      "love": "Love expands beyond familiar horizons; new experiences together deepen your bond.",
+      "career": "Your professional efforts bear fruit on a larger scale; expansion and growth opportunities appear."
+    },
+    "25": {
+      "name": "Four of Wands",
+      "upright": "The Four of Wands celebrates a joyful milestone, stability, and the warmth of homecoming. It is a time for celebration, community, and the sense of belonging that comes from shared achievement.",
+      "reversed": "Instability at home, a delayed celebration, or feeling unsettled despite external success.",
+      "description": "The Four of Wands celebrates harmony, stability, and the joy of reaching a meaningful milestone.",
+      "keywords": "Celebration, Harmony, Stability, Milestone, Home, Belonging",
+      "love": "A joyful celebration of love, such as an engagement, moving in together, or deepening commitment.",
+      "career": "A professional milestone worth celebrating; enjoy the stability and recognition you have earned."
+    },
+    "26": {
+      "name": "Five of Wands",
+      "upright": "The Five of Wands brings competitive tension and creative friction. Multiple viewpoints clash, but from this healthy conflict, stronger ideas and resilience emerge.",
+      "reversed": "Avoiding conflict, inner turmoil, or finding resolution after a period of disagreement.",
+      "description": "The Five of Wands represents competition, creative tension, and the challenge of conflicting forces.",
+      "keywords": "Competition, Conflict, Tension, Challenge, Disagreement, Struggle",
+      "love": "Minor disagreements or competing needs create friction; honest dialogue resolves the tension.",
+      "career": "Workplace competition or conflicting ideas demand assertiveness; stand your ground constructively."
+    },
+    "27": {
+      "name": "Six of Wands",
+      "upright": "The Six of Wands parades in triumph, bringing recognition, honor, and well-deserved victory. Your efforts are acknowledged, and confidence rides high on the wave of success.",
+      "reversed": "Lack of recognition, self-doubt despite achievement, or ego inflated by hollow praise.",
+      "description": "The Six of Wands heralds victory, public recognition, and the confidence of achievement.",
+      "keywords": "Victory, Honor, Recognition, Achievement, Confidence, Leadership",
+      "love": "Your relationship is admired and celebrated; mutual appreciation and pride strengthen the bond.",
+      "career": "Public recognition and professional triumph reward your hard work; lead with well-earned confidence."
+    },
+    "28": {
+      "name": "Seven of Wands",
+      "upright": "The Seven of Wands calls you to defend your position with courage and tenacity. Challenges arise from many directions, but standing firm in your convictions brings perseverance.",
+      "reversed": "Feeling overwhelmed, giving in under pressure, or losing confidence in your stance.",
+      "description": "The Seven of Wands represents perseverance, courage, and the determination to hold your ground.",
+      "keywords": "Perseverance, Defense, Courage, Challenge, Standing ground, Tenacity",
+      "love": "Defend the relationship you value; stand firm against outside pressures or internal doubts.",
+      "career": "Hold your professional ground against competitors or critics; persistence and courage pay off."
+    },
+    "29": {
+      "name": "Eight of Wands",
+      "upright": "The Eight of Wands flies with swift momentum, bringing rapid change, exciting news, and accelerated progress. Events unfold quickly, and decisive action is needed to ride the wave.",
+      "reversed": "Delays, miscommunication, or feeling stuck when rapid progress suddenly stalls.",
+      "description": "The Eight of Wands signifies swift movement, rapid progress, and exciting momentum.",
+      "keywords": "Speed, Change, Travel, News, Momentum, Acceleration",
+      "love": "Love moves quickly; exciting developments or a whirlwind romance picks up speed.",
+      "career": "Rapid professional progress and exciting news arrive; act quickly to capitalize on momentum."
+    },
+    "30": {
+      "name": "Nine of Wands",
+      "upright": "The Nine of Wands stands battle-worn but unbroken, embodying resilience and the determination to endure. Though exhausted, you have the strength for one last stand before victory.",
+      "reversed": "Burnout, paranoia, or stubbornly refusing to rest when recovery is needed.",
+      "description": "The Nine of Wands embodies resilience, persistence, and the courage to endure near the finish line.",
+      "keywords": "Resilience, Persistence, Trial, Exhaustion, Vigilance, Tenacity",
+      "love": "Persevere through a challenging phase in love; resilience and trust carry you to stronger ground.",
+      "career": "You are near the finish line at work; summon your remaining strength to push through the final challenge."
+    },
+    "31": {
+      "name": "Ten of Wands",
+      "upright": "The Ten of Wands bears a heavy load, signaling burdens, excessive responsibility, and the need to delegate or release what weighs you down. You cannot carry everything alone.",
+      "reversed": "Learning to delegate, releasing unnecessary burdens, or the relief that comes after letting go.",
+      "description": "The Ten of Wands represents the weight of excessive burden and the need to lighten your load.",
+      "keywords": "Burden, Responsibility, Fatigue, Letting go, Delegation, Pressure",
+      "love": "The relationship may feel heavy with obligations; share the load and communicate your needs openly.",
+      "career": "Work burdens are overwhelming; delegate tasks and prioritize to avoid burnout."
+    },
+    "32": {
+      "name": "Page of Wands",
+      "upright": "The Page of Wands arrives with youthful enthusiasm, a spark of curiosity, and exciting news of creative ventures. Explore new ideas with playful energy and an adventurous spirit.",
+      "reversed": "Lack of direction, immature behavior, or creative ideas that fizzle out before taking form.",
+      "description": "The Page of Wands carries the spark of new creative adventures and enthusiastic exploration.",
+      "keywords": "Exploration, Enthusiasm, Good news, Creativity, Adventure, New direction",
+      "love": "A playful, exciting spark enters your love life; embrace spontaneity and youthful romantic energy.",
+      "career": "An exciting new project or creative direction inspires you; pursue fresh professional interests eagerly."
+    },
+    "33": {
+      "name": "Knight of Wands",
+      "upright": "The Knight of Wands charges forward with fearless passion, daring action, and an unstoppable drive for adventure. He pursues his goals with boldness and magnetic energy.",
+      "reversed": "Impulsiveness, scattered energy, or reckless pursuit without considering consequences.",
+      "description": "The Knight of Wands embodies bold action, passionate pursuit, and fearless adventure.",
+      "keywords": "Action, Adventure, Passion, Pursuit, Boldness, Drive",
+      "love": "A passionate, adventurous romance sweeps in; bold romantic gestures ignite excitement.",
+      "career": "Charge ahead on ambitious professional goals; bold action and passionate drive lead to breakthroughs."
+    },
+    "34": {
+      "name": "Queen of Wands",
+      "upright": "The Queen of Wands radiates warmth, confidence, and magnetic charm. She commands attention with her independence, social grace, and the passionate fire that inspires those around her.",
+      "reversed": "Jealousy, insecurity masked by bravado, or domineering behavior in personal interactions.",
+      "description": "The Queen of Wands embodies confident warmth, independence, and inspiring social grace.",
+      "keywords": "Confidence, Independence, Warmth, Charm, Social grace, Passion",
+      "love": "Radiate confidence and warmth in love; your magnetic energy attracts deep and genuine admiration.",
+      "career": "Lead with charisma and confidence; your warmth and vision inspire colleagues and open doors."
+    },
+    "35": {
+      "name": "King of Wands",
+      "upright": "The King of Wands commands with visionary leadership, entrepreneurial boldness, and the ability to see the big picture. He inspires others with his confidence and turns vision into reality.",
+      "reversed": "Overbearing leadership, impulsive decisions, or a vision that lacks follow-through.",
+      "description": "The King of Wands represents visionary leadership, bold influence, and entrepreneurial mastery.",
+      "keywords": "Leadership, Vision, Entrepreneurship, Boldness, Big picture, Influence",
+      "love": "Take confident initiative in love; your vision and passionate leadership strengthen the relationship.",
+      "career": "Visionary leadership and bold strategy drive professional success; think big and inspire your team."
+    },
+    "36": {
+      "name": "Ace of Cups",
+      "upright": "The Ace of Cups overflows with new emotional beginnings, deep love, and intuitive connection. An outpouring of joy, compassion, and heartfelt possibility awaits.",
+      "reversed": "Emotional emptiness, blocked feelings, or a love opportunity that is not yet ready to blossom.",
+      "description": "The Ace of Cups represents an overflowing of new love, emotional connection, and heartfelt joy.",
+      "keywords": "New emotions, Intuition, Emotional connection, Love, Joy, Heart",
+      "love": "A beautiful new love or a profound deepening of emotional intimacy fills your heart.",
+      "career": "Emotional fulfillment at work; a new role or project brings joy and creative satisfaction."
+    },
+    "37": {
+      "name": "Two of Cups",
+      "upright": "The Two of Cups celebrates a deep, balanced partnership built on mutual attraction, respect, and emotional harmony. Two hearts meet as equals in love and understanding.",
+      "reversed": "Imbalanced partnership, miscommunication, or a connection that has lost its equilibrium.",
+      "description": "The Two of Cups symbolizes a harmonious partnership, mutual love, and the union of two hearts.",
+      "keywords": "Partnership, Attraction, Union, Love, Balance, Connection",
+      "love": "A soulful, balanced romantic partnership blossoms; mutual love and respect deepen your bond.",
+      "career": "A powerful professional partnership or collaboration brings shared success and mutual benefit."
+    },
+    "38": {
+      "name": "Three of Cups",
+      "upright": "The Three of Cups raises a toast to friendship, joyful celebration, and the strength found in community. Shared happiness, creative collaboration, and heartfelt reunion fill the moment.",
+      "reversed": "Social isolation, gossip, or overindulgence that distracts from deeper emotional needs.",
+      "description": "The Three of Cups celebrates friendship, joyful gathering, and the warmth of community.",
+      "keywords": "Friendship, Celebration, Socializing, Collaboration, Joy, Reunion",
+      "love": "Joyful social connections enrich your love life; celebrate love with friends and loved ones.",
+      "career": "Team collaboration and a positive workplace social dynamic boost morale and creative output."
+    },
+    "39": {
+      "name": "Four of Cups",
+      "upright": "The Four of Cups sits in contemplation, perhaps dissatisfied with what is offered, missing the new opportunity right before you. It is a time to look inward and reevaluate what truly matters.",
+      "reversed": "Renewed motivation, acceptance of a new offer, or emerging from a period of apathy.",
+      "description": "The Four of Cups invites contemplation and warns against missing hidden opportunities through apathy.",
+      "keywords": "Contemplation, Dissatisfaction, Meditation, Evaluation, Introspection, Awakening",
+      "love": "Emotional restlessness or taking love for granted; look with fresh eyes at what is being offered.",
+      "career": "Professional boredom or dissatisfaction; a new opportunity may be closer than you realize."
+    },
+    "40": {
+      "name": "Five of Cups",
+      "upright": "The Five of Cups mourns what has been lost, yet two cups still stand behind you, offering hope. Allow yourself to grieve, then turn around and see what remains to be cherished.",
+      "reversed": "Beginning to heal, accepting loss, and finding the strength to move forward with hope.",
+      "description": "The Five of Cups acknowledges grief and loss while pointing toward the hope that remains.",
+      "keywords": "Loss, Grief, Regret, Hope, Acceptance, Moving forward",
+      "love": "Heartache or disappointment in love; allow yourself to grieve, then open your eyes to what endures.",
+      "career": "A professional setback or loss stings; focus on remaining strengths and opportunities to recover."
+    },
+    "41": {
+      "name": "Six of Cups",
+      "upright": "The Six of Cups stirs sweet nostalgia, childhood innocence, and the warmth of cherished memories. Past connections resurface, bringing comfort and a gentle reminder of simpler times.",
+      "reversed": "Living in the past, inability to move on, or idealizing memories at the expense of the present.",
+      "description": "The Six of Cups evokes nostalgia, innocent joy, and the tender warmth of cherished memories.",
+      "keywords": "Nostalgia, Memories, Childhood, Innocence, Reunion, Warmth",
+      "love": "A past love returns or tender memories strengthen your current relationship; embrace innocent affection.",
+      "career": "Reconnecting with former colleagues or revisiting past skills brings unexpected professional benefit."
+    },
+    "42": {
+      "name": "Seven of Cups",
+      "upright": "The Seven of Cups presents a dazzling array of choices and fantasies, some real, some illusory. Discernment is needed to distinguish genuine opportunity from wishful thinking.",
+      "reversed": "Gaining clarity, making a firm decision, or overcoming confusion and distraction.",
+      "description": "The Seven of Cups presents many enticing choices, urging discernment between fantasy and reality.",
+      "keywords": "Fantasy, Choices, Daydreaming, Temptation, Confusion, Clarity",
+      "love": "Romantic fantasies cloud judgment; ground yourself to see your relationship or prospects clearly.",
+      "career": "Many options dazzle but not all are real; focus your energy on the most grounded opportunity."
+    },
+    "43": {
+      "name": "Eight of Cups",
+      "upright": "The Eight of Cups walks away from what once brought fulfillment, seeking something deeper. It takes courage to leave behind the familiar in pursuit of greater emotional truth.",
+      "reversed": "Fear of leaving, aimless wandering, or returning to a situation you had already outgrown.",
+      "description": "The Eight of Cups represents the courageous departure from the familiar in search of deeper meaning.",
+      "keywords": "Departure, Seeking, Abandonment, Courage, New journey, Growth",
+      "love": "Walking away from a love that no longer fulfills you; trust that something truer awaits ahead.",
+      "career": "Leaving a comfortable but unfulfilling role behind; seek work that aligns with your deeper purpose."
+    },
+    "44": {
+      "name": "Nine of Cups",
+      "upright": "The Nine of Cups glows with satisfaction, wish fulfillment, and the contentment of emotional abundance. Your heart's desires are realized, and gratitude fills the moment.",
+      "reversed": "Superficial happiness, unfulfilled wishes, or complacency masking deeper emotional needs.",
+      "description": "The Nine of Cups is the wish card, radiating satisfaction, emotional fulfillment, and gratitude.",
+      "keywords": "Satisfaction, Wish fulfilled, Happiness, Enjoyment, Gratitude, Contentment",
+      "love": "Your romantic wishes come true; deep emotional satisfaction and happiness bless your love life.",
+      "career": "Professional satisfaction and the fulfillment of a cherished career goal bring contentment."
+    },
+    "45": {
+      "name": "Ten of Cups",
+      "upright": "The Ten of Cups paints the picture of complete emotional fulfillment, family harmony, and lasting happiness. The rainbow arcs over a scene of love, joy, and contentment shared with those you cherish.",
+      "reversed": "Family discord, broken harmony, or the gap between idealized happiness and reality.",
+      "description": "The Ten of Cups represents complete emotional fulfillment, family harmony, and lasting joy.",
+      "keywords": "Fulfillment, Family, Contentment, Rainbow, Reunion, Bliss",
+      "love": "The fullness of love and family joy; a deeply fulfilling and harmonious partnership is celebrated.",
+      "career": "Work-life balance achieved; your career supports a fulfilling and happy personal life."
+    },
+    "46": {
+      "name": "Page of Cups",
+      "upright": "The Page of Cups arrives with gentle creativity, intuitive messages, and a sweet surprise of the heart. Open yourself to tender new feelings and the magic of emotional discovery.",
+      "reversed": "Emotional immaturity, creative blocks, or retreating from vulnerability.",
+      "description": "The Page of Cups brings tender emotional surprises, gentle creativity, and intuitive whispers.",
+      "keywords": "Creativity, Intuition, Gentleness, Innocence, Surprise, Sensitivity",
+      "love": "A sweet romantic surprise or tender new feelings emerge; be open to love's gentle magic.",
+      "career": "Creative inspiration strikes; follow your intuitive spark to bring a fresh perspective to your work."
+    },
+    "47": {
+      "name": "Knight of Cups",
+      "upright": "The Knight of Cups rides forth as the romantic dreamer, pursuing love and beauty with charm, imagination, and idealistic devotion. He follows his heart above all else.",
+      "reversed": "Unrealistic expectations, moodiness, or pursuing fantasy at the expense of practicality.",
+      "description": "The Knight of Cups is the romantic idealist, pursuing love and beauty with charm and imagination.",
+      "keywords": "Romance, Charm, Pursuit, Imagination, Idealism, Tenderness",
+      "love": "A romantic gesture or a charming suitor appears; follow your heart toward tender, idealistic love.",
+      "career": "Pursue creative or artistic professional paths; let imagination and passion guide your career moves."
+    },
+    "48": {
+      "name": "Queen of Cups",
+      "upright": "The Queen of Cups embodies deep compassion, nurturing intuition, and emotional wisdom. She holds space for others with empathy and grace, offering comfort and understanding.",
+      "reversed": "Emotional overwhelm, codependency, or neglecting your own needs while caring for others.",
+      "description": "The Queen of Cups radiates compassion, intuitive wisdom, and the nurturing power of empathy.",
+      "keywords": "Compassion, Care, Support, Intuition, Empathy, Nurturing",
+      "love": "Deep emotional support and compassionate understanding strengthen your most intimate connections.",
+      "career": "Empathy and emotional intelligence make you invaluable at work; nurture colleagues and lead with care."
+    },
+    "49": {
+      "name": "King of Cups",
+      "upright": "The King of Cups rules with emotional maturity, diplomatic grace, and calm composure. He balances deep feeling with wise restraint, offering guidance through empathy and steady presence.",
+      "reversed": "Emotional manipulation, suppressed feelings, or losing composure under pressure.",
+      "description": "The King of Cups embodies emotional maturity, diplomatic composure, and wise empathetic guidance.",
+      "keywords": "Maturity, Balance, Diplomacy, Composure, Empathy, Guidance",
+      "love": "Emotionally mature and balanced love; a partner who offers steady support and wise understanding.",
+      "career": "Lead with emotional intelligence and diplomacy; your calm composure earns trust and respect."
+    },
+    "50": {
+      "name": "Ace of Swords",
+      "upright": "The Ace of Swords cuts through confusion with a flash of clarity, truth, and intellectual breakthrough. A new insight emerges that brings sharp perception and the power of clear thought.",
+      "reversed": "Mental confusion, misinformation, or a breakthrough that is blocked by clouded thinking.",
+      "description": "The Ace of Swords represents a breakthrough of clarity, truth, and sharp new insight.",
+      "keywords": "Clarity, Truth, Breakthrough, New insight, Perception, Wisdom",
+      "love": "A moment of clarity in love; honest communication cuts through misunderstanding to reveal the truth.",
+      "career": "A brilliant new idea or intellectual breakthrough propels your career forward with sharp focus."
+    },
+    "51": {
+      "name": "Two of Swords",
+      "upright": "The Two of Swords sits blindfolded at a crossroads, caught between two opposing choices. A difficult decision must be made, but avoidance only prolongs the stalemate.",
+      "reversed": "Information coming to light, breaking through indecision, or being forced into a choice.",
+      "description": "The Two of Swords represents a difficult dilemma, a stalemate, and the need to choose.",
+      "keywords": "Dilemma, Stalemate, Avoidance, Conflict, Choice, Difficulty",
+      "love": "An unresolved decision weighs on the relationship; face the choice honestly to move forward.",
+      "career": "A professional crossroads demands a decision; weigh both sides carefully and commit to a path."
+    },
+    "52": {
+      "name": "Three of Swords",
+      "upright": "The Three of Swords pierces the heart with the sharp pain of heartbreak, grief, and emotional betrayal. Yet through this sorrow, the path to healing and emotional release begins.",
+      "reversed": "Recovery from heartbreak, forgiveness beginning, or releasing old pain to heal at last.",
+      "description": "The Three of Swords speaks of heartbreak and grief, but also the beginning of emotional healing.",
+      "keywords": "Heartbreak, Grief, Separation, Betrayal, Release, Healing",
+      "love": "Painful heartbreak or betrayal in love; allow yourself to feel the sorrow and begin healing.",
+      "career": "A professional disappointment or painful separation; process the grief and look toward recovery."
+    },
+    "53": {
+      "name": "Four of Swords",
+      "upright": "The Four of Swords offers a sanctuary of rest, recovery, and quiet retreat. After a period of stress or conflict, deep restoration and mental renewal come through stillness and meditation.",
+      "reversed": "Restlessness, returning to action too soon, or inability to find the peace you need.",
+      "description": "The Four of Swords calls for rest, mental recovery, and the healing power of quiet retreat.",
+      "keywords": "Rest, Recovery, Retreat, Recharge, Meditation, Renewal",
+      "love": "Take a quiet pause to restore emotional energy; rest strengthens the relationship in the long run.",
+      "career": "Step back from work stress to recharge; mental clarity returns after a period of rest."
+    },
+    "54": {
+      "name": "Five of Swords",
+      "upright": "The Five of Swords marks a hollow victory or bitter conflict where winning comes at a cost. Not every battle is worth fighting, and the aftermath may leave all sides diminished.",
+      "reversed": "Reconciliation after conflict, learning from defeat, or choosing to walk away from a losing battle.",
+      "description": "The Five of Swords warns of conflict where victory comes at a price and not every fight is worth winning.",
+      "keywords": "Conflict, Competition, Disagreement, Cost, Winning and losing, Reconciliation",
+      "love": "Arguments leave both partners wounded; consider whether being right matters more than being together.",
+      "career": "Workplace conflict or cutthroat competition; weigh the cost of winning against long-term relationships."
+    },
+    "55": {
+      "name": "Six of Swords",
+      "upright": "The Six of Swords carries you across troubled waters toward calmer shores. A necessary transition is underway, leaving difficulty behind and moving toward healing and peace.",
+      "reversed": "Difficulty moving on, unresolved baggage, or a transition that feels incomplete.",
+      "description": "The Six of Swords signals a transition away from difficulty toward calmer, more peaceful waters.",
+      "keywords": "Transition, Moving on, Leaving difficulty, Calm, Healing, Progress",
+      "love": "Moving past a difficult chapter in love; calmer, more peaceful emotional waters lie ahead.",
+      "career": "A professional transition carries you toward better circumstances; leave past difficulties behind."
+    },
+    "56": {
+      "name": "Seven of Swords",
+      "upright": "The Seven of Swords moves with strategic cunning, suggesting the need for cleverness, discretion, or an unconventional approach. Be mindful of deception, whether from others or self-deception.",
+      "reversed": "Coming clean, returning what was taken, or a deception being uncovered and addressed.",
+      "description": "The Seven of Swords speaks of strategy, cunning, and the need for discernment around deception.",
+      "keywords": "Strategy, Cunning, Deception, Flexibility, Scheming, Truth",
+      "love": "Hidden truths or dishonesty may be at play; seek transparency and address any lack of trust.",
+      "career": "Use strategic thinking, but beware of workplace politics or dishonesty; integrity protects you."
+    },
+    "57": {
+      "name": "Eight of Swords",
+      "upright": "The Eight of Swords stands bound and blindfolded, trapped by self-imposed limitations and mental barriers. The prison is an illusion, and freedom comes through shifting your perspective.",
+      "reversed": "Breaking free from mental constraints, seeing new options, or reclaiming personal power.",
+      "description": "The Eight of Swords reveals self-imposed restriction and the mental barriers that can be overcome.",
+      "keywords": "Restriction, Bondage, Self-limitation, Powerlessness, Breakthrough, New perspective",
+      "love": "Feeling trapped in a relationship pattern; recognize that the barriers are mental and can be released.",
+      "career": "Feeling stuck professionally is often self-imposed; shift your perspective to see new possibilities."
+    },
+    "58": {
+      "name": "Nine of Swords",
+      "upright": "The Nine of Swords sits in the darkness of anxiety, worry, and sleepless nights. The fears that haunt you may be worse in your mind than in reality. Facing them brings relief.",
+      "reversed": "Recovery from anxiety, finding hope after despair, or learning to manage worry constructively.",
+      "description": "The Nine of Swords represents anxiety, worry, and the weight of fears that feel overwhelming.",
+      "keywords": "Anxiety, Worry, Nightmare, Insomnia, Fear, Facing fears",
+      "love": "Anxiety or worry troubles the relationship; share your fears openly and seek reassurance together.",
+      "career": "Work-related stress keeps you up at night; address the root cause rather than spiraling in worry."
+    },
+    "59": {
+      "name": "Ten of Swords",
+      "upright": "The Ten of Swords marks the absolute end, a painful collapse that also signals the dawn of a new beginning. Rock bottom has been reached, and the only direction now is up.",
+      "reversed": "Survival after a crisis, the worst is over, or resisting the inevitable end of a painful cycle.",
+      "description": "The Ten of Swords signals a painful ending that clears the way for dawn and renewal.",
+      "keywords": "Ending, Collapse, Rock bottom, Dawn, Rebuilding, Rebirth",
+      "love": "A painful ending in love; though it hurts deeply, this closure opens space for a fresh start.",
+      "career": "A career setback hits hard, but this is rock bottom, and recovery and rebuilding begin now."
+    },
+    "60": {
+      "name": "Page of Swords",
+      "upright": "The Page of Swords buzzes with intellectual curiosity, sharp observation, and an eager hunger for knowledge. New ideas spark, and a fresh perspective cuts through old assumptions.",
+      "reversed": "Gossip, hasty conclusions, or intellectual energy scattered without productive focus.",
+      "description": "The Page of Swords embodies sharp curiosity, new ideas, and an eager thirst for knowledge.",
+      "keywords": "Curiosity, Alertness, Learning, Sharpness, New ideas, Inquiry",
+      "love": "Intellectual connection sparks attraction; stimulating conversation and curiosity deepen the bond.",
+      "career": "A sharp new idea or research opportunity energizes your work; stay curious and keep learning."
+    },
+    "61": {
+      "name": "Knight of Swords",
+      "upright": "The Knight of Swords charges into action with decisive speed, sharp ambition, and unwavering directness. He cuts straight to the point and pursues his objectives with fierce determination.",
+      "reversed": "Reckless haste, arguments, or aggressive behavior that causes unintended damage.",
+      "description": "The Knight of Swords charges forward with decisive action, directness, and sharp ambition.",
+      "keywords": "Decisiveness, Directness, Speed, Ambition, Action, Charge",
+      "love": "Love moves fast and direct; be bold in expressing your feelings but mindful of your partner's pace.",
+      "career": "Decisive, rapid action drives career progress; cut through obstacles with focus and determination."
+    },
+    "62": {
+      "name": "Queen of Swords",
+      "upright": "The Queen of Swords sees through pretense with razor-sharp clarity, independent judgment, and uncompromising honesty. She values truth above comfort and communicates with direct fairness.",
+      "reversed": "Cold detachment, harsh criticism, or using intellect as a weapon rather than a tool for truth.",
+      "description": "The Queen of Swords embodies independent clarity, direct honesty, and fair-minded objectivity.",
+      "keywords": "Independence, Objectivity, Directness, Clarity, Fairness, Rationality",
+      "love": "Clear and honest communication defines your love; value truth and fairness over emotional games.",
+      "career": "Independent thinking and objective analysis earn respect; lead with clarity and fair judgment."
+    },
+    "63": {
+      "name": "King of Swords",
+      "upright": "The King of Swords rules with rational authority, logical precision, and unwavering commitment to truth and justice. He makes clear, fair decisions guided by intellect and ethical principle.",
+      "reversed": "Tyrannical use of intellect, cold manipulation, or rigid thinking that lacks compassion.",
+      "description": "The King of Swords represents rational authority, logical truth, and just, decisive leadership.",
+      "keywords": "Rationality, Authority, Truth, Justice, Logic, Decisiveness",
+      "love": "Approach love with fairness and clear communication; balance rational thinking with emotional warmth.",
+      "career": "Authoritative, logical leadership guides your team; make decisions rooted in truth and fairness."
+    },
+    "64": {
+      "name": "Ace of Pentacles",
+      "upright": "The Ace of Pentacles presents a golden opportunity for material prosperity, practical new beginnings, and the seed of financial growth. A tangible new start takes root in fertile ground.",
+      "reversed": "Missed financial opportunity, poor planning, or a promising venture that fails to materialize.",
+      "description": "The Ace of Pentacles offers a golden seed of new opportunity, prosperity, and practical beginnings.",
+      "keywords": "New opportunity, Prosperity, Potential, Practicality, Finance, New start",
+      "love": "A stable, grounded new beginning in love; build a relationship with solid, practical foundations.",
+      "career": "A lucrative new opportunity or financial windfall appears; invest wisely in your professional future."
+    },
+    "65": {
+      "name": "Two of Pentacles",
+      "upright": "The Two of Pentacles juggles multiple demands with grace, adaptability, and flexible balance. Life requires careful coordination, and finding rhythm amidst change is the key.",
+      "reversed": "Overwhelm from too many commitments, dropping the ball, or financial imbalance.",
+      "description": "The Two of Pentacles represents adaptable balance, flexibility, and the art of juggling life's demands.",
+      "keywords": "Balance, Adaptability, Flexibility, Time management, Coordination, Multitasking",
+      "love": "Balance love with other life demands; flexibility and adaptability keep the relationship thriving.",
+      "career": "Juggling multiple projects demands skillful time management; stay flexible and prioritize wisely."
+    },
+    "66": {
+      "name": "Three of Pentacles",
+      "upright": "The Three of Pentacles celebrates skilled collaboration, dedication to craft, and the mastery that comes through focused teamwork. Working together with shared expertise produces exceptional results.",
+      "reversed": "Poor teamwork, lack of skill development, or a project suffering from disorganization.",
+      "description": "The Three of Pentacles represents collaboration, craftsmanship, and the mastery born of teamwork.",
+      "keywords": "Collaboration, Craftsmanship, Learning, Professionalism, Mastery, Teamwork",
+      "love": "Build your relationship as a shared craft; teamwork and mutual effort create something beautiful together.",
+      "career": "Collaborative projects and professional skill development lead to recognized mastery and achievement."
+    },
+    "67": {
+      "name": "Four of Pentacles",
+      "upright": "The Four of Pentacles grips tightly to security, stability, and material possessions. While prudent saving is wise, holding on too tightly can prevent growth and generosity.",
+      "reversed": "Releasing control, overcoming greed, or financial insecurity driving excessive caution.",
+      "description": "The Four of Pentacles represents the tension between financial security and the need to let go.",
+      "keywords": "Security, Conservatism, Saving, Possessiveness, Control, Guarding",
+      "love": "Fear of vulnerability or possessiveness may restrict the relationship; loosen your grip to let love grow.",
+      "career": "Financial caution serves you well, but avoid clinging so tightly to the status quo that you miss growth."
+    },
+    "68": {
+      "name": "Five of Pentacles",
+      "upright": "The Five of Pentacles walks through hardship, financial struggle, and the cold of feeling left out. Yet help is closer than it appears, and asking for support is a sign of strength.",
+      "reversed": "Recovery from financial difficulty, finding help, or emerging from a period of hardship.",
+      "description": "The Five of Pentacles speaks of hardship and insecurity, with the promise that help is near.",
+      "keywords": "Hardship, Poverty, Insecurity, Help, Recovery, Hope",
+      "love": "Financial or emotional hardship strains the relationship; lean on each other and seek support together.",
+      "career": "Professional or financial difficulty tests your resilience; seek assistance and trust that recovery comes."
+    },
+    "69": {
+      "name": "Six of Pentacles",
+      "upright": "The Six of Pentacles embodies generosity, sharing resources, and the balanced exchange of giving and receiving. Abundance flows when you share what you have with open hands.",
+      "reversed": "Strings attached to generosity, power imbalance in giving, or feeling undervalued.",
+      "description": "The Six of Pentacles represents generosity, balanced giving and receiving, and shared abundance.",
+      "keywords": "Generosity, Sharing, Giving, Receiving, Mutual aid, Balance",
+      "love": "Generous giving and gracious receiving balance your relationship; share love and support equally.",
+      "career": "Sharing knowledge or resources at work creates mutual benefit; generosity strengthens professional bonds."
+    },
+    "70": {
+      "name": "Seven of Pentacles",
+      "upright": "The Seven of Pentacles pauses to assess the harvest, weighing the results of patient investment and persistent effort. Growth takes time, and now is the moment to evaluate your progress.",
+      "reversed": "Impatience with slow results, poor return on investment, or questioning if the effort is worthwhile.",
+      "description": "The Seven of Pentacles represents patient investment, assessment of progress, and waiting for the harvest.",
+      "keywords": "Patience, Investment, Persistence, Assessment, Waiting, Reward",
+      "love": "Love grows slowly through steady investment; be patient and trust the process of deepening connection.",
+      "career": "Assess your long-term professional investments; patience and persistence are about to pay off."
+    },
+    "71": {
+      "name": "Eight of Pentacles",
+      "upright": "The Eight of Pentacles works diligently at the craft, honing skills with focused dedication and the pursuit of excellence. Mastery comes through repetition, practice, and unwavering commitment.",
+      "reversed": "Shortcuts, lack of focus, or perfectionism that hinders rather than helps progress.",
+      "description": "The Eight of Pentacles embodies diligent skill-building, focused craftsmanship, and the pursuit of mastery.",
+      "keywords": "Diligence, Mastery, Focus, Craftsmanship, Skill, Excellence",
+      "love": "Put loving effort into your relationship; dedication and attention to detail strengthen the bond.",
+      "career": "Commit to developing your skills; diligent practice and focused effort lead to professional mastery."
+    },
+    "72": {
+      "name": "Nine of Pentacles",
+      "upright": "The Nine of Pentacles revels in the abundance earned through independent effort, self-sufficiency, and refined enjoyment of life's pleasures. You have built something beautiful on your own terms.",
+      "reversed": "Over-dependence on others, financial setbacks, or inability to enjoy your achievements.",
+      "description": "The Nine of Pentacles celebrates independence, self-made abundance, and elegant enjoyment of success.",
+      "keywords": "Abundance, Independence, Self-sufficiency, Elegance, Achievement, Enjoyment",
+      "love": "Confident independence makes you magnetic in love; enjoy a relationship that complements your wholeness.",
+      "career": "Your hard-earned professional success allows you to enjoy the rewards of your independent effort."
+    },
+    "73": {
+      "name": "Ten of Pentacles",
+      "upright": "The Ten of Pentacles crowns a legacy of lasting prosperity, generational stability, and the deep fulfillment of building something enduring. Wealth extends beyond money to family, tradition, and heritage.",
+      "reversed": "Family financial disputes, instability in legacy, or questioning the value of inherited traditions.",
+      "description": "The Ten of Pentacles represents lasting legacy, generational prosperity, and enduring stability.",
+      "keywords": "Legacy, Prosperity, Stability, Inheritance, Foundation, Generations",
+      "love": "A love that builds toward lasting legacy; family bonds and long-term commitment bring deep fulfillment.",
+      "career": "Long-term professional stability and a lasting legacy of achievement; your work stands the test of time."
+    },
+    "74": {
+      "name": "Page of Pentacles",
+      "upright": "The Page of Pentacles approaches new learning with diligent curiosity, practical ambition, and a willingness to start from the ground up. A promising opportunity for skill development appears.",
+      "reversed": "Lack of progress, procrastination, or unrealistic expectations about material goals.",
+      "description": "The Page of Pentacles represents eager learning, practical opportunity, and diligent new beginnings.",
+      "keywords": "Learning, New skills, Practicality, Opportunity, Diligence, Growth",
+      "love": "A grounded, sincere new connection based on shared practical values and steady growth together.",
+      "career": "A new learning opportunity or entry-level position sets the foundation for long-term professional growth."
+    },
+    "75": {
+      "name": "Knight of Pentacles",
+      "upright": "The Knight of Pentacles advances with steady reliability, patient persistence, and grounded determination. He may not be the fastest, but his methodical approach ensures lasting results.",
+      "reversed": "Stubbornness, stagnation, or being so cautious that no progress is made.",
+      "description": "The Knight of Pentacles embodies steady reliability, patient persistence, and grounded dedication.",
+      "keywords": "Diligence, Reliability, Persistence, Steadiness, Responsibility, Groundedness",
+      "love": "A slow, steady, and deeply reliable love; patience and commitment build an unshakable bond.",
+      "career": "Methodical, dependable effort earns trust and lasting professional results; stay the course."
+    },
+    "76": {
+      "name": "Queen of Pentacles",
+      "upright": "The Queen of Pentacles nurtures abundance with practical wisdom, generous care, and the ability to create a warm, secure environment. She manages resources with grace and ensures everyone thrives.",
+      "reversed": "Neglecting self-care, financial anxiety, or losing balance between nurturing others and yourself.",
+      "description": "The Queen of Pentacles embodies practical nurturing, abundant care, and wise resource management.",
+      "keywords": "Practicality, Abundance, Care, Wisdom, Security, Management",
+      "love": "Create a warm, secure home for love to flourish; practical care and nurturing strengthen the bond.",
+      "career": "Wise management of resources and a nurturing leadership style create a thriving work environment."
+    },
+    "77": {
+      "name": "King of Pentacles",
+      "upright": "The King of Pentacles sits atop a throne of earned wealth, successful leadership, and practical mastery. He has built enduring prosperity through discipline, vision, and sound management.",
+      "reversed": "Materialism, workaholism, or using wealth and status as a substitute for emotional connection.",
+      "description": "The King of Pentacles represents earned wealth, successful leadership, and enduring material mastery.",
+      "keywords": "Wealth, Success, Leadership, Management, Stability, Prosperity",
+      "love": "A stable, prosperous partnership grounded in shared security and the comfort of lasting commitment.",
+      "career": "You have reached or are reaching the pinnacle of professional success; lead with wisdom and generosity."
+    }
+  },
+  "settings": {
+    "interpretationStyle": "Interpretation Style",
+    "interpretationStyleDesc": "Choose how the AI delivers your reading",
+    "style": {
+      "concise": {
+        "label": "Concise",
+        "desc": "Brief and direct — key insights only"
+      },
+      "standard": {
+        "label": "Standard",
+        "desc": "Balanced depth with clear guidance"
+      },
+      "poetic": {
+        "label": "Poetic",
+        "desc": "Mystical and literary — rich imagery"
+      },
+      "analytical": {
+        "label": "Analytical",
+        "desc": "Structured and detailed — thorough analysis"
+      }
+    }
+  },
+  "chat": {
+    "title": "Follow-up Chat",
+    "placeholder": "Ask a follow-up question...",
+    "aiLabel": "Tarot Reader",
+    "followUp": "Continue asking the Tarot Reader",
+    "context": "Reading Context",
+    "cards": "cards",
+    "thinking": "Reading the cards...",
+    "loadingSuggestions": "Generating questions for you...",
+    "suggestionsTitle": "You might want to ask:",
+    "suggest1": "What should I pay attention to?",
+    "suggest2": "How can I improve the outcome?",
+    "suggest3": "What's the timeline for this?"
+  },
+  "journal": {
+    "title": "Reading Journal",
+    "detail": "Reading Detail",
+    "empty": "No readings yet",
+    "emptyHint": "Complete a reading and tap the bookmark icon to save it here",
+    "totalReadings": "Total",
+    "thisMonth": "This Month",
+    "mostDrawn": "Most Drawn"
+  },
+  "learn": {
+    "title": "Learn Tarot",
+    "lessons": "Lessons",
+    "symbols": "Symbols",
+    "symbolsIntro": "Tarot cards are rich with symbolic imagery. Understanding these symbols deepens your readings.",
+    "comingSoon": "Content coming soon...",
+    "lesson": {
+      "basics": {
+        "title": "Tarot Basics",
+        "desc": "Structure of the deck, how readings work, and getting started",
+        "content": "## The Tarot Deck\n\nA standard tarot deck contains **78 cards** divided into two groups:\n\n### Major Arcana (22 cards)\nThese represent life's major themes and spiritual lessons — from The Fool's journey of innocence to The World's completion.\n\n### Minor Arcana (56 cards)\nFour suits of 14 cards each, dealing with everyday situations:\n- **Wands** — Passion, creativity, ambition\n- **Cups** — Emotions, relationships, intuition\n- **Swords** — Intellect, conflict, truth\n- **Pentacles** — Material world, career, health\n\n## How a Reading Works\n\n1. **Focus** on your question\n2. **Shuffle** and draw cards\n3. **Place** them in a spread pattern\n4. **Interpret** each card's meaning in its position\n5. **Synthesize** the story the cards tell together"
+      },
+      "majorArcana": {
+        "title": "Major Arcana",
+        "desc": "The 22 archetypal cards and The Fool's Journey",
+        "content": "## The Fool's Journey\n\nThe Major Arcana tells the story of a soul's journey through life:\n\n**0 - The Fool**: Innocence, new beginnings\n**I - The Magician**: Willpower, manifestation\n**II - The High Priestess**: Intuition, mystery\n**III - The Empress**: Abundance, nurturing\n**IV - The Emperor**: Authority, structure\n**V - The Hierophant**: Tradition, guidance\n**VI - The Lovers**: Choices, partnerships\n**VII - The Chariot**: Determination, victory\n**VIII - Strength**: Courage, inner power\n**IX - The Hermit**: Wisdom, solitude\n**X - Wheel of Fortune**: Cycles, destiny\n\nThe journey continues through trials (XI-XV), awakening (XVI-XIX), and ultimately completion with **XXI - The World**."
+      },
+      "minorArcana": {
+        "title": "Minor Arcana",
+        "desc": "The four suits and their meanings in daily life",
+        "content": "## The Four Suits\n\n### Wands (Fire)\nAction, inspiration, growth. Wands cards often relate to career ambitions and creative projects.\n\n### Cups (Water)\nEmotions, love, relationships. Cups reveal the state of your heart and emotional connections.\n\n### Swords (Air)\nThought, communication, challenges. Swords cut through confusion but can also represent conflict.\n\n### Pentacles (Earth)\nMaterial reality, finances, health. Pentacles ground us in the physical world.\n\n## Court Cards\nEach suit has four court cards:\n- **Page** — Learning, curiosity, messages\n- **Knight** — Action, pursuit, movement\n- **Queen** — Nurturing mastery of the suit's element\n- **King** — Authority, leadership, full mastery"
+      },
+      "spreads": {
+        "title": "Spread Patterns",
+        "desc": "Common layouts and when to use each one",
+        "content": "## Popular Spreads\n\n### Single Card\nQuick daily guidance. Ask one question, draw one card.\n\n### Three Card Spread\nThe most versatile spread: **Past — Present — Future** or **Situation — Challenge — Advice**.\n\n### Celtic Cross (10 cards)\nThe classic comprehensive reading covering all aspects of a situation.\n\n### Relationship Spread\nDesigned for love and partnership questions, examining both people's perspectives.\n\n## Choosing a Spread\n- **Simple questions** → 1-3 cards\n- **Complex situations** → 5+ cards\n- **Life overview** → Celtic Cross\n- **Yes/No questions** → Single card with upright/reversed"
+      },
+      "reversals": {
+        "title": "Reversed Cards",
+        "desc": "How to read cards that appear upside-down",
+        "content": "## What Reversals Mean\n\nWhen a card appears upside-down, its energy is modified:\n\n### Common Interpretations\n- **Blocked energy** — The card's positive qualities are being suppressed\n- **Internal focus** — The energy is directed inward rather than outward\n- **Delay** — The card's influence is coming, but not yet fully manifested\n- **Excess or deficiency** — Too much or too little of the card's qualities\n\n### Tips for Reading Reversals\n1. Consider the upright meaning first\n2. Think about what would happen if that energy were blocked or turned inward\n3. Look at surrounding cards for context\n4. Trust your intuition — sometimes a reversal simply softens the card's message"
+      },
+      "intuition": {
+        "title": "Developing Intuition",
+        "desc": "Tips for deepening your connection with the cards",
+        "content": "## Building Your Intuitive Practice\n\n### Daily Practice\nDraw a single card each morning. Before looking up its meaning, notice:\n- What catches your eye first?\n- What emotions does the image evoke?\n- What story does the card tell you?\n\n### Journaling\nKeep a tarot journal to track patterns and deepen understanding. Note the cards drawn, your interpretations, and what actually happened.\n\n### Trust Yourself\nTextbook meanings are guidelines, not rules. Your personal connection to a card is always valid.\n\n### Meditation\nSpend time with individual cards. Place one where you can see it and let its symbolism speak to you throughout the day."
+      }
+    },
+    "symbol": {
+      "elements": {
+        "title": "Elements",
+        "intro": "The four classical elements form the foundation of tarot symbolism, each corresponding to a suit.",
+        "fire": {
+          "name": "Fire",
+          "meaning": "Passion, willpower, transformation, creativity. Fire drives action and ambition.",
+          "cards": "Wands suit, The Tower, Strength"
+        },
+        "water": {
+          "name": "Water",
+          "meaning": "Emotions, intuition, the unconscious, healing. Water flows and adapts.",
+          "cards": "Cups suit, The Moon, The Star"
+        },
+        "air": {
+          "name": "Air",
+          "meaning": "Intellect, communication, truth, conflict. Air cuts through illusion.",
+          "cards": "Swords suit, Justice, The Fool"
+        },
+        "earth": {
+          "name": "Earth",
+          "meaning": "Material world, stability, growth, abundance. Earth grounds and nourishes.",
+          "cards": "Pentacles suit, The Empress, The World"
+        }
+      },
+      "celestial": {
+        "title": "Celestial Bodies",
+        "intro": "Sun, moon, and stars appear throughout tarot, connecting the cards to cosmic rhythms.",
+        "sun": {
+          "name": "The Sun",
+          "meaning": "Consciousness, joy, success, clarity. Represents the conscious mind and vitality.",
+          "cards": "The Sun (XIX), Ace of Wands"
+        },
+        "moon": {
+          "name": "The Moon",
+          "meaning": "Unconscious, dreams, illusion, mystery. The moon reveals hidden truths.",
+          "cards": "The Moon (XVIII), High Priestess"
+        },
+        "star": {
+          "name": "Stars",
+          "meaning": "Hope, guidance, divine inspiration. Stars light the way in darkness.",
+          "cards": "The Star (XVII), The Hermit"
+        },
+        "tower": {
+          "name": "Lightning",
+          "meaning": "Sudden revelation, divine intervention, breaking down false structures.",
+          "cards": "The Tower (XVI), Ace of Swords"
+        }
+      },
+      "figures": {
+        "title": "Archetypal Figures",
+        "intro": "Key figures in the Major Arcana represent universal human experiences.",
+        "fool": {
+          "name": "The Fool",
+          "meaning": "Innocence, potential, the beginning of all journeys. Represents pure possibility.",
+          "cards": "The Fool (0)"
+        },
+        "magician": {
+          "name": "The Magician",
+          "meaning": "Mastery of the elements, willpower, manifestation. 'As above, so below.'",
+          "cards": "The Magician (I)"
+        },
+        "priestess": {
+          "name": "The Priestess",
+          "meaning": "Hidden knowledge, intuition, the veil between worlds. Keeper of mysteries.",
+          "cards": "High Priestess (II)"
+        },
+        "empress": {
+          "name": "The Empress",
+          "meaning": "Fertility, abundance, nurturing. The divine feminine principle of creation.",
+          "cards": "The Empress (III)"
+        }
+      },
+      "animals": {
+        "title": "Animals",
+        "intro": "Animals in tarot carry deep symbolic meaning, representing instincts and qualities.",
+        "lion": {
+          "name": "Lion",
+          "meaning": "Courage, strength, nobility. Tamed by gentleness, not force.",
+          "cards": "Strength (VIII), King of Wands"
+        },
+        "eagle": {
+          "name": "Eagle",
+          "meaning": "Vision, spiritual ascension, power. Sees from the highest perspective.",
+          "cards": "The World (XXI), Knight of Swords"
+        },
+        "bull": {
+          "name": "Bull",
+          "meaning": "Determination, earthly power, fertility. Steady and unstoppable.",
+          "cards": "The World (XXI), King of Pentacles"
+        },
+        "sphinx": {
+          "name": "Sphinx",
+          "meaning": "Mystery, riddles, the guardian of sacred knowledge. Tests the worthy.",
+          "cards": "Wheel of Fortune (X), The Chariot (VII)"
+        }
+      },
+      "objects": {
+        "title": "Sacred Objects",
+        "intro": "The four suit symbols represent the tools of spiritual practice.",
+        "sword": {
+          "name": "Sword",
+          "meaning": "Truth, justice, mental clarity. Double-edged — can heal or harm.",
+          "cards": "All Swords cards, Justice (XI)"
+        },
+        "cup": {
+          "name": "Cup / Chalice",
+          "meaning": "Emotional fulfillment, love, spiritual nourishment. The Holy Grail.",
+          "cards": "All Cups cards, The Star (XVII)"
+        },
+        "wand": {
+          "name": "Wand / Staff",
+          "meaning": "Creative power, will, spiritual authority. Channel of divine energy.",
+          "cards": "All Wands cards, The Magician (I)"
+        },
+        "pentacle": {
+          "name": "Pentacle / Coin",
+          "meaning": "Material manifestation, earthly wisdom, sacred geometry. Spirit in matter.",
+          "cards": "All Pentacles cards, The World (XXI)"
+        }
+      },
+      "colors": {
+        "title": "Colors",
+        "intro": "Colors in tarot imagery carry symbolic weight and emotional resonance.",
+        "red": {
+          "name": "Red",
+          "meaning": "Passion, desire, vitality, action. The color of blood and fire.",
+          "cards": "The Emperor, Knight of Wands"
+        },
+        "blue": {
+          "name": "Blue",
+          "meaning": "Intuition, peace, spiritual depth, truth. The color of water and sky.",
+          "cards": "High Priestess, Queen of Cups"
+        },
+        "gold": {
+          "name": "Gold / Yellow",
+          "meaning": "Consciousness, success, divine light, solar energy. Illumination.",
+          "cards": "The Sun, Ace of Pentacles"
+        },
+        "white": {
+          "name": "White",
+          "meaning": "Purity, spiritual clarity, new beginnings, innocence. The blank slate.",
+          "cards": "The Fool, The Star"
+        }
+      }
+    }
+  }
+}

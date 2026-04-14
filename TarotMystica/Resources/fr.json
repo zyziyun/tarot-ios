@@ -1,0 +1,1581 @@
+{
+  "meta": {
+    "title": "Tarot Mystica",
+    "description": "Explorez les mystères du destin."
+  },
+  "common": {
+    "back": "Retour",
+    "share": "Partager",
+    "save": "Enregistrer",
+    "tapToContinue": "Appuyez pour continuer"
+  },
+  "hero": {
+    "title": "Tarot Mystica",
+    "subtitle": "Écoutez votre cœur, explorez les murmures du destin",
+    "tagline": "Tarot Mystica",
+    "startButton": "Commencer la lecture",
+    "aiReady": "IA prête",
+    "retryLoad": "Réessayer",
+    "collapseSettings": "Masquer les paramètres",
+    "aiSettings": "Paramètres IA",
+    "localModel": "Modèle local",
+    "externalAPI": "API externe",
+    "provider": "Fournisseur",
+    "model": "Modèle",
+    "apiKeyHint": "Entrez votre clé API pour activer l'interprétation IA",
+    "baseUrl": "URL de base",
+    "customProvider": "Personnalisé (compatible OpenAI)",
+    "localModelDesc": "Fonctionne entièrement sur votre appareil. Aucune clé API nécessaire, privé et sécurisé.",
+    "externalAPIDesc": "Utilise des services IA cloud (OpenAI, etc.). Plus rapide et performant, nécessite une clé API.",
+    "chooseMode": "Choisir le mode IA",
+    "chooseModeDesc": "Comment souhaitez-vous alimenter vos lectures en IA ?",
+    "confirmMode": "Confirmer et continuer",
+    "skipAI": "Passer l'IA (lecture manuelle uniquement)",
+    "switchModelConfirm": "Changer de modèle supprimera le cache actuel (~{size}) et téléchargera le nouveau. Continuer ?",
+    "cancel": "Annuler",
+    "localDownloadConfirm": "Cela va télécharger {model} ({size}) dans votre navigateur. Le téléchargement peut prendre quelques minutes.",
+    "confirmDownload": "Télécharger et démarrer",
+    "advancedLabel": "Avancé",
+    "modelDescGemma2B": "Anglais uniquement",
+    "modelDescQwen1_5B": "Recommandé · Meilleur multilingue",
+    "modelDescQwen3B": "Qualité et vitesse équilibrées",
+    "modelDescPhi": "Bonne capacité de raisonnement",
+    "modelDescLlama": "Meilleure qualité, nécessite plus de RAM",
+    "setupAI": "Configurer l'IA",
+    "setupHint": "Choisissez un modèle local ou connectez une API pour commencer"
+  },
+  "question": {
+    "title": "Que souhaitez-vous demander ?",
+    "subtitle": "Concentrez-vous sur ce qui compte le plus",
+    "continue": "Continuer",
+    "skip": "Passer, tirer directement",
+    "defaultQuestion": "Donnez-moi des conseils",
+    "defaultDailyQuestion": "Donnez-moi les conseils du jour",
+    "placeholder1": "Où va ma relation amoureuse ?",
+    "placeholder2": "Est-ce le bon moment pour changer d'emploi ?",
+    "placeholder3": "Comment faire face à mes difficultés actuelles ?",
+    "placeholder4": "À quoi dois-je faire attention récemment ?",
+    "topicCareer": "Comment va évoluer ma carrière ?",
+    "topicLove": "Où va ma vie amoureuse ?",
+    "topicWealth": "Quelles sont mes perspectives financières ?",
+    "topicHealth": "Comment améliorer mon bien-être ?",
+    "topicGrowth": "De quoi ai-je besoin pour grandir ?",
+    "tagCareer": "Carrière",
+    "tagLove": "Amour",
+    "tagWealth": "Finance",
+    "tagHealth": "Santé",
+    "tagGrowth": "Croissance"
+  },
+  "spreadSelector": {
+    "title": "Choisir un tirage",
+    "subtitleDefault": "Choisissez le style de lecture qui vous convient",
+    "aiAnalyzing": "L'IA analyse votre question...",
+    "aiAnalyzingHint": "Recherche du meilleur tirage pour vous",
+    "aiRecommend": "L'IA recommande : {name} — {reason}",
+    "aiCustomRecommend": "Recommandation personnalisée IA",
+    "aiRecommendBadge": "Choix IA",
+    "useThis": "Utiliser ce tirage",
+    "classicDivider": "ou choisissez un tirage classique",
+    "cardCount": "{count} cartes"
+  },
+  "deck": {
+    "focusInstruction": "Concentrez votre esprit sur votre question",
+    "shuffle": "Mélanger",
+    "drawInstruction": "Touchez le paquet pour tirer la carte {n} —",
+    "reversed": "Inversée",
+    "viewReading": "Voir la lecture",
+    "tapToDraw": "Appuyez pour tirer",
+    "allDrawn": "Les cartes du destin ont été révélées",
+    "cardsDrawn": "{count} cartes tirées",
+    "allDrawnHint": "Touchez une carte pour agrandir",
+    "viewAIReading": "✦ Voir la lecture IA"
+  },
+  "result": {
+    "title": "Interprétation",
+    "reversed": "Inversée",
+    "positionMeaning": "Signification de la position",
+    "interpretation": "Interprétation de la carte",
+    "upright": "Endroit",
+    "reversedLabel": "Inversée",
+    "love": "Amour",
+    "career": "Carrière",
+    "keywords": "Mots-clés",
+    "aiDeepReading": "Lecture approfondie IA",
+    "thinking": "Réflexion...",
+    "aiModelLoading": "Téléchargement du modèle IA, l'interprétation démarrera automatiquement...",
+    "generating": "Génération de l'interprétation...",
+    "aiNotConfigured": "L'IA n'est pas configurée. Vous pouvez la configurer sur la page d'accueil.",
+    "aiLoadingHint": "Vous pouvez lire les significations des cartes ci-dessus en attendant",
+    "retry": "Réessayer",
+    "footerLine1": "Les cartes de tarot sont un miroir, reflétant la sagesse au plus profond de votre cœur.",
+    "footerLine2": "Les conseils des cartes ne sont pas un décret du destin, mais une lanterne éclairant le chemin.",
+    "restart": "Recommencer",
+    "shareReading": "Partager la lecture",
+    "aiReadingTab": "Lecture IA",
+    "cardsTab": "Cartes ({count})",
+    "resetConfirmTitle": "Recommencer ?",
+    "resetConfirmMessage": "Votre lecture actuelle sera perdue. Êtes-vous sûr ?",
+    "resetConfirm": "Confirmer"
+  },
+  "loading": {
+    "preparing": "Préparation..."
+  },
+  "ai": {
+    "notReady": "Le moteur IA n'est pas prêt, veuillez attendre le chargement du modèle",
+    "interpretError": "Échec de l'interprétation IA : {message}",
+    "browserNotSupported": "Votre navigateur ne supporte pas WebGPU. Veuillez utiliser la dernière version de Chrome.",
+    "cacheCleared": "Cache vidé, re-téléchargement...",
+    "loadFailed": "Échec du chargement du modèle, veuillez rafraîchir et réessayer",
+    "loadFailedShort": "Échec du chargement du modèle",
+    "configureApiKey": "Veuillez configurer votre clé API",
+    "cannotReadStream": "Impossible de lire le flux de réponse",
+    "apiError": "Erreur API ({status}) : {error}",
+    "systemPrompt": "Vous êtes un tarologue doué, canalisant une sagesse intuitive profonde pour un tirage「{spreadName}」.\n\nRÈGLE FONDAMENTALE : Chaque phrase doit se rattacher à la question spécifique du consultant. Ne donnez jamais de significations génériques.\n\nSTRUCTURE (Markdown) :\n\n### L'Énergie de ce Tirage\nOuvrez avec la signature énergétique globale : suites dominantes, équilibre Arcanes Majeurs/Mineurs, nombres ou thèmes récurrents. 2-3 phrases pour donner le ton.\n\n### Carte par Carte\nPour chaque carte : **Nom** *(Position : nom de la position)*\nInterprétez ce que cette carte révèle sur la question du consultant DANS CETTE POSITION SPÉCIFIQUE. Si inversée, explorez l'énergie bloquée ou l'ombre qu'elle représente.\n\n### Le Dialogue entre les Cartes\nIdentifiez les connexions les plus importantes entre 2-3 cartes. Comment s'amplifient-elles, se défient-elles ou se transforment-elles mutuellement ?\n\n### La Voie à Suivre\nSynthétisez en un conseil clair et habilitant. Terminez par une question de réflexion.\n\nVOIX : Parlez directement au consultant (\"Vous...\"). Autorité chaleureuse. Poétique mais ancré. Même les cartes difficiles portent un potentiel transformateur. Ne pas hésiter — engagez-vous dans l'interprétation.\n\nLONGUEUR : 400-800 mots. Répondez en français.",
+    "userPrompt": "Le consultant demande :「{question}」\n\nCartes tirées :\n{cardDescriptions}\n\nCanalisez votre intuition la plus profonde. Lisez ces cartes comme une histoire vivante qui répond à「{question}」— pas comme des significations isolées, mais comme une conversation entre les cartes.",
+    "cardDescUpright": "【{position}】{name} (Endroit) : {meaning}",
+    "cardDescReversed": "【{position}】{name} (Inversée) : {meaning}",
+    "recommendSystemIntro": "Vous êtes un lecteur de tarot expérimenté. Recommandez le tirage le plus adapté à la question du consultant.",
+    "recommendChoice": "Vous avez deux options :\n1. Choisir parmi les tirages existants\n2. Concevoir un tirage personnalisé (si aucun ne convient bien)",
+    "recommendExistingSpreads": "Tirages existants :\n{spreadList}",
+    "recommendFormat": "Répondez strictement en JSON :\nExistant : '{\"isCustom\":false,\"existingKey\":\"clé\",\"reason\":\"raison (moins de 15 mots)\"}'\nPersonnalisé (3-8 cartes) : '{\"isCustom\":true,\"customSpread\":{\"name\":\"Nom\",\"nameEn\":\"English Name\",\"description\":\"Description brève\",\"icon\":\"emoji\",\"positions\":[{\"label\":\"Position\",\"description\":\"Signification\"}]},\"reason\":\"raison\"}'",
+    "recommendUserPrompt": "La question du consultant est :「{question}」\n\nRecommandez le tirage le plus adapté. JSON uniquement.",
+    "style": {
+      "concise": "STYLE : Soyez concis et direct. Donnez des aperçus brefs et exploitables — pas de langage fleuri, pas de longs préambules. Concentrez-vous sur le message clé de chaque carte. Limitez la lecture à 300 mots.",
+      "standard": "",
+      "poetic": "STYLE : Canalisez une voix mystique et poétique. Utilisez des images riches, des métaphores et un langage évocateur. Laissez la lecture couler comme une histoire racontée à la lueur des bougies.",
+      "analytical": "STYLE : Soyez systématique et approfondi. Structurez la lecture clairement avec des sections distinctes pour chaque carte. Fournissez une analyse détaillée des interactions entre les cartes."
+    },
+    "followUpInstruction": "Le consultant souhaite poser des questions de suivi sur la lecture que vous venez de donner. Continuez en tant que même lecteur de tarot. Restez dans le personnage, référencez les cartes spécifiques. Soyez concis — 2-3 paragraphes maximum.",
+    "localSystemPrompt": "Vous êtes un lecteur de tarot professionnel. Interprétez les cartes ci-dessous pour la question du consultant.\n\nRègles :\n- Les significations des cartes sont fournies ci-dessous — utilisez-les directement, N'INVENTEZ PAS de noms ou significations\n- Chaque interprétation doit se rapporter à la question spécifique du consultant\n- Parlez directement au consultant d'un ton chaleureux et sage\n\nFormat de sortie (Markdown) :\n\n### Énergie Globale\n(2-3 phrases résumant le message combiné de ces cartes)\n\n### Interprétation des Cartes\n(Pour chaque carte : **Nom de la Carte** — ce qu'elle révèle sur la question à cette position. Utilisez les significations fournies.)\n\n### Guidance\n(Synthétisez toutes les cartes en conseils clairs et concrets. Terminez par une question de réflexion.)\n\nLongueur : 200-400 mots. Soyez concis et significatif. Ne mentionnez PAS de cartes non tirées.",
+    "localUserPrompt": "Tirage : {spreadName}\nQuestion : « {question} »\n\n{cardDescriptions}\n\nInterprétez ces cartes pour le consultant. Utilisez UNIQUEMENT les informations fournies ci-dessus.",
+    "localCardDesc": "Carte {index} : {name} en position « {position} » (Endroit)\n  Signification : {meaning}\n  Description : {description}\n  Mots-clés : {keywords}",
+    "localCardDescReversed": "Carte {index} : {name} en position « {position} » (RENVERSÉE)\n  Signification : {meaning}\n  Description : {description}\n  Mots-clés : {keywords}"
+  },
+  "spreads": {
+    "single": {
+      "name": "Carte Unique",
+      "description": "Tirez une carte pour une guidance instantanée",
+      "whenToUse": "Guidance rapide ou questions oui/non",
+      "pos0": {
+        "label": "Guidance",
+        "description": "Ce que l'univers veut vous dire"
+      }
+    },
+    "threeCard": {
+      "name": "Passé · Présent · Futur",
+      "description": "Éclairages du passé, présent et futur",
+      "whenToUse": "Comprendre l'évolution temporelle",
+      "pos0": {
+        "label": "Passé",
+        "description": "Facteurs passés influençant la situation actuelle"
+      },
+      "pos1": {
+        "label": "Présent",
+        "description": "Vos circonstances actuelles"
+      },
+      "pos2": {
+        "label": "Futur",
+        "description": "Tendances à venir"
+      }
+    },
+    "mindBodySpirit": {
+      "name": "Corps · Âme · Esprit",
+      "description": "Examinez votre état sur trois dimensions",
+      "whenToUse": "Soin de soi et équilibre intérieur",
+      "pos0": {
+        "label": "Mental",
+        "description": "État mental actuel et schémas de pensée"
+      },
+      "pos1": {
+        "label": "Corps",
+        "description": "État physique et vie matérielle"
+      },
+      "pos2": {
+        "label": "Esprit",
+        "description": "Croissance spirituelle et guidance"
+      }
+    },
+    "fiveCard": {
+      "name": "Croix à Cinq Cartes",
+      "description": "Croix classique — simple mais profonde",
+      "whenToUse": "Guidance claire sur une question précise",
+      "pos0": {
+        "label": "Situation actuelle",
+        "description": "La situation centrale que vous affrontez"
+      },
+      "pos1": {
+        "label": "Défi",
+        "description": "Obstacle principal à surmonter"
+      },
+      "pos2": {
+        "label": "Influence passée",
+        "description": "Facteurs passés façonnant le présent"
+      },
+      "pos3": {
+        "label": "Direction future",
+        "description": "Développements à venir"
+      },
+      "pos4": {
+        "label": "Meilleur conseil",
+        "description": "Meilleure stratégie pour votre situation"
+      }
+    },
+    "relationship": {
+      "name": "Miroir Relationnel",
+      "description": "Vision profonde des dynamiques relationnelles",
+      "whenToUse": "Comprendre les dynamiques amoureuses ou interpersonnelles",
+      "pos0": {
+        "label": "Votre état",
+        "description": "Vos sentiments et votre rôle"
+      },
+      "pos1": {
+        "label": "Son état",
+        "description": "Ses sentiments et son rôle"
+      },
+      "pos2": {
+        "label": "État actuel",
+        "description": "État actuel de la relation"
+      },
+      "pos3": {
+        "label": "Forces",
+        "description": "Forces positives"
+      },
+      "pos4": {
+        "label": "À améliorer",
+        "description": "Domaines nécessitant un effort commun"
+      }
+    },
+    "horseshoe": {
+      "name": "Tirage en Fer à Cheval",
+      "description": "Analyse complète en sept cartes étape par étape",
+      "whenToUse": "Analyse approfondie d'une question précise",
+      "pos0": {
+        "label": "Passé",
+        "description": "Événements et facteurs passés"
+      },
+      "pos1": {
+        "label": "Présent",
+        "description": "Circonstances actuelles"
+      },
+      "pos2": {
+        "label": "Influence cachée",
+        "description": "Facteurs invisibles"
+      },
+      "pos3": {
+        "label": "Conseil",
+        "description": "Meilleure marche à suivre"
+      },
+      "pos4": {
+        "label": "Entourage",
+        "description": "Points de vue et influence de l'entourage"
+      },
+      "pos5": {
+        "label": "Action",
+        "description": "Étapes d'action concrètes"
+      },
+      "pos6": {
+        "label": "Résultat",
+        "description": "Résultat le plus probable"
+      }
+    },
+    "celtic": {
+      "name": "Croix Celtique",
+      "description": "Lecture approfondie et complète en dix cartes",
+      "whenToUse": "Analyse la plus approfondie et détaillée",
+      "pos0": {
+        "label": "Présent",
+        "description": "Votre situation centrale"
+      },
+      "pos1": {
+        "label": "Défi",
+        "description": "Obstacle principal"
+      },
+      "pos2": {
+        "label": "Subconscient",
+        "description": "Vos pensées les plus profondes"
+      },
+      "pos3": {
+        "label": "Passé",
+        "description": "Événements récents influents"
+      },
+      "pos4": {
+        "label": "Objectif",
+        "description": "Ce que vous désirez le plus atteindre"
+      },
+      "pos5": {
+        "label": "Futur",
+        "description": "Influences à venir"
+      },
+      "pos6": {
+        "label": "Soi",
+        "description": "Comment vous vous percevez"
+      },
+      "pos7": {
+        "label": "Environnement",
+        "description": "Influence des autres"
+      },
+      "pos8": {
+        "label": "Espoirs et craintes",
+        "description": "Espoirs et inquiétudes intérieurs"
+      },
+      "pos9": {
+        "label": "Résultat",
+        "description": "Issue finale probable"
+      }
+    },
+    "twoPaths": {
+      "name": "Deux Chemins",
+      "description": "Analysez les avantages et inconvénients de deux choix",
+      "whenToUse": "Décider entre deux options",
+      "pos0": {
+        "label": "Situation actuelle",
+        "description": "Dilemme central"
+      },
+      "pos1": {
+        "label": "Développement Voie A",
+        "description": "Ce que la Voie A apporte"
+      },
+      "pos2": {
+        "label": "Issue Voie A",
+        "description": "Résultat de la Voie A"
+      },
+      "pos3": {
+        "label": "Développement Voie B",
+        "description": "Ce que la Voie B apporte"
+      },
+      "pos4": {
+        "label": "Issue Voie B",
+        "description": "Résultat de la Voie B"
+      }
+    },
+    "hexagram": {
+      "name": "Tirage Hexagramme",
+      "description": "Étoile à six branches pour une analyse multi-angle",
+      "whenToUse": "Analyse multi-perspective d'une question complexe",
+      "pos0": {
+        "label": "Passé",
+        "description": "Facteurs passés"
+      },
+      "pos1": {
+        "label": "Présent",
+        "description": "Circonstances centrales"
+      },
+      "pos2": {
+        "label": "Futur",
+        "description": "Tendance de développement"
+      },
+      "pos3": {
+        "label": "Cause profonde",
+        "description": "Raison sous-jacente profonde"
+      },
+      "pos4": {
+        "label": "Environnement",
+        "description": "Influences extérieures"
+      },
+      "pos5": {
+        "label": "Votre attitude",
+        "description": "Votre approche intérieure"
+      },
+      "pos6": {
+        "label": "Guidance finale",
+        "description": "Conseil d'ensemble"
+      }
+    },
+    "treeOfLife": {
+      "name": "Arbre de Vie",
+      "description": "Arbre de Vie kabbalistique — de l'esprit à la réalité",
+      "whenToUse": "Exploration spirituelle profonde",
+      "pos0": {
+        "label": "Idéal suprême",
+        "description": "But et sens les plus élevés"
+      },
+      "pos1": {
+        "label": "Créativité",
+        "description": "Forces pionnières"
+      },
+      "pos2": {
+        "label": "Compréhension",
+        "description": "Rôle de la sagesse dans la réalité"
+      },
+      "pos3": {
+        "label": "Miséricorde",
+        "description": "Facteurs positifs et aide"
+      },
+      "pos4": {
+        "label": "Force",
+        "description": "Défis et discorde"
+      },
+      "pos5": {
+        "label": "Harmonie",
+        "description": "Soi profond et équilibre"
+      },
+      "pos6": {
+        "label": "Désir",
+        "description": "Attractions et aspirations"
+      },
+      "pos7": {
+        "label": "Intellect",
+        "description": "Communication et apprentissage"
+      },
+      "pos8": {
+        "label": "Fondation",
+        "description": "Subconscient et intuition"
+      },
+      "pos9": {
+        "label": "Réalité",
+        "description": "Situation du monde matériel"
+      }
+    },
+    "zodiac": {
+      "name": "Roue du Zodiaque",
+      "description": "Douze maisons astrologiques — tous les domaines de vie",
+      "whenToUse": "Vue d'ensemble complète de la vie",
+      "pos0": {
+        "label": "Soi",
+        "description": "Personnalité et expression"
+      },
+      "pos1": {
+        "label": "Finances",
+        "description": "Fondation matérielle et valeurs"
+      },
+      "pos2": {
+        "label": "Communication",
+        "description": "Apprentissage et interactions quotidiennes"
+      },
+      "pos3": {
+        "label": "Foyer",
+        "description": "Famille et sécurité"
+      },
+      "pos4": {
+        "label": "Créativité",
+        "description": "Romance et expression de soi"
+      },
+      "pos5": {
+        "label": "Santé",
+        "description": "Travail et bien-être"
+      },
+      "pos6": {
+        "label": "Partenariat",
+        "description": "Mariage et partenariats"
+      },
+      "pos7": {
+        "label": "Transformation",
+        "description": "Changement profond et intimité"
+      },
+      "pos8": {
+        "label": "Exploration",
+        "description": "Voyages et philosophie"
+      },
+      "pos9": {
+        "label": "Carrière",
+        "description": "Statut et accomplissement"
+      },
+      "pos10": {
+        "label": "Communauté",
+        "description": "Amitiés et idéaux"
+      },
+      "pos11": {
+        "label": "Âme",
+        "description": "Subconscient et pratique spirituelle"
+      }
+    },
+    "yearAhead": {
+      "name": "Année à Venir",
+      "description": "Guidance mensuelle plus carte d'énergie annuelle",
+      "whenToUse": "Prévisions pour la nouvelle année ou l'anniversaire",
+      "pos0": {
+        "label": "Janvier",
+        "description": "Thème de janvier"
+      },
+      "pos1": {
+        "label": "Février",
+        "description": "Thème de février"
+      },
+      "pos2": {
+        "label": "Mars",
+        "description": "Thème de mars"
+      },
+      "pos3": {
+        "label": "Avril",
+        "description": "Thème d'avril"
+      },
+      "pos4": {
+        "label": "Mai",
+        "description": "Thème de mai"
+      },
+      "pos5": {
+        "label": "Juin",
+        "description": "Thème de juin"
+      },
+      "pos6": {
+        "label": "Juillet",
+        "description": "Thème de juillet"
+      },
+      "pos7": {
+        "label": "Août",
+        "description": "Thème d'août"
+      },
+      "pos8": {
+        "label": "Septembre",
+        "description": "Thème de septembre"
+      },
+      "pos9": {
+        "label": "Octobre",
+        "description": "Thème d'octobre"
+      },
+      "pos10": {
+        "label": "Novembre",
+        "description": "Thème de novembre"
+      },
+      "pos11": {
+        "label": "Décembre",
+        "description": "Thème de décembre"
+      },
+      "pos12": {
+        "label": "Énergie annuelle",
+        "description": "Thème central de l'année"
+      }
+    },
+    "career": {
+      "name": "Chemin de Carrière",
+      "description": "Focus carrière — talents, obstacles, direction",
+      "whenToUse": "Choix ou orientation de carrière",
+      "pos0": {
+        "label": "État actuel",
+        "description": "Énergie professionnelle actuelle"
+      },
+      "pos1": {
+        "label": "Talent principal",
+        "description": "Compétences et dons remarquables"
+      },
+      "pos2": {
+        "label": "Opportunité cachée",
+        "description": "Possibilités encore non découvertes"
+      },
+      "pos3": {
+        "label": "Obstacle principal",
+        "description": "Facteurs freinant le développement"
+      },
+      "pos4": {
+        "label": "Conseil d'action",
+        "description": "Prochaine étape à franchir"
+      },
+      "pos5": {
+        "label": "Perspectives de carrière",
+        "description": "Résultat en suivant la guidance"
+      }
+    },
+    "gypsyCross": {
+      "name": "Croix Gitane",
+      "description": "Croix gitane traditionnelle — aperçu rapide de l'essentiel",
+      "whenToUse": "Vue d'ensemble rapide de la situation",
+      "pos0": {
+        "label": "Passé",
+        "description": "Facteurs passés"
+      },
+      "pos1": {
+        "label": "Futur",
+        "description": "Tendances à venir"
+      },
+      "pos2": {
+        "label": "Meilleure possibilité",
+        "description": "Meilleur résultat possible"
+      },
+      "pos3": {
+        "label": "Influence cachée",
+        "description": "Facteurs subconscients ou cachés"
+      },
+      "pos4": {
+        "label": "Présent",
+        "description": "Cœur et état actuel"
+      }
+    },
+    "loversTree": {
+      "name": "Arbre des Amoureux",
+      "description": "Analyse amoureuse profonde — deux cœurs et une direction",
+      "whenToUse": "Compréhension profonde d'une relation amoureuse",
+      "pos0": {
+        "label": "Votre attitude apparente",
+        "description": "L'attitude que vous montrez à l'extérieur"
+      },
+      "pos1": {
+        "label": "Son attitude apparente",
+        "description": "Son attitude extérieure"
+      },
+      "pos2": {
+        "label": "Votre cœur profond",
+        "description": "Vos vrais sentiments intérieurs"
+      },
+      "pos3": {
+        "label": "Son cœur profond",
+        "description": "Ses vrais sentiments intérieurs"
+      },
+      "pos4": {
+        "label": "État de la relation",
+        "description": "Le vrai visage de la relation"
+      },
+      "pos5": {
+        "label": "Défi relationnel",
+        "description": "Problèmes à affronter ensemble"
+      },
+      "pos6": {
+        "label": "Direction de la relation",
+        "description": "Où se dirige la relation"
+      }
+    },
+    "mirrorOfSelf": {
+      "name": "Miroir de Soi",
+      "description": "Regardez en vous les multiples facettes du soi",
+      "whenToUse": "Connaissance de soi et croissance personnelle",
+      "pos0": {
+        "label": "Image extérieure",
+        "description": "Comment vous vous présentez au monde"
+      },
+      "pos1": {
+        "label": "Soi intérieur",
+        "description": "Votre vrai monde intérieur"
+      },
+      "pos2": {
+        "label": "Face cachée",
+        "description": "Ce que vous n'avez pas encore affronté"
+      },
+      "pos3": {
+        "label": "Force profonde",
+        "description": "Plus grand pouvoir intérieur"
+      },
+      "pos4": {
+        "label": "Direction de croissance",
+        "description": "Où votre âme vous guide"
+      }
+    },
+    "pentagram": {
+      "name": "Tirage Pentagramme",
+      "description": "Cinq éléments pour un équilibre de vie holistique",
+      "whenToUse": "Vérifier l'équilibre dans tous les domaines de vie",
+      "pos0": {
+        "label": "Feu · Esprit",
+        "description": "Passion, élan, créativité"
+      },
+      "pos1": {
+        "label": "Eau · Émotion",
+        "description": "État émotionnel et relations"
+      },
+      "pos2": {
+        "label": "Air · Mental",
+        "description": "État mental et communication"
+      },
+      "pos3": {
+        "label": "Terre · Matière",
+        "description": "Santé, finances, vie matérielle"
+      },
+      "pos4": {
+        "label": "Éther · Esprit",
+        "description": "Croissance spirituelle et dessein"
+      }
+    }
+  },
+  "cards": {
+    "0": {
+      "name": "Le Mat",
+      "upright": "Le Mat représente un voyage tout neuf, un pas dans l'inconnu avec innocence et foi. Possibilités infinies, esprit libre et soif d'aventure.",
+      "reversed": "Agir de manière irréfléchie, indécision. Peut indiquer un manque de préparation ou des opportunités manquées par excès de peur.",
+      "description": "Le Mat représente le début d'un nouveau voyage, plein de possibilités et de foi.",
+      "keywords": "Nouveaux départs, Aventure, Liberté, Innocence, Possibilité, Acte de foi",
+      "love": "Une nouvelle romance passionnante ou une énergie fraîche. Embrassez le voyage inconnu de l'amour avec un cœur ouvert.",
+      "career": "De nouvelles opportunités professionnelles émergent. Les directions professionnelles audacieuses sont favorisées."
+    },
+    "1": {
+      "name": "Le Bateleur",
+      "upright": "Le Bateleur symbolise la transformation des idées en réalité. Vous possédez toutes les ressources et compétences pour réussir. Créativité, concentration et confiance.",
+      "reversed": "Talents gaspillés ou mal utilisés, tromperie, manque de direction.",
+      "description": "Le Bateleur symbolise le pouvoir de transformer l'intention en réalité.",
+      "keywords": "Créativité, Volonté, Confiance, Compétence, Manifestation, Ressources",
+      "love": "Vous pouvez créer votre relation idéale. Montrer votre vrai moi mène à une connexion profonde.",
+      "career": "Vous avez tout ce qu'il faut pour réussir. Transformez vos idées en actions."
+    },
+    "2": {
+      "name": "La Papesse",
+      "upright": "Une intuition profonde et la sagesse du subconscient vous guident pour écouter votre voix intérieure. Mystère, connaissance intérieure, éveil spirituel.",
+      "reversed": "Ignorer les avertissements intuitifs, secrets gardés, approche superficielle.",
+      "description": "La Papesse vous guide pour écouter en vous, faisant confiance à l'intuition et à la sagesse intérieure.",
+      "keywords": "Intuition, Subconscient, Mystère, Sagesse intérieure, Spiritualité, Silence",
+      "love": "Faites confiance à vos sentiments intuitifs. Des vérités émotionnelles cachées peuvent se trouver sous la surface.",
+      "career": "Fiez-vous à l'intuition et à la perspicacité. Soyez attentif aux informations pas encore visibles."
+    },
+    "3": {
+      "name": "L'Impératrice",
+      "upright": "L'Impératrice incarne l'abondance, la fertilité et l'énergie nourricière. Créativité florissante, beauté et connexion profonde avec la nature.",
+      "reversed": "Dépendance affective, créativité bloquée, négligence de soi ou surprotection.",
+      "description": "L'Impératrice représente l'abondance, la fertilité et le pouvoir nourrissant de la nature.",
+      "keywords": "Abondance, Fertilité, Nature, Soin, Beauté, Créativité",
+      "love": "Une période d'amour nourrissant et d'épanouissement. La relation s'approfondit avec tendresse.",
+      "career": "Projets créatifs en plein essor. La collaboration et la patience portent leurs fruits."
+    },
+    "4": {
+      "name": "L'Empereur",
+      "upright": "L'Empereur représente la structure, l'autorité et la stabilité. Leadership solide, discipline et capacité à bâtir des fondations durables.",
+      "reversed": "Rigidité excessive, autoritarisme, manque de flexibilité ou perte de contrôle.",
+      "description": "L'Empereur symbolise la structure, l'autorité et la maîtrise du monde matériel.",
+      "keywords": "Autorité, Structure, Stabilité, Leadership, Discipline, Fondation",
+      "love": "Relation stable et sécurisante. Besoin d'équilibrer protection et liberté au sein du couple.",
+      "career": "Position de leadership et d'autorité. Organisez et structurez vos projets pour réussir."
+    },
+    "5": {
+      "name": "Le Pape",
+      "upright": "Le Pape représente la tradition, l'enseignement spirituel et la guidance. Sagesse transmise, conformité et recherche de sens profond.",
+      "reversed": "Dogmatisme, rébellion contre les conventions, besoin de trouver sa propre voie spirituelle.",
+      "description": "Le Pape incarne la sagesse traditionnelle, l'enseignement et la guidance spirituelle.",
+      "keywords": "Tradition, Enseignement, Sagesse, Conformité, Spiritualité, Guidance",
+      "love": "Relation basée sur des valeurs partagées et un engagement profond. Conseils relationnels bienvenus.",
+      "career": "Mentorat et apprentissage. Suivez les voies établies ou cherchez un guide expérimenté."
+    },
+    "6": {
+      "name": "Les Amoureux",
+      "upright": "Les Amoureux symbolisent l'amour, l'harmonie et les choix importants. Union des opposés, alignement des valeurs et décisions du cœur.",
+      "reversed": "Déséquilibre dans la relation, choix difficile, conflit de valeurs ou tentation.",
+      "description": "Les Amoureux représentent l'amour, l'harmonie et les choix cruciaux de la vie.",
+      "keywords": "Amour, Choix, Harmonie, Union, Valeurs, Partenariat",
+      "love": "Amour profond et connexion authentique. Un choix important en matière de relation se présente.",
+      "career": "Choix de carrière aligné avec vos valeurs. Les partenariats professionnels sont favorisés."
+    },
+    "7": {
+      "name": "Le Chariot",
+      "upright": "Le Chariot représente la détermination, la victoire et l'avancée par la volonté. Maîtrise des forces opposées et progrès rapide.",
+      "reversed": "Manque de direction, agressivité, obstacles sur le chemin ou perte de contrôle.",
+      "description": "Le Chariot symbolise la victoire par la détermination et la maîtrise de soi.",
+      "keywords": "Détermination, Victoire, Volonté, Progrès, Maîtrise, Avancée",
+      "love": "Avancez avec confiance dans votre relation. La détermination mène à la victoire en amour.",
+      "career": "Succès professionnel par la persévérance. Foncez avec détermination vers vos objectifs."
+    },
+    "8": {
+      "name": "La Force",
+      "upright": "La Force représente le courage intérieur, la compassion et la maîtrise douce. Patience, persuasion et force tranquille qui surmonte tous les obstacles.",
+      "reversed": "Doute de soi, manque de confiance, recours à la force brute plutôt qu'à la douceur.",
+      "description": "La Force symbolise le courage intérieur et la maîtrise par la douceur et la compassion.",
+      "keywords": "Courage, Compassion, Force intérieure, Patience, Maîtrise, Résilience",
+      "love": "L'amour demande patience et douceur. Votre force intérieure renforce le lien amoureux.",
+      "career": "Persévérance et diplomatie mènent au succès. Gérez les défis avec grâce et détermination."
+    },
+    "9": {
+      "name": "L'Hermite",
+      "upright": "L'Hermite représente l'introspection, la solitude choisie et la recherche de la vérité intérieure. Sagesse acquise par la méditation et le retrait.",
+      "reversed": "Isolement excessif, refus de guidance, solitude subie ou repli sur soi.",
+      "description": "L'Hermite symbolise la quête intérieure de sagesse et la guidance par l'introspection.",
+      "keywords": "Introspection, Solitude, Sagesse, Recherche, Méditation, Guidance intérieure",
+      "love": "Temps de réflexion sur vos besoins amoureux. La solitude peut clarifier vos désirs profonds.",
+      "career": "Période de réflexion professionnelle. Prenez du recul pour trouver votre véritable vocation."
+    },
+    "10": {
+      "name": "La Roue de Fortune",
+      "upright": "La Roue de Fortune annonce des cycles de changement, le destin en mouvement et des tournants décisifs. Chance, karma et flux naturel de la vie.",
+      "reversed": "Résistance au changement, malchance temporaire, impression d'être bloqué dans un cycle.",
+      "description": "La Roue de Fortune représente les cycles du destin et les tournants de la vie.",
+      "keywords": "Destin, Cycles, Changement, Chance, Karma, Tournant",
+      "love": "Un tournant dans votre vie amoureuse. Le destin joue un rôle dans votre relation.",
+      "career": "Changement de fortune professionnel. Saisissez les opportunités que le destin vous offre."
+    },
+    "11": {
+      "name": "La Justice",
+      "upright": "La Justice représente l'équité, la vérité et la responsabilité. Décisions justes, conséquences karmiques et recherche d'équilibre.",
+      "reversed": "Injustice, malhonnêteté, refus d'assumer ses responsabilités ou déséquilibre.",
+      "description": "La Justice symbolise l'équité, la vérité et l'équilibre dans les décisions.",
+      "keywords": "Justice, Équité, Vérité, Équilibre, Responsabilité, Karma",
+      "love": "Équilibre et honnêteté dans la relation. Les décisions justes renforcent le lien.",
+      "career": "Décisions professionnelles équitables. La justice et l'éthique guident votre parcours."
+    },
+    "12": {
+      "name": "Le Pendu",
+      "upright": "Le Pendu invite à un changement de perspective, au lâcher-prise et au sacrifice volontaire. Suspension, illumination par la patience et vision nouvelle.",
+      "reversed": "Résistance au sacrifice nécessaire, stagnation, retarder l'inévitable.",
+      "description": "Le Pendu symbolise le lâcher-prise et l'illumination par un changement de perspective.",
+      "keywords": "Lâcher-prise, Sacrifice, Perspective, Patience, Suspension, Illumination",
+      "love": "Voyez votre relation sous un nouvel angle. Le lâcher-prise ouvre de nouvelles possibilités.",
+      "career": "Pause nécessaire pour voir les choses différemment. Le sacrifice temporaire mène à la croissance."
+    },
+    "13": {
+      "name": "La Mort (XIII)",
+      "upright": "La Mort symbolise la fin d'un cycle, la transformation profonde et le renouveau. Libération du passé pour renaître et embrasser le changement.",
+      "reversed": "Résistance au changement nécessaire, peur de la transformation, stagnation.",
+      "description": "La Mort représente la transformation profonde, la fin d'un cycle et le renouveau.",
+      "keywords": "Transformation, Fin, Renouveau, Libération, Transition, Renaissance",
+      "love": "Transformation profonde de la relation. Une fin ouvre la voie à un nouveau départ.",
+      "career": "Fin d'un chapitre professionnel. Embrassez le changement pour une renaissance de carrière."
+    },
+    "14": {
+      "name": "Tempérance",
+      "upright": "Tempérance représente l'équilibre, la modération et l'harmonie. Patience, guérison et intégration harmonieuse des opposés.",
+      "reversed": "Excès, déséquilibre, impatience ou manque de modération dans les actions.",
+      "description": "Tempérance symbolise l'équilibre, la modération et l'harmonie intérieure.",
+      "keywords": "Équilibre, Modération, Harmonie, Patience, Guérison, Intégration",
+      "love": "Harmonie et équilibre dans la relation. La patience et la modération renforcent l'amour.",
+      "career": "Approche équilibrée au travail. La patience et la diplomatie mènent au succès durable."
+    },
+    "15": {
+      "name": "Le Diable",
+      "upright": "Le Diable représente les chaînes du matérialisme, les tentations et les attachements malsains. Ombre intérieure, dépendance et illusions.",
+      "reversed": "Libération des chaînes, prise de conscience des schémas destructeurs, reconquête du pouvoir.",
+      "description": "Le Diable symbolise les attachements, les tentations et la confrontation avec l'ombre.",
+      "keywords": "Tentation, Attachement, Ombre, Dépendance, Matérialisme, Illusion",
+      "love": "Attention aux schémas toxiques ou aux dépendances dans la relation. Libérez-vous des liens malsains.",
+      "career": "Piégé par des ambitions matérialistes. Examinez ce qui vous enchaîne professionnellement."
+    },
+    "16": {
+      "name": "La Maison Dieu",
+      "upright": "La Maison Dieu représente un bouleversement soudain, la destruction des fausses structures et la révélation. Éveil brutal mais libérateur.",
+      "reversed": "Résistance au changement inévitable, peur de l'effondrement, prolonger une situation instable.",
+      "description": "La Maison Dieu symbolise le bouleversement soudain et la destruction des illusions.",
+      "keywords": "Bouleversement, Révélation, Destruction, Éveil, Libération, Changement soudain",
+      "love": "Révélation soudaine dans la relation. Un choc peut mener à une transformation nécessaire.",
+      "career": "Bouleversement professionnel inattendu. La destruction des anciennes structures ouvre de nouvelles voies."
+    },
+    "17": {
+      "name": "L'Étoile",
+      "upright": "L'Étoile apporte espoir, inspiration et sérénité. Guérison spirituelle, foi renouvelée et connexion avec le divin.",
+      "reversed": "Perte d'espoir, découragement, déconnexion de sa guidance intérieure.",
+      "description": "L'Étoile symbolise l'espoir, l'inspiration et la guidance spirituelle.",
+      "keywords": "Espoir, Inspiration, Sérénité, Guérison, Foi, Étoile guide",
+      "love": "Espoir renouvelé en amour. Une connexion spirituelle profonde illumine votre relation.",
+      "career": "Inspiration et vision claire pour l'avenir professionnel. Suivez votre étoile."
+    },
+    "18": {
+      "name": "La Lune",
+      "upright": "La Lune révèle les illusions, les peurs inconscientes et le monde des rêves. Intuition profonde, mystères cachés et navigation dans l'obscurité.",
+      "reversed": "Dissipation de la confusion, confrontation des peurs, retour de la clarté.",
+      "description": "La Lune représente les illusions, l'intuition profonde et les mystères de l'inconscient.",
+      "keywords": "Illusion, Intuition, Peurs, Rêves, Inconscient, Mystère",
+      "love": "Méfiez-vous des illusions en amour. Écoutez votre intuition face aux incertitudes relationnelles.",
+      "career": "Situation professionnelle floue. Faites confiance à votre instinct et attendez la clarté."
+    },
+    "19": {
+      "name": "Le Soleil",
+      "upright": "Le Soleil rayonne de joie, de succès et de vitalité. Bonheur, clarté, réussite et énergie positive abondante.",
+      "reversed": "Joie temporairement obscurcie, excès d'optimisme ou succès retardé.",
+      "description": "Le Soleil symbolise la joie, le succès et la vitalité rayonnante.",
+      "keywords": "Joie, Succès, Vitalité, Bonheur, Clarté, Énergie positive",
+      "love": "Bonheur et joie rayonnante dans la relation. L'amour brille de toute sa splendeur.",
+      "career": "Succès éclatant et reconnaissance professionnelle. Votre énergie positive attire la réussite."
+    },
+    "20": {
+      "name": "Le Jugement",
+      "upright": "Le Jugement annonce le renouveau, l'appel intérieur et le bilan de vie. Renaissance spirituelle, absolution et éveil à sa vraie vocation.",
+      "reversed": "Refus d'écouter l'appel intérieur, regrets non résolus, jugement sévère envers soi.",
+      "description": "Le Jugement symbolise le renouveau, l'éveil spirituel et l'appel à une vie nouvelle.",
+      "keywords": "Renouveau, Appel, Jugement, Renaissance, Absolution, Éveil",
+      "love": "Renouveau dans la relation. Un appel intérieur vous guide vers l'amour authentique.",
+      "career": "Appel à une nouvelle vocation. Faites le bilan et embrassez votre véritable chemin professionnel."
+    },
+    "21": {
+      "name": "Le Monde",
+      "upright": "Le Monde représente l'accomplissement, la complétude et l'intégration. Aboutissement d'un cycle, harmonie universelle et réalisation de soi.",
+      "reversed": "Accomplissement retardé, sentiment d'inachevé, obstacles avant la ligne d'arrivée.",
+      "description": "Le Monde symbolise l'accomplissement, la complétude et la célébration du cycle achevé.",
+      "keywords": "Accomplissement, Complétude, Intégration, Célébration, Harmonie, Réalisation",
+      "love": "Accomplissement et plénitude dans la relation. L'amour atteint un niveau d'harmonie totale.",
+      "career": "Réalisation professionnelle majeure. Un cycle s'achève avec succès et reconnaissance."
+    },
+    "22": {
+      "name": "As de Bâtons",
+      "upright": "L'As de Bâtons annonce un nouvel élan créatif, une inspiration soudaine et le début d'une aventure passionnante. Énergie pure et potentiel illimité.",
+      "reversed": "Énergie créative bloquée, faux départs, manque d'enthousiasme ou de direction.",
+      "description": "L'As de Bâtons représente l'étincelle d'inspiration et le début d'une nouvelle aventure créative.",
+      "keywords": "Inspiration, Création, Élan, Potentiel, Passion, Nouveau départ",
+      "love": "Nouvelle passion enflammée ou renouveau dans la relation. L'étincelle de l'amour s'allume.",
+      "career": "Nouvelle opportunité ou projet inspirant. L'énergie créative est à son apogée."
+    },
+    "23": {
+      "name": "Deux de Bâtons",
+      "upright": "Le Deux de Bâtons représente la planification, la vision à long terme et les décisions à prendre. Le monde est à votre portée.",
+      "reversed": "Peur de l'inconnu, mauvaise planification, manque de vision ou d'ambition.",
+      "description": "Le Deux de Bâtons symbolise la planification et la vision d'avenir avec de grands projets en vue.",
+      "keywords": "Planification, Vision, Décision, Ambition, Exploration, Potentiel",
+      "love": "Réflexion sur l'avenir de la relation. De grands projets à deux se dessinent.",
+      "career": "Planification stratégique de carrière. Votre vision ambitieuse ouvre de nouveaux horizons."
+    },
+    "24": {
+      "name": "Trois de Bâtons",
+      "upright": "Le Trois de Bâtons représente l'expansion, la prévoyance et les premiers fruits de vos efforts. Les horizons s'élargissent.",
+      "reversed": "Retards dans les plans, manque de prévoyance, opportunités qui n'arrivent pas.",
+      "description": "Le Trois de Bâtons symbolise l'expansion et la vision des opportunités qui se profilent à l'horizon.",
+      "keywords": "Expansion, Prévoyance, Progrès, Horizons, Attente, Exploration",
+      "love": "La relation s'ouvre à de nouveaux horizons. Les efforts communs portent leurs premiers fruits.",
+      "career": "Vos projets prennent forme. L'expansion professionnelle est en vue."
+    },
+    "25": {
+      "name": "Quatre de Bâtons",
+      "upright": "Le Quatre de Bâtons célèbre la joie, l'harmonie et les réussites. Fête, mariage, foyer heureux et étapes franchies avec bonheur.",
+      "reversed": "Disharmonie familiale, célébration retardée, instabilité au foyer.",
+      "description": "Le Quatre de Bâtons représente la célébration, l'harmonie familiale et la joie partagée.",
+      "keywords": "Célébration, Harmonie, Foyer, Joie, Mariage, Réussite",
+      "love": "Célébration de l'amour. Engagement, mariage ou étape joyeuse dans la relation.",
+      "career": "Succès célébré au travail. Environnement professionnel harmonieux et agréable."
+    },
+    "26": {
+      "name": "Cinq de Bâtons",
+      "upright": "Le Cinq de Bâtons indique des conflits, la compétition et des désaccords. Confrontation d'idées, rivalité et luttes de pouvoir.",
+      "reversed": "Évitement des conflits, résolution de disputes, volonté de compromis.",
+      "description": "Le Cinq de Bâtons représente les conflits, la compétition et les confrontations d'idées.",
+      "keywords": "Conflit, Compétition, Désaccord, Rivalité, Confrontation, Lutte",
+      "love": "Tensions et désaccords dans la relation. La communication ouverte est essentielle.",
+      "career": "Compétition et rivalité au travail. Défendez vos idées avec conviction."
+    },
+    "27": {
+      "name": "Six de Bâtons",
+      "upright": "Le Six de Bâtons annonce la victoire, la reconnaissance publique et le triomphe. Succès mérité et admiration des autres.",
+      "reversed": "Chute après le succès, arrogance, reconnaissance retardée ou éphémère.",
+      "description": "Le Six de Bâtons symbolise la victoire, la reconnaissance et le triomphe public.",
+      "keywords": "Victoire, Reconnaissance, Triomphe, Succès, Fierté, Accomplissement",
+      "love": "Votre relation est source de fierté. Reconnaissance et admiration mutuelles.",
+      "career": "Victoire professionnelle et reconnaissance publique. Vos efforts sont récompensés."
+    },
+    "28": {
+      "name": "Sept de Bâtons",
+      "upright": "Le Sept de Bâtons représente la persévérance, la défense de ses positions et le courage face à l'adversité. Tenez bon.",
+      "reversed": "Épuisement, abandon de la lutte, sentiment d'être submergé par les obstacles.",
+      "description": "Le Sept de Bâtons symbolise la défense de ses convictions et la persévérance face aux défis.",
+      "keywords": "Persévérance, Défense, Courage, Résistance, Détermination, Adversité",
+      "love": "Défendez votre relation face aux pressions extérieures. La persévérance renforce le lien.",
+      "career": "Maintenez vos positions au travail. Votre persévérance sera récompensée."
+    },
+    "29": {
+      "name": "Huit de Bâtons",
+      "upright": "Le Huit de Bâtons annonce un mouvement rapide, des nouvelles soudaines et une accélération. Les choses avancent vite.",
+      "reversed": "Retards, frustration, messages perdus ou ralentissement inattendu.",
+      "description": "Le Huit de Bâtons représente la vitesse, le mouvement rapide et les nouvelles soudaines.",
+      "keywords": "Rapidité, Mouvement, Nouvelles, Accélération, Élan, Action",
+      "love": "Développement rapide de la relation. Les sentiments s'intensifient soudainement.",
+      "career": "Progression rapide au travail. Les projets avancent à grande vitesse."
+    },
+    "30": {
+      "name": "Neuf de Bâtons",
+      "upright": "Le Neuf de Bâtons représente la résilience, la dernière ligne droite et la force malgré la fatigue. Presque au bout du chemin.",
+      "reversed": "Épuisement total, refus obstiné de lâcher prise, paranoïa défensive.",
+      "description": "Le Neuf de Bâtons symbolise la résilience et la persévérance dans la dernière ligne droite.",
+      "keywords": "Résilience, Persévérance, Force, Endurance, Protection, Dernière épreuve",
+      "love": "La relation traverse une épreuve, mais la persévérance sera récompensée. Tenez bon.",
+      "career": "Dernière ligne droite d'un projet difficile. Votre endurance mènera au succès."
+    },
+    "31": {
+      "name": "Dix de Bâtons",
+      "upright": "Le Dix de Bâtons représente le fardeau, la surcharge et les responsabilités écrasantes. Le poids du monde sur les épaules.",
+      "reversed": "Libération des fardeaux, délégation, refus d'en prendre davantage.",
+      "description": "Le Dix de Bâtons symbolise les fardeaux lourds et les responsabilités écrasantes.",
+      "keywords": "Fardeau, Surcharge, Responsabilité, Pression, Épuisement, Sacrifice",
+      "love": "La relation pèse lourd. Il est temps de partager les responsabilités et de déléguer.",
+      "career": "Surcharge de travail. Apprenez à déléguer et à alléger votre fardeau."
+    },
+    "32": {
+      "name": "Valet de Bâtons",
+      "upright": "Le Valet de Bâtons apporte des nouvelles enthousiasmantes, un esprit aventureux et une énergie créative débordante. Découverte et exploration.",
+      "reversed": "Manque de direction, projets inaboutis, enthousiasme superficiel sans suite.",
+      "description": "Le Valet de Bâtons représente l'enthousiasme, l'aventure et les nouvelles inspirantes.",
+      "keywords": "Enthousiasme, Découverte, Aventure, Messages, Créativité, Exploration",
+      "love": "Nouvelles excitantes en amour. Un message ou une rencontre enflamme votre cœur.",
+      "career": "Nouvelle opportunité enthousiasmante. Explorez avec curiosité et audace."
+    },
+    "33": {
+      "name": "Cavalier de Bâtons",
+      "upright": "Le Cavalier de Bâtons représente l'action impulsive, l'aventure et la passion ardente. Énergie débordante et désir d'exploration.",
+      "reversed": "Impulsivité destructrice, projets abandonnés, frustration et impatience.",
+      "description": "Le Cavalier de Bâtons symbolise l'action passionnée, l'aventure et l'énergie ardente.",
+      "keywords": "Action, Passion, Aventure, Impulsivité, Énergie, Audace",
+      "love": "Passion ardente et romance enflammée. L'aventure amoureuse bat son plein.",
+      "career": "Action rapide et audacieuse au travail. Saisissez les opportunités avec passion."
+    },
+    "34": {
+      "name": "Reine de Bâtons",
+      "upright": "La Reine de Bâtons incarne la confiance, le charisme et l'énergie chaleureuse. Indépendance, détermination et magnétisme naturel.",
+      "reversed": "Jalousie, autoritarisme, épuisement ou perte de confiance en soi.",
+      "description": "La Reine de Bâtons représente la confiance, le charisme et la chaleur rayonnante.",
+      "keywords": "Confiance, Charisme, Chaleur, Indépendance, Détermination, Magnétisme",
+      "love": "Présence magnétique et amour confiant. Votre charisme attire les connexions profondes.",
+      "career": "Leadership charismatique. Votre énergie et votre confiance inspirent les autres."
+    },
+    "35": {
+      "name": "Roi de Bâtons",
+      "upright": "Le Roi de Bâtons représente le leadership visionnaire, l'audace et l'entrepreneuriat. Vision grande et capacité à inspirer les autres.",
+      "reversed": "Tyrannie, impulsivité dans le leadership, attentes irréalistes.",
+      "description": "Le Roi de Bâtons symbolise le leadership visionnaire et le courage entrepreneurial.",
+      "keywords": "Leadership, Vision, Audace, Entrepreneuriat, Charisme, Inspiration",
+      "love": "Partenaire passionné et protecteur. La relation est guidée par une vision partagée.",
+      "career": "Leadership naturel et vision ambitieuse. Vous inspirez et guidez avec succès."
+    },
+    "36": {
+      "name": "As de Coupes",
+      "upright": "L'As de Coupes annonce un nouveau départ émotionnel, l'amour qui déborde et l'éveil spirituel. Source d'amour pur et de joie profonde.",
+      "reversed": "Émotions refoulées, amour bloqué, vide intérieur ou opportunité manquée.",
+      "description": "L'As de Coupes représente le nouveau départ émotionnel et le débordement d'amour.",
+      "keywords": "Amour, Émotion, Nouveau départ, Joie, Spiritualité, Abondance émotionnelle",
+      "love": "Nouvel amour ou renouveau émotionnel profond. Le cœur s'ouvre à la joie.",
+      "career": "Satisfaction émotionnelle au travail. Un nouveau projet apporte une joie profonde."
+    },
+    "37": {
+      "name": "Deux de Coupes",
+      "upright": "Le Deux de Coupes représente l'union, le partenariat et la connexion profonde entre deux âmes. Amour mutuel et harmonie.",
+      "reversed": "Rupture, déséquilibre dans la relation, manque de réciprocité.",
+      "description": "Le Deux de Coupes symbolise l'union harmonieuse et la connexion profonde entre deux êtres.",
+      "keywords": "Union, Partenariat, Amour, Réciprocité, Connexion, Harmonie",
+      "love": "Connexion profonde et réciproque. L'amour vrai se manifeste dans l'union des cœurs.",
+      "career": "Partenariat professionnel harmonieux. La collaboration porte ses fruits."
+    },
+    "38": {
+      "name": "Trois de Coupes",
+      "upright": "Le Trois de Coupes célèbre l'amitié, la communauté et les festivités. Joie partagée, créativité collective et soutien mutuel.",
+      "reversed": "Excès dans les fêtes, commérages, isolement social ou trahison d'amis.",
+      "description": "Le Trois de Coupes représente la célébration, l'amitié et la joie partagée en communauté.",
+      "keywords": "Célébration, Amitié, Communauté, Joie, Créativité, Fête",
+      "love": "Joie et célébration en amour. L'entourage soutient et célèbre votre relation.",
+      "career": "Travail d'équipe réussi. La collaboration joyeuse mène au succès collectif."
+    },
+    "39": {
+      "name": "Quatre de Coupes",
+      "upright": "Le Quatre de Coupes indique la méditation, l'apathie ou la contemplation. Insatisfaction, opportunités ignorées et repli sur soi.",
+      "reversed": "Éveil à de nouvelles possibilités, motivation retrouvée, sortie de l'apathie.",
+      "description": "Le Quatre de Coupes représente la contemplation, l'apathie et les opportunités non vues.",
+      "keywords": "Contemplation, Apathie, Insatisfaction, Méditation, Repli, Réévaluation",
+      "love": "Insatisfaction en amour. Ouvrez les yeux sur les opportunités affectives que vous ignorez.",
+      "career": "Ennui ou insatisfaction au travail. De nouvelles opportunités vous attendent si vous regardez."
+    },
+    "40": {
+      "name": "Cinq de Coupes",
+      "upright": "Le Cinq de Coupes représente le chagrin, la perte et la déception. Deuil émotionnel, regrets, mais aussi espoir résiduel.",
+      "reversed": "Acceptation de la perte, guérison, capacité à avancer malgré le chagrin.",
+      "description": "Le Cinq de Coupes symbolise le chagrin et la perte, mais aussi l'espoir qui demeure.",
+      "keywords": "Chagrin, Perte, Déception, Regret, Deuil, Espoir résiduel",
+      "love": "Chagrin ou déception en amour. Tournez-vous vers ce qui reste plutôt que ce qui est perdu.",
+      "career": "Déception professionnelle. Concentrez-vous sur les opportunités qui restent."
+    },
+    "41": {
+      "name": "Six de Coupes",
+      "upright": "Le Six de Coupes évoque la nostalgie, les souvenirs heureux et l'innocence retrouvée. Retour du passé, générosité et simplicité.",
+      "reversed": "Vivre dans le passé, refus de grandir, idéalisation excessive des souvenirs.",
+      "description": "Le Six de Coupes représente la nostalgie, les souvenirs heureux et l'innocence du passé.",
+      "keywords": "Nostalgie, Souvenirs, Innocence, Passé, Générosité, Simplicité",
+      "love": "Retour d'un amour passé ou nostalgie tendre. Les souvenirs heureux nourrissent le présent.",
+      "career": "Inspiration du passé pour le présent. Un ancien contact ou savoir-faire refait surface."
+    },
+    "42": {
+      "name": "Sept de Coupes",
+      "upright": "Le Sept de Coupes représente les illusions, les rêves et les choix multiples. Imagination débordante, fantasmes et besoin de discernement.",
+      "reversed": "Retour à la réalité, clarté de choix, abandon des illusions.",
+      "description": "Le Sept de Coupes symbolise les illusions, les rêves multiples et le besoin de discernement.",
+      "keywords": "Illusions, Rêves, Choix, Imagination, Fantasmes, Discernement",
+      "love": "Attention aux illusions amoureuses. Distinguez les fantasmes de la réalité dans vos relations.",
+      "career": "Trop de choix ou d'idées. Concentrez-vous sur des objectifs réalistes et réalisables."
+    },
+    "43": {
+      "name": "Huit de Coupes",
+      "upright": "Le Huit de Coupes représente le départ volontaire, l'abandon de ce qui ne sert plus et la quête de sens. Courage de partir.",
+      "reversed": "Peur de partir, attachement au familier, errance sans but.",
+      "description": "Le Huit de Coupes symbolise le départ volontaire vers quelque chose de plus significatif.",
+      "keywords": "Départ, Abandon, Quête, Désillusion, Courage, Recherche de sens",
+      "love": "Besoin de quitter une relation insatisfaisante. Le courage de partir ouvre de nouvelles voies.",
+      "career": "Quitter un emploi insatisfaisant pour suivre votre vocation. Le changement est nécessaire."
+    },
+    "44": {
+      "name": "Neuf de Coupes",
+      "upright": "Le Neuf de Coupes représente la satisfaction, le contentement et la réalisation des souhaits. Bonheur émotionnel et gratitude.",
+      "reversed": "Insatisfaction malgré l'abondance, excès, désirs superficiels non comblés.",
+      "description": "Le Neuf de Coupes symbolise la satisfaction des souhaits et le contentement émotionnel.",
+      "keywords": "Satisfaction, Souhaits, Contentement, Bonheur, Gratitude, Plaisir",
+      "love": "Vos souhaits amoureux se réalisent. Bonheur et satisfaction dans la relation.",
+      "career": "Satisfaction professionnelle. Vos efforts portent leurs fruits et le contentement est au rendez-vous."
+    },
+    "45": {
+      "name": "Dix de Coupes",
+      "upright": "Le Dix de Coupes représente le bonheur familial, l'harmonie complète et la plénitude émotionnelle. Amour durable et joie partagée.",
+      "reversed": "Disharmonie familiale, valeurs familiales remises en question, bonheur brisé.",
+      "description": "Le Dix de Coupes symbolise le bonheur familial complet et l'harmonie émotionnelle durable.",
+      "keywords": "Bonheur familial, Harmonie, Plénitude, Amour durable, Joie, Famille",
+      "love": "Bonheur familial et amour durable. La relation atteint une plénitude harmonieuse.",
+      "career": "Environnement professionnel harmonieux et bienveillant, comme une famille."
+    },
+    "46": {
+      "name": "Valet de Coupes",
+      "upright": "Le Valet de Coupes apporte des messages d'amour, une sensibilité artistique et une ouverture émotionnelle. Rêveur et intuitif.",
+      "reversed": "Immaturité émotionnelle, rêveries excessives, messages d'amour non reçus.",
+      "description": "Le Valet de Coupes représente les messages d'amour, la sensibilité et l'imagination créative.",
+      "keywords": "Messages, Sensibilité, Imagination, Intuition, Romantisme, Créativité",
+      "love": "Message d'amour ou rencontre romantique en vue. Ouvrez votre cœur aux surprises.",
+      "career": "Inspiration créative et intuitive. Un projet artistique ou émotionnel se dessine."
+    },
+    "47": {
+      "name": "Cavalier de Coupes",
+      "upright": "Le Cavalier de Coupes représente le romantisme, l'idéalisme et les propositions du cœur. Chevalier des émotions, charmeur et rêveur.",
+      "reversed": "Jalousie, émotions instables, promesses non tenues ou illusions romantiques.",
+      "description": "Le Cavalier de Coupes symbolise le romantisme chevaleresque et les propositions du cœur.",
+      "keywords": "Romantisme, Idéalisme, Charme, Proposition, Rêve, Chevalerie",
+      "love": "Proposition romantique ou déclaration d'amour. Un partenaire idéaliste se présente.",
+      "career": "Opportunité qui parle au cœur. Suivez votre passion créative."
+    },
+    "48": {
+      "name": "Reine de Coupes",
+      "upright": "La Reine de Coupes incarne la compassion, l'intuition profonde et la sagesse émotionnelle. Soin des autres et compréhension empathique.",
+      "reversed": "Dépendance émotionnelle, manipulation affective, submersion par les émotions.",
+      "description": "La Reine de Coupes représente la compassion profonde, l'intuition et la sagesse émotionnelle.",
+      "keywords": "Compassion, Intuition, Sagesse émotionnelle, Empathie, Soin, Profondeur",
+      "love": "Amour profond et compassion infinie. La relation est nourrie par l'empathie et la compréhension.",
+      "career": "Utilisez votre intelligence émotionnelle au travail. L'empathie est votre force."
+    },
+    "49": {
+      "name": "Roi de Coupes",
+      "upright": "Le Roi de Coupes représente la maîtrise émotionnelle, la diplomatie et la sagesse bienveillante. Équilibre entre cœur et raison.",
+      "reversed": "Manipulation émotionnelle, froideur, émotions réprimées ou instabilité cachée.",
+      "description": "Le Roi de Coupes symbolise la maîtrise émotionnelle et la sagesse du cœur.",
+      "keywords": "Maîtrise émotionnelle, Diplomatie, Sagesse, Bienveillance, Équilibre, Calme",
+      "love": "Partenaire émotionnellement mature et bienveillant. L'amour est guidé par la sagesse.",
+      "career": "Leadership empathique et diplomate. Vous gérez les situations avec sagesse émotionnelle."
+    },
+    "50": {
+      "name": "As d'Épées",
+      "upright": "L'As d'Épées annonce la percée mentale, la clarté de pensée et la vérité. Nouvelle idée puissante, justice et triomphe de la raison.",
+      "reversed": "Confusion mentale, pensée destructrice, utilisation abusive du pouvoir intellectuel.",
+      "description": "L'As d'Épées représente la percée mentale, la vérité et la clarté de pensée.",
+      "keywords": "Clarté, Vérité, Percée, Raison, Justice, Idée nouvelle",
+      "love": "Clarté soudaine sur votre situation amoureuse. La vérité émerge dans la relation.",
+      "career": "Percée intellectuelle ou nouvelle idée brillante. La clarté mentale guide vos décisions."
+    },
+    "51": {
+      "name": "Deux d'Épées",
+      "upright": "Le Deux d'Épées représente l'indécision, l'impasse et le besoin de choix. Équilibre tendu, blocage mental et déni.",
+      "reversed": "Décision enfin prise, libération du blocage, vérité qui émerge.",
+      "description": "Le Deux d'Épées symbolise l'indécision, le blocage mental et le besoin de trancher.",
+      "keywords": "Indécision, Impasse, Choix, Blocage, Équilibre, Déni",
+      "love": "Indécision en amour. Il est temps de faire un choix et de lever les yeux sur la vérité.",
+      "career": "Impasse professionnelle. Pesez le pour et le contre et prenez une décision."
+    },
+    "52": {
+      "name": "Trois d'Épées",
+      "upright": "Le Trois d'Épées représente le chagrin d'amour, la trahison et la douleur émotionnelle. Rupture, déchirure et peine profonde.",
+      "reversed": "Guérison du chagrin, pardon, sortie progressive de la douleur.",
+      "description": "Le Trois d'Épées symbolise le chagrin d'amour, la trahison et la douleur du cœur.",
+      "keywords": "Chagrin, Trahison, Douleur, Rupture, Peine, Déchirure",
+      "love": "Douleur et trahison en amour. Le temps et la vérité permettront la guérison.",
+      "career": "Déception ou conflit douloureux au travail. Permettez-vous de guérir avant d'avancer."
+    },
+    "53": {
+      "name": "Quatre d'Épées",
+      "upright": "Le Quatre d'Épées invite au repos, à la récupération et à la retraite nécessaire. Pause salutaire, méditation et guérison.",
+      "reversed": "Agitation, refus de se reposer, burnout ou reprise prématurée.",
+      "description": "Le Quatre d'Épées représente le repos nécessaire, la retraite et la récupération.",
+      "keywords": "Repos, Récupération, Retraite, Méditation, Pause, Guérison",
+      "love": "Besoin de repos dans la relation. Prenez du temps pour vous retrouver intérieurement.",
+      "career": "Pause professionnelle nécessaire. Le repos et la réflexion préparent le prochain chapitre."
+    },
+    "54": {
+      "name": "Cinq d'Épées",
+      "upright": "Le Cinq d'Épées représente le conflit, la défaite et la victoire amère. Confrontation, humiliation et besoin de choisir ses batailles.",
+      "reversed": "Réconciliation, fin des hostilités, leçons tirées de la défaite.",
+      "description": "Le Cinq d'Épées symbolise les conflits, la victoire amère et la nécessité de choisir ses batailles.",
+      "keywords": "Conflit, Défaite, Victoire amère, Confrontation, Humiliation, Leçon",
+      "love": "Conflits et blessures dans la relation. Choisissez vos batailles avec sagesse.",
+      "career": "Conflit au travail. Une victoire obtenue au prix de relations brisées ne vaut pas le coût."
+    },
+    "55": {
+      "name": "Six d'Épées",
+      "upright": "Le Six d'Épées représente la transition, le passage vers des eaux plus calmes et le départ nécessaire. Guérison progressive et nouveau départ.",
+      "reversed": "Résistance au changement, voyage perturbé, bagages émotionnels non résolus.",
+      "description": "Le Six d'Épées symbolise la transition vers des eaux plus calmes et un nouveau départ.",
+      "keywords": "Transition, Voyage, Guérison, Départ, Passage, Eaux calmes",
+      "love": "Transition vers une période plus sereine. Laissez le passé derrière vous.",
+      "career": "Changement professionnel salutaire. Le passage vers de meilleures conditions est en cours."
+    },
+    "56": {
+      "name": "Sept d'Épées",
+      "upright": "Le Sept d'Épées représente la ruse, la tromperie et les stratégies secrètes. Action furtive, malhonnêteté ou besoin de discrétion.",
+      "reversed": "Vérité qui éclate, remords, retour de la conscience morale.",
+      "description": "Le Sept d'Épées symbolise la ruse, la tromperie et les actions secrètes.",
+      "keywords": "Ruse, Tromperie, Secret, Stratégie, Furtivité, Malhonnêteté",
+      "love": "Méfiez-vous de la tromperie en amour. Des secrets peuvent miner la confiance.",
+      "career": "Attention aux manœuvres déloyales au travail. La discrétion est de mise."
+    },
+    "57": {
+      "name": "Huit d'Épées",
+      "upright": "Le Huit d'Épées représente l'emprisonnement mental, les restrictions auto-imposées et le sentiment d'être piégé. Peur et impuissance.",
+      "reversed": "Libération des restrictions, nouvelle perspective, reprise du pouvoir personnel.",
+      "description": "Le Huit d'Épées symbolise l'emprisonnement mental et les restrictions auto-imposées.",
+      "keywords": "Emprisonnement, Restriction, Piège, Peur, Impuissance, Limitation",
+      "love": "Sentiment d'être piégé dans la relation. Les restrictions sont peut-être auto-imposées.",
+      "career": "Sentiment d'impuissance au travail. Vos limitations sont surtout dans votre esprit."
+    },
+    "58": {
+      "name": "Neuf d'Épées",
+      "upright": "Le Neuf d'Épées représente l'anxiété, les cauchemars et les tourments mentaux. Inquiétude excessive, insomnie et peurs nocturnes.",
+      "reversed": "Fin de l'anxiété, espoir retrouvé, prise de conscience que les peurs étaient exagérées.",
+      "description": "Le Neuf d'Épées symbolise l'anxiété profonde, les cauchemars et les tourments de l'esprit.",
+      "keywords": "Anxiété, Cauchemars, Tourment, Insomnie, Peur, Inquiétude",
+      "love": "Anxiété et inquiétude en amour. Vos peurs sont peut-être plus grandes que la réalité.",
+      "career": "Stress et anxiété au travail. Prenez du recul pour voir la situation plus clairement."
+    },
+    "59": {
+      "name": "Dix d'Épées",
+      "upright": "Le Dix d'Épées représente la fin douloureuse, le coup final et la trahison ultime. Fond du gouffre, mais aussi possibilité de renaissance.",
+      "reversed": "Survie après la catastrophe, guérison lente, refus d'accepter la fin.",
+      "description": "Le Dix d'Épées symbolise la fin douloureuse d'un cycle et le fond avant la renaissance.",
+      "keywords": "Fin, Trahison, Coup fatal, Fond, Renaissance, Libération",
+      "love": "Fin douloureuse d'une relation. Le fond du gouffre précède le renouveau.",
+      "career": "Fin brutale d'un chapitre professionnel. La renaissance est possible après le choc."
+    },
+    "60": {
+      "name": "Valet d'Épées",
+      "upright": "Le Valet d'Épées apporte curiosité intellectuelle, nouvelles idées et esprit vif. Soif d'apprendre, communication directe et franchise.",
+      "reversed": "Commérages, cruauté verbale, espion ou manque de tact.",
+      "description": "Le Valet d'Épées représente la curiosité intellectuelle, la franchise et l'esprit vif.",
+      "keywords": "Curiosité, Intellect, Franchise, Communication, Esprit vif, Vérité",
+      "love": "Communication franche en amour. La curiosité intellectuelle rapproche les cœurs.",
+      "career": "Nouvelles idées et approche intellectuelle. Votre esprit vif est un atout."
+    },
+    "61": {
+      "name": "Cavalier d'Épées",
+      "upright": "Le Cavalier d'Épées représente l'action rapide, l'ambition et la pensée directe. Fonce tête baissée avec détermination intellectuelle.",
+      "reversed": "Précipitation, agressivité verbale, plans mal réfléchis.",
+      "description": "Le Cavalier d'Épées symbolise l'action intellectuelle rapide et la détermination tranchante.",
+      "keywords": "Action rapide, Ambition, Détermination, Intellect, Vitesse, Franchise",
+      "love": "Avancée rapide en amour. La franchise directe peut blesser ou libérer.",
+      "career": "Action décisive et rapide au travail. Foncez avec détermination mais restez réfléchi."
+    },
+    "62": {
+      "name": "Reine d'Épées",
+      "upright": "La Reine d'Épées incarne la clarté mentale, l'indépendance d'esprit et la communication honnête. Perception aiguisée et jugement juste.",
+      "reversed": "Froideur excessive, cruauté verbale, amertume ou isolement émotionnel.",
+      "description": "La Reine d'Épées représente la clarté mentale, l'indépendance et la vérité sans détour.",
+      "keywords": "Clarté, Indépendance, Honnêteté, Perception, Jugement, Communication",
+      "love": "Honnêteté et clarté dans la relation. Les limites saines renforcent l'amour.",
+      "career": "Communication claire et jugement aiguisé au travail. Votre honnêteté est respectée."
+    },
+    "63": {
+      "name": "Roi d'Épées",
+      "upright": "Le Roi d'Épées représente l'autorité intellectuelle, la pensée claire et le jugement équitable. Maîtrise de la raison et leadership par l'esprit.",
+      "reversed": "Tyrannie intellectuelle, manipulation mentale, froideur calculatrice.",
+      "description": "Le Roi d'Épées symbolise l'autorité intellectuelle, le jugement équitable et la maîtrise de l'esprit.",
+      "keywords": "Autorité intellectuelle, Jugement, Clarté, Raison, Leadership, Vérité",
+      "love": "Relation fondée sur le respect intellectuel. Le dialogue honnête est la clé.",
+      "career": "Leadership intellectuel et décisions justes. Votre esprit clair guide les autres."
+    },
+    "64": {
+      "name": "As de Deniers",
+      "upright": "L'As de Deniers annonce une nouvelle opportunité matérielle, la prospérité et un nouveau départ concret. Abondance, santé et stabilité.",
+      "reversed": "Opportunité financière manquée, insécurité matérielle, mauvais investissement.",
+      "description": "L'As de Deniers représente la nouvelle opportunité matérielle et le début de la prospérité.",
+      "keywords": "Prospérité, Opportunité, Abondance, Matériel, Stabilité, Nouveau départ",
+      "love": "Stabilité matérielle qui renforce la relation. Un nouveau départ concret ensemble.",
+      "career": "Nouvelle opportunité financière ou professionnelle concrète. La prospérité est à portée."
+    },
+    "65": {
+      "name": "Deux de Deniers",
+      "upright": "Le Deux de Deniers représente l'équilibre, l'adaptabilité et la gestion de multiples priorités. Jongler avec les responsabilités.",
+      "reversed": "Déséquilibre, surcharge, difficulté à gérer plusieurs choses à la fois.",
+      "description": "Le Deux de Deniers symbolise l'équilibre entre les priorités et l'adaptabilité face au changement.",
+      "keywords": "Équilibre, Adaptabilité, Gestion, Priorités, Flexibilité, Changement",
+      "love": "Équilibrer amour et autres responsabilités. La flexibilité maintient l'harmonie.",
+      "career": "Gestion habile de multiples projets. L'adaptabilité est votre meilleur atout."
+    },
+    "66": {
+      "name": "Trois de Deniers",
+      "upright": "Le Trois de Deniers représente le travail d'équipe, la maîtrise et la collaboration. Excellence artisanale et efforts reconnus.",
+      "reversed": "Travail médiocre, manque de collaboration, compétences non reconnues.",
+      "description": "Le Trois de Deniers symbolise la maîtrise artisanale, le travail d'équipe et l'excellence.",
+      "keywords": "Collaboration, Maîtrise, Travail d'équipe, Excellence, Artisanat, Reconnaissance",
+      "love": "Construire la relation avec soin et dévouement. Le travail d'équipe renforce le couple.",
+      "career": "Collaboration fructueuse et reconnaissance de votre expertise. Le travail d'équipe excelle."
+    },
+    "67": {
+      "name": "Quatre de Deniers",
+      "upright": "Le Quatre de Deniers représente la sécurité, la conservation et le contrôle des ressources. Stabilité financière mais possessivité.",
+      "reversed": "Avarice, peur de la perte, besoin de lâcher prise sur le contrôle matériel.",
+      "description": "Le Quatre de Deniers symbolise la sécurité financière, la conservation et le besoin de contrôle.",
+      "keywords": "Sécurité, Conservation, Contrôle, Stabilité, Possessivité, Épargne",
+      "love": "Possessivité ou besoin de sécurité en amour. Apprenez à donner sans craindre de perdre.",
+      "career": "Sécurité financière assurée. Attention à ne pas devenir trop rigide dans votre approche."
+    },
+    "68": {
+      "name": "Cinq de Deniers",
+      "upright": "Le Cinq de Deniers représente les difficultés matérielles, l'exclusion et le sentiment de manque. Épreuve financière et isolement.",
+      "reversed": "Fin des difficultés, aide trouvée, amélioration progressive de la situation.",
+      "description": "Le Cinq de Deniers symbolise les difficultés matérielles, l'exclusion et le besoin d'aide.",
+      "keywords": "Difficultés, Manque, Exclusion, Épreuve, Pauvreté, Isolement",
+      "love": "Période difficile pour le couple. Le soutien mutuel est essentiel pour traverser l'épreuve.",
+      "career": "Difficultés financières ou professionnelles. L'aide est disponible si vous la cherchez."
+    },
+    "69": {
+      "name": "Six de Deniers",
+      "upright": "Le Six de Deniers représente la générosité, le partage et l'équilibre des échanges. Donner et recevoir, charité et gratitude.",
+      "reversed": "Dette, générosité intéressée, déséquilibre dans le donner et recevoir.",
+      "description": "Le Six de Deniers symbolise la générosité, le partage équitable et la charité.",
+      "keywords": "Générosité, Partage, Charité, Équilibre, Don, Gratitude",
+      "love": "Générosité et partage dans la relation. L'équilibre entre donner et recevoir nourrit l'amour.",
+      "career": "Partage des ressources et reconnaissance. Votre générosité au travail est récompensée."
+    },
+    "70": {
+      "name": "Sept de Deniers",
+      "upright": "Le Sept de Deniers représente la patience, l'investissement à long terme et l'évaluation des progrès. Les fruits mûrissent lentement.",
+      "reversed": "Impatience, investissement perdu, résultats décevants malgré les efforts.",
+      "description": "Le Sept de Deniers symbolise la patience, l'investissement et l'évaluation des résultats.",
+      "keywords": "Patience, Investissement, Évaluation, Progrès, Croissance, Persévérance",
+      "love": "La relation mûrit avec le temps. La patience et l'investissement portent leurs fruits.",
+      "career": "Évaluation de vos progrès professionnels. La patience mènera à la récolte."
+    },
+    "71": {
+      "name": "Huit de Deniers",
+      "upright": "Le Huit de Deniers représente le travail assidu, le perfectionnement et la maîtrise d'un métier. Dévouement, apprentissage et diligence.",
+      "reversed": "Perfectionnisme excessif, travail monotone, manque de passion dans l'effort.",
+      "description": "Le Huit de Deniers symbolise le travail assidu, l'apprentissage et la maîtrise d'un savoir-faire.",
+      "keywords": "Travail assidu, Apprentissage, Maîtrise, Diligence, Perfectionnement, Artisanat",
+      "love": "Investissement patient dans la relation. Le travail assidu renforce les fondations amoureuses.",
+      "career": "Perfectionnement de vos compétences. Le travail assidu et l'apprentissage mènent à la maîtrise."
+    },
+    "72": {
+      "name": "Neuf de Deniers",
+      "upright": "Le Neuf de Deniers représente l'abondance, le luxe et l'indépendance financière. Succès matériel, confort et autosuffisance.",
+      "reversed": "Dépendance financière, excès matérialiste, solitude dorée.",
+      "description": "Le Neuf de Deniers symbolise l'abondance matérielle, le luxe et l'indépendance financière.",
+      "keywords": "Abondance, Luxe, Indépendance, Succès, Confort, Autosuffisance",
+      "love": "Indépendance et confort dans la relation. L'amour s'épanouit dans la sécurité.",
+      "career": "Succès matériel et indépendance financière. Votre travail acharné porte ses fruits."
+    },
+    "73": {
+      "name": "Dix de Deniers",
+      "upright": "Le Dix de Deniers représente la richesse durable, l'héritage et la sécurité familiale. Prospérité sur plusieurs générations et fondations solides.",
+      "reversed": "Conflits d'héritage, instabilité familiale, perte financière ou rupture des traditions.",
+      "description": "Le Dix de Deniers symbolise la richesse durable, l'héritage familial et la prospérité intergénérationnelle.",
+      "keywords": "Richesse, Héritage, Famille, Prospérité, Tradition, Fondation",
+      "love": "Amour durable et sécurité familiale. La relation bâtit un héritage pour l'avenir.",
+      "career": "Succès financier durable et entreprise prospère. Les fondations solides perdurent."
+    },
+    "74": {
+      "name": "Valet de Deniers",
+      "upright": "Le Valet de Deniers apporte de nouvelles opportunités concrètes, l'ambition studieuse et le désir d'apprendre un métier. Début prometteur.",
+      "reversed": "Manque de concentration, opportunité concrète manquée, paresse ou procrastination.",
+      "description": "Le Valet de Deniers représente les nouvelles opportunités matérielles et l'ambition d'apprendre.",
+      "keywords": "Opportunité, Apprentissage, Ambition, Concret, Studieux, Début",
+      "love": "Nouvelle relation stable et prometteuse. L'amour se construit sur des bases concrètes.",
+      "career": "Nouvelle opportunité d'apprentissage ou de carrière. Abordez-la avec sérieux et ambition."
+    },
+    "75": {
+      "name": "Cavalier de Deniers",
+      "upright": "Le Cavalier de Deniers représente la fiabilité, le travail méthodique et la progression stable. Patient, persévérant et responsable.",
+      "reversed": "Stagnation, ennui, obstination, paresse ou excès de prudence.",
+      "description": "Le Cavalier de Deniers symbolise la progression méthodique, la fiabilité et la persévérance.",
+      "keywords": "Fiabilité, Méthode, Persévérance, Stabilité, Responsabilité, Patience",
+      "love": "Relation stable et fiable. La progression lente mais sûre renforce l'engagement.",
+      "career": "Approche méthodique et fiable. La persévérance et la constance mènent au succès."
+    },
+    "76": {
+      "name": "Reine de Deniers",
+      "upright": "La Reine de Deniers incarne l'abondance nourricière, le sens pratique et la générosité terrestre. Foyer chaleureux et sagesse pragmatique.",
+      "reversed": "Insécurité matérielle, négligence du foyer, dépendance ou matérialisme excessif.",
+      "description": "La Reine de Deniers représente l'abondance nourricière, le sens pratique et la chaleur du foyer.",
+      "keywords": "Abondance, Sens pratique, Générosité, Foyer, Nourriture, Pragmatisme",
+      "love": "Amour nourrissant et concret. La relation est un foyer de chaleur et d'abondance.",
+      "career": "Succès grâce au sens pratique et à la générosité. Créez un environnement prospère."
+    },
+    "77": {
+      "name": "Roi de Deniers",
+      "upright": "Le Roi de Deniers représente la réussite matérielle, le leadership pragmatique et la sécurité. Abondance, fiabilité et sagesse financière.",
+      "reversed": "Avidité, matérialisme excessif, tyrannie par l'argent ou insécurité financière.",
+      "description": "Le Roi de Deniers symbolise la réussite matérielle, le leadership pragmatique et l'abondance.",
+      "keywords": "Réussite, Pragmatisme, Abondance, Sécurité, Leadership, Sagesse financière",
+      "love": "Partenaire stable et généreux. La sécurité matérielle renforce les fondations amoureuses.",
+      "career": "Maîtrise financière et leadership pragmatique. Votre sagesse matérielle inspire confiance."
+    }
+  },
+  "settings": {
+    "interpretationStyle": "Style d'interprétation",
+    "interpretationStyleDesc": "Choisissez comment l'IA délivre votre lecture",
+    "style": {
+      "concise": {
+        "label": "Concis",
+        "desc": "Bref et direct — les insights clés uniquement"
+      },
+      "standard": {
+        "label": "Standard",
+        "desc": "Profondeur équilibrée avec des conseils clairs"
+      },
+      "poetic": {
+        "label": "Poétique",
+        "desc": "Mystique et littéraire — imagerie riche"
+      },
+      "analytical": {
+        "label": "Analytique",
+        "desc": "Structuré et détaillé — analyse approfondie"
+      }
+    }
+  },
+  "chat": {
+    "title": "Discussion",
+    "placeholder": "Poser une question de suivi...",
+    "aiLabel": "Lecteur de Tarot",
+    "followUp": "Continuer avec le lecteur de Tarot",
+    "context": "Contexte de la lecture",
+    "cards": "cartes",
+    "thinking": "Lecture en cours...",
+    "loadingSuggestions": "Génération de questions...",
+    "suggestionsTitle": "Vous pourriez demander :",
+    "suggest1": "À quoi devrais-je faire attention ?",
+    "suggest2": "Comment améliorer le résultat ?",
+    "suggest3": "Quel est le calendrier pour cela ?"
+  },
+  "journal": {
+    "title": "Journal de lectures",
+    "detail": "Détail de la lecture",
+    "empty": "Aucune lecture pour l'instant",
+    "emptyHint": "Terminez une lecture et appuyez sur le signet pour l'enregistrer ici",
+    "totalReadings": "Total",
+    "thisMonth": "Ce mois",
+    "mostDrawn": "Plus tirée"
+  },
+  "learn": {
+    "title": "Apprendre le Tarot",
+    "lessons": "Leçons",
+    "symbols": "Symboles",
+    "symbolsIntro": "Les cartes de tarot regorgent d'images symboliques. Comprendre ces symboles enrichit vos lectures.",
+    "comingSoon": "Contenu à venir...",
+    "lesson": {
+      "basics": {
+        "title": "Les Bases du Tarot",
+        "desc": "Structure du jeu, fonctionnement des lectures et guide de démarrage"
+      },
+      "majorArcana": {
+        "title": "Arcanes Majeurs",
+        "desc": "Les 22 cartes archétypales et le Voyage du Fou"
+      },
+      "minorArcana": {
+        "title": "Arcanes Mineurs",
+        "desc": "Les quatre couleurs et leurs significations"
+      },
+      "spreads": {
+        "title": "Les Tirages",
+        "desc": "Dispositions courantes et quand les utiliser"
+      },
+      "reversals": {
+        "title": "Cartes Inversées",
+        "desc": "Comment lire les cartes à l'envers"
+      },
+      "intuition": {
+        "title": "Développer l'Intuition",
+        "desc": "Conseils pour approfondir votre connexion avec les cartes"
+      }
+    },
+    "symbol": {
+      "elements": {
+        "title": "Éléments",
+        "intro": "Les quatre éléments classiques forment le fondement du symbolisme du tarot.",
+        "fire": {
+          "name": "Feu",
+          "meaning": "Passion, volonté, transformation, créativité."
+        },
+        "water": {
+          "name": "Eau",
+          "meaning": "Émotions, intuition, inconscient, guérison."
+        },
+        "air": {
+          "name": "Air",
+          "meaning": "Intellect, communication, vérité, conflit."
+        },
+        "earth": {
+          "name": "Terre",
+          "meaning": "Monde matériel, stabilité, croissance, abondance."
+        }
+      },
+      "celestial": {
+        "title": "Corps Célestes",
+        "intro": "Le soleil, la lune et les étoiles parcourent le tarot.",
+        "sun": {
+          "name": "Soleil",
+          "meaning": "Conscience, joie, succès, clarté."
+        },
+        "moon": {
+          "name": "Lune",
+          "meaning": "Inconscient, rêves, illusion, mystère."
+        },
+        "star": {
+          "name": "Étoiles",
+          "meaning": "Espoir, guidance, inspiration divine."
+        },
+        "tower": {
+          "name": "Éclair",
+          "meaning": "Révélation soudaine, intervention divine."
+        }
+      },
+      "figures": {
+        "title": "Figures Archétypales",
+        "intro": "Les figures clés des Arcanes Majeurs représentent des expériences universelles.",
+        "fool": {
+          "name": "Le Fou",
+          "meaning": "Innocence, potentiel, début de tous les voyages."
+        },
+        "magician": {
+          "name": "Le Magicien",
+          "meaning": "Maîtrise des éléments, volonté, manifestation."
+        },
+        "priestess": {
+          "name": "La Papesse",
+          "meaning": "Connaissance cachée, intuition, le voile entre les mondes."
+        },
+        "empress": {
+          "name": "L'Impératrice",
+          "meaning": "Fertilité, abondance, nourricière."
+        }
+      },
+      "animals": {
+        "title": "Animaux",
+        "intro": "Les animaux dans le tarot portent une signification symbolique profonde.",
+        "lion": {
+          "name": "Lion",
+          "meaning": "Courage, force, noblesse."
+        },
+        "eagle": {
+          "name": "Aigle",
+          "meaning": "Vision, ascension spirituelle, pouvoir."
+        },
+        "bull": {
+          "name": "Taureau",
+          "meaning": "Détermination, puissance terrestre, fertilité."
+        },
+        "sphinx": {
+          "name": "Sphinx",
+          "meaning": "Mystère, énigmes, gardien du savoir sacré."
+        }
+      },
+      "objects": {
+        "title": "Objets Sacrés",
+        "intro": "Les quatre symboles de couleur représentent les outils de pratique spirituelle.",
+        "sword": {
+          "name": "Épée",
+          "meaning": "Vérité, justice, clarté mentale."
+        },
+        "cup": {
+          "name": "Coupe",
+          "meaning": "Accomplissement émotionnel, amour, nourriture spirituelle."
+        },
+        "wand": {
+          "name": "Bâton",
+          "meaning": "Pouvoir créatif, volonté, autorité spirituelle."
+        },
+        "pentacle": {
+          "name": "Pentacle",
+          "meaning": "Manifestation matérielle, sagesse terrestre."
+        }
+      },
+      "colors": {
+        "title": "Couleurs",
+        "intro": "Les couleurs dans l'imagerie du tarot portent un poids symbolique.",
+        "red": {
+          "name": "Rouge",
+          "meaning": "Passion, désir, vitalité, action."
+        },
+        "blue": {
+          "name": "Bleu",
+          "meaning": "Intuition, paix, profondeur spirituelle."
+        },
+        "gold": {
+          "name": "Or",
+          "meaning": "Conscience, succès, lumière divine."
+        },
+        "white": {
+          "name": "Blanc",
+          "meaning": "Pureté, clarté spirituelle, nouveaux départs."
+        }
+      }
+    }
+  }
+}
