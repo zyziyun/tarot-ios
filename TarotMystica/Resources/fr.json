@@ -1432,27 +1432,33 @@
     "lesson": {
       "basics": {
         "title": "Les Bases du Tarot",
-        "desc": "Structure du jeu, fonctionnement des lectures et guide de démarrage"
+        "desc": "Structure du jeu, fonctionnement des lectures et guide de démarrage",
+        "content": "## Le Jeu de Tarot\n\nUn jeu de tarot standard contient **78 cartes** divisées en deux groupes :\n\n### Arcanes Majeurs (22 cartes)\nIls représentent les thèmes majeurs de la vie et les leçons spirituelles — du voyage du Mat à l'accomplissement du Monde. Chaque carte marque une étape importante sur votre chemin.\n\n### Arcanes Mineurs (56 cartes)\nDivisés en quatre suites — **Bâtons**, **Coupes**, **Épées** et **Deniers** — ils reflètent les expériences quotidiennes et les défis pratiques. Chaque suite contient des cartes de l'As au 10, plus quatre cartes de cour.\n\n### Votre Première Lecture\nCommencez par tirer une seule carte chaque jour. Pas besoin de mémoriser les significations — laissez les images vous parler d'abord."
       },
       "majorArcana": {
         "title": "Arcanes Majeurs",
-        "desc": "Les 22 cartes archétypales et le Voyage du Fou"
+        "desc": "Les 22 cartes archétypales et le Voyage du Fou",
+        "content": "## Le Voyage du Mat\n\nLes Arcanes Majeurs racontent l'histoire du voyage de l'âme à travers la vie :\n\n**0 - Le Mat** : Innocence, nouveaux départs\n**I - Le Bateleur** : Volonté, manifestation\n**II - La Papesse** : Intuition, mystère\n**III - L'Impératrice** : Abondance, nature\n**IV - L'Empereur** : Structure, autorité\n\nChaque carte représente une leçon archétypale. Quand elles apparaissent dans une lecture, elles signalent des thèmes importants et des transformations de vie.\n\n### Le Chemin\nLes 11 premières cartes (0-X) représentent les forces extérieures. Les 11 dernières (XI-XXI) représentent l'éveil intérieur et l'intégration spirituelle."
       },
       "minorArcana": {
         "title": "Arcanes Mineurs",
-        "desc": "Les quatre couleurs et leurs significations"
+        "desc": "Les quatre couleurs et leurs significations",
+        "content": "## Les Quatre Suites\n\n### Bâtons (Feu)\nAction, inspiration, croissance. Les cartes de Bâtons concernent les ambitions professionnelles et les projets créatifs.\n\n### Coupes (Eau)\nÉmotions, amour, relations. Les Coupes révèlent l'état du cœur et les connexions émotionnelles.\n\n### Épées (Air)\nPensée, communication, conflit. Les Épées traitent des décisions mentales et de la quête de vérité.\n\n### Deniers (Terre)\nMatériel, finances, santé. Les Deniers se concentrent sur le monde physique et la sécurité pratique.\n\n### Les Cartes de Cour\nValet, Cavalier, Reine et Roi représentent des personnes ou des aspects de votre personnalité à différents niveaux de maturité."
       },
       "spreads": {
         "title": "Les Tirages",
-        "desc": "Dispositions courantes et quand les utiliser"
+        "desc": "Dispositions courantes et quand les utiliser",
+        "content": "## Tirages Populaires\n\n### Carte Unique\nGuidance rapide quotidienne. Posez une question, tirez une carte.\n\n### Tirage à Trois Cartes\nLe tirage le plus polyvalent : **Passé — Présent — Futur** ou **Situation — Défi — Conseil**.\n\n### Croix Celtique\nLe tirage classique de 10 cartes pour une analyse approfondie. Il couvre la situation présente, les obstacles, les influences inconscientes, le passé récent, les possibilités futures et le résultat.\n\n### Conseils pour les Tirages\n- Formulez des questions ouvertes (« Que dois-je savoir sur... ? »)\n- Mélangez les cartes en vous concentrant sur votre question\n- Faites confiance au premier tirage — ne retirez pas de cartes"
       },
       "reversals": {
         "title": "Cartes Inversées",
-        "desc": "Comment lire les cartes à l'envers"
+        "desc": "Comment lire les cartes à l'envers",
+        "content": "## Ce Que Signifient les Cartes Inversées\n\nQuand une carte apparaît à l'envers, son énergie est modifiée :\n\n### Interprétations Courantes\n- **Énergie bloquée** — Les qualités positives de la carte sont supprimées\n- **Focus interne** — Le thème se manifeste intérieurement plutôt qu'extérieurement\n- **Retards** — L'énergie de la carte est présente mais ne s'est pas encore manifestée\n- **Excès ou manque** — Trop ou pas assez de la qualité de la carte\n\n### Conseil pour Débutants\nIl n'y a pas de façon « correcte » de lire les inversées. Certains lecteurs ne les utilisent pas. Commencez sans elles et ajoutez-les quand vous vous sentez à l'aise. Faites confiance à votre intuition."
       },
       "intuition": {
         "title": "Développer l'Intuition",
-        "desc": "Conseils pour approfondir votre connexion avec les cartes"
+        "desc": "Conseils pour approfondir votre connexion avec les cartes",
+        "content": "## Développer Votre Pratique Intuitive\n\n### Pratique Quotidienne\nTirez une carte chaque matin. Avant de chercher sa signification, observez :\n- Qu'est-ce qui attire votre regard en premier ?\n- Quelles émotions l'image évoque-t-elle ?\n- Quelle histoire vous racontez-vous en la regardant ?\n\n### Connexion aux Symboles\nChaque carte regorge de symbolisme. Les couleurs, nombres, figures et objets contribuent au message. Avec le temps, vous développerez votre propre vocabulaire intuitif.\n\n### Tenir un Journal\nNotez votre carte du jour et vos impressions. Relisez en fin de semaine — vous remarquerez des motifs et votre intuition se renforcera."
       }
     },
     "symbol": {
@@ -1461,19 +1467,23 @@
         "intro": "Les quatre éléments classiques forment le fondement du symbolisme du tarot.",
         "fire": {
           "name": "Feu",
-          "meaning": "Passion, volonté, transformation, créativité."
+          "meaning": "Passion, volonté, transformation, créativité.",
+          "cards": "Suite de Bâtons, La Maison Dieu, La Force"
         },
         "water": {
           "name": "Eau",
-          "meaning": "Émotions, intuition, inconscient, guérison."
+          "meaning": "Émotions, intuition, inconscient, guérison.",
+          "cards": "Suite de Coupes, La Lune, L'Étoile"
         },
         "air": {
           "name": "Air",
-          "meaning": "Intellect, communication, vérité, conflit."
+          "meaning": "Intellect, communication, vérité, conflit.",
+          "cards": "Suite d'Épées, La Justice, Le Mat"
         },
         "earth": {
           "name": "Terre",
-          "meaning": "Monde matériel, stabilité, croissance, abondance."
+          "meaning": "Monde matériel, stabilité, croissance, abondance.",
+          "cards": "Suite de Deniers, L'Impératrice, Le Monde"
         }
       },
       "celestial": {
@@ -1481,19 +1491,23 @@
         "intro": "Le soleil, la lune et les étoiles parcourent le tarot.",
         "sun": {
           "name": "Soleil",
-          "meaning": "Conscience, joie, succès, clarté."
+          "meaning": "Conscience, joie, succès, clarté.",
+          "cards": "Le Soleil (XIX), As de Bâtons"
         },
         "moon": {
           "name": "Lune",
-          "meaning": "Inconscient, rêves, illusion, mystère."
+          "meaning": "Inconscient, rêves, illusion, mystère.",
+          "cards": "La Lune (XVIII), La Papesse"
         },
         "star": {
           "name": "Étoiles",
-          "meaning": "Espoir, guidance, inspiration divine."
+          "meaning": "Espoir, guidance, inspiration divine.",
+          "cards": "L'Étoile (XVII), L'Ermite"
         },
         "tower": {
           "name": "Éclair",
-          "meaning": "Révélation soudaine, intervention divine."
+          "meaning": "Révélation soudaine, intervention divine.",
+          "cards": "La Maison Dieu (XVI), As d'Épées"
         }
       },
       "figures": {
@@ -1501,19 +1515,23 @@
         "intro": "Les figures clés des Arcanes Majeurs représentent des expériences universelles.",
         "fool": {
           "name": "Le Fou",
-          "meaning": "Innocence, potentiel, début de tous les voyages."
+          "meaning": "Innocence, potentiel, début de tous les voyages.",
+          "cards": "Le Mat (0)"
         },
         "magician": {
           "name": "Le Magicien",
-          "meaning": "Maîtrise des éléments, volonté, manifestation."
+          "meaning": "Maîtrise des éléments, volonté, manifestation.",
+          "cards": "Le Bateleur (I)"
         },
         "priestess": {
           "name": "La Papesse",
-          "meaning": "Connaissance cachée, intuition, le voile entre les mondes."
+          "meaning": "Connaissance cachée, intuition, le voile entre les mondes.",
+          "cards": "La Papesse (II)"
         },
         "empress": {
           "name": "L'Impératrice",
-          "meaning": "Fertilité, abondance, nourricière."
+          "meaning": "Fertilité, abondance, nourricière.",
+          "cards": "L'Impératrice (III)"
         }
       },
       "animals": {
@@ -1521,19 +1539,23 @@
         "intro": "Les animaux dans le tarot portent une signification symbolique profonde.",
         "lion": {
           "name": "Lion",
-          "meaning": "Courage, force, noblesse."
+          "meaning": "Courage, force, noblesse.",
+          "cards": "La Force (VIII), Roi de Bâtons"
         },
         "eagle": {
           "name": "Aigle",
-          "meaning": "Vision, ascension spirituelle, pouvoir."
+          "meaning": "Vision, ascension spirituelle, pouvoir.",
+          "cards": "Le Monde (XXI), Cavalier d'Épées"
         },
         "bull": {
           "name": "Taureau",
-          "meaning": "Détermination, puissance terrestre, fertilité."
+          "meaning": "Détermination, puissance terrestre, fertilité.",
+          "cards": "Le Monde (XXI), Roi de Deniers"
         },
         "sphinx": {
           "name": "Sphinx",
-          "meaning": "Mystère, énigmes, gardien du savoir sacré."
+          "meaning": "Mystère, énigmes, gardien du savoir sacré.",
+          "cards": "La Roue de Fortune (X), Le Chariot (VII)"
         }
       },
       "objects": {
@@ -1541,19 +1563,23 @@
         "intro": "Les quatre symboles de couleur représentent les outils de pratique spirituelle.",
         "sword": {
           "name": "Épée",
-          "meaning": "Vérité, justice, clarté mentale."
+          "meaning": "Vérité, justice, clarté mentale.",
+          "cards": "Toutes les cartes d'Épées, La Justice (XI)"
         },
         "cup": {
           "name": "Coupe",
-          "meaning": "Accomplissement émotionnel, amour, nourriture spirituelle."
+          "meaning": "Accomplissement émotionnel, amour, nourriture spirituelle.",
+          "cards": "Toutes les cartes de Coupes, L'Étoile (XVII)"
         },
         "wand": {
           "name": "Bâton",
-          "meaning": "Pouvoir créatif, volonté, autorité spirituelle."
+          "meaning": "Pouvoir créatif, volonté, autorité spirituelle.",
+          "cards": "Toutes les cartes de Bâtons, Le Bateleur (I)"
         },
         "pentacle": {
           "name": "Pentacle",
-          "meaning": "Manifestation matérielle, sagesse terrestre."
+          "meaning": "Manifestation matérielle, sagesse terrestre.",
+          "cards": "Toutes les cartes de Deniers, Le Monde (XXI)"
         }
       },
       "colors": {
@@ -1561,19 +1587,23 @@
         "intro": "Les couleurs dans l'imagerie du tarot portent un poids symbolique.",
         "red": {
           "name": "Rouge",
-          "meaning": "Passion, désir, vitalité, action."
+          "meaning": "Passion, désir, vitalité, action.",
+          "cards": "L'Empereur, Cavalier de Bâtons"
         },
         "blue": {
           "name": "Bleu",
-          "meaning": "Intuition, paix, profondeur spirituelle."
+          "meaning": "Intuition, paix, profondeur spirituelle.",
+          "cards": "La Papesse, Reine de Coupes"
         },
         "gold": {
           "name": "Or",
-          "meaning": "Conscience, succès, lumière divine."
+          "meaning": "Conscience, succès, lumière divine.",
+          "cards": "Le Soleil, As de Deniers"
         },
         "white": {
           "name": "Blanc",
-          "meaning": "Pureté, clarté spirituelle, nouveaux départs."
+          "meaning": "Pureté, clarté spirituelle, nouveaux départs.",
+          "cards": "Le Mat, L'Étoile"
         }
       }
     }
