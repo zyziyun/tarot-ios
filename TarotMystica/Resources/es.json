@@ -1432,27 +1432,33 @@
     "lesson": {
       "basics": {
         "title": "Bases del Tarot",
-        "desc": "Estructura del mazo, cómo funcionan las lecturas y guía inicial"
+        "desc": "Estructura del mazo, cómo funcionan las lecturas y guía inicial",
+        "content": "## La Baraja de Tarot\n\nUna baraja estándar de tarot contiene **78 cartas** divididas en dos grupos:\n\n### Arcanos Mayores (22 cartas)\nRepresentan los temas principales de la vida y las lecciones espirituales — desde el viaje del Loco hasta la realización del Mundo. Cada carta marca un hito importante en tu camino.\n\n### Arcanos Menores (56 cartas)\nDivididos en cuatro palos — **Bastos**, **Copas**, **Espadas** y **Oros** — estos reflejan las experiencias cotidianas y desafíos prácticos. Cada palo contiene cartas del As al 10, más cuatro cartas de la corte.\n\n### Tu Primera Lectura\nComienza con una sola carta cada día. No necesitas memorizar significados — deja que las imágenes te hablen primero."
       },
       "majorArcana": {
         "title": "Arcanos Mayores",
-        "desc": "Las 22 cartas arquetípicas y el Viaje del Loco"
+        "desc": "Las 22 cartas arquetípicas y el Viaje del Loco",
+        "content": "## El Viaje del Loco\n\nLos Arcanos Mayores cuentan la historia del viaje del alma a través de la vida:\n\n**0 - El Loco**: Inocencia, nuevos comienzos\n**I - El Mago**: Voluntad, manifestación\n**II - La Sacerdotisa**: Intuición, misterio\n**III - La Emperatriz**: Abundancia, naturaleza\n**IV - El Emperador**: Estructura, autoridad\n\nCada carta representa una lección arquetipal. Cuando aparecen en una lectura, señalan temas importantes y transformaciones vitales.\n\n### El Camino\nLas primeras 11 cartas (0-X) representan las fuerzas externas. Las últimas 11 (XI-XXI) representan el despertar interior y la integración espiritual."
       },
       "minorArcana": {
         "title": "Arcanos Menores",
-        "desc": "Los cuatro palos y sus significados"
+        "desc": "Los cuatro palos y sus significados",
+        "content": "## Los Cuatro Palos\n\n### Bastos (Fuego)\nAcción, inspiración, crecimiento. Las cartas de Bastos se relacionan con ambiciones profesionales y proyectos creativos.\n\n### Copas (Agua)\nEmociones, amor, relaciones. Las Copas revelan el estado del corazón y las conexiones emocionales.\n\n### Espadas (Aire)\nPensamiento, comunicación, conflicto. Las Espadas tratan sobre decisiones mentales y la búsqueda de la verdad.\n\n### Oros (Tierra)\nMaterial, finanzas, salud. Los Oros se enfocan en el mundo físico y la seguridad práctica.\n\n### Las Cartas de la Corte\nSota, Caballero, Reina y Rey representan personas o aspectos de tu personalidad en diferentes niveles de madurez."
       },
       "spreads": {
         "title": "Tiradas",
-        "desc": "Disposiciones comunes y cuándo usar cada una"
+        "desc": "Disposiciones comunes y cuándo usar cada una",
+        "content": "## Tiradas Populares\n\n### Carta Única\nGuía rápida diaria. Haz una pregunta, saca una carta.\n\n### Tirada de Tres Cartas\nLa tirada más versátil: **Pasado — Presente — Futuro** o **Situación — Desafío — Consejo**.\n\n### Cruz Celta\nLa tirada clásica de 10 cartas para un análisis profundo. Cubre la situación presente, obstáculos, influencias inconscientes, pasado reciente, posibilidades futuras y resultado.\n\n### Consejos para Tiradas\n- Formula preguntas abiertas (\"¿Qué necesito saber sobre...?\")\n- Baraja mientras te concentras en tu pregunta\n- Confía en la primera disposición — no vuelvas a sacar cartas"
       },
       "reversals": {
         "title": "Cartas Invertidas",
-        "desc": "Cómo leer cartas que aparecen al revés"
+        "desc": "Cómo leer cartas que aparecen al revés",
+        "content": "## Qué Significan las Cartas Invertidas\n\nCuando una carta aparece al revés, su energía se modifica:\n\n### Interpretaciones Comunes\n- **Energía bloqueada** — Las cualidades positivas de la carta están siendo suprimidas\n- **Enfoque interno** — El tema se manifiesta internamente en lugar de externamente\n- **Retrasos** — La energía de la carta está presente pero aún no se ha manifestado\n- **Exceso o defecto** — Demasiado o muy poco de la cualidad de la carta\n\n### Consejo para Principiantes\nNo hay una forma \"correcta\" de leer invertidas. Algunos lectores no las usan. Comienza sin ellas y añádelas cuando te sientas cómodo. Confía en tu intuición."
       },
       "intuition": {
         "title": "Desarrollar la Intuición",
-        "desc": "Consejos para profundizar tu conexión con las cartas"
+        "desc": "Consejos para profundizar tu conexión con las cartas",
+        "content": "## Desarrollando Tu Práctica Intuitiva\n\n### Práctica Diaria\nSaca una carta cada mañana. Antes de buscar su significado, observa:\n- ¿Qué te llama la atención primero?\n- ¿Qué emociones evoca la imagen?\n- ¿Qué historia te cuentas sobre lo que ves?\n\n### Conexión con los Símbolos\nCada carta está llena de simbolismo. Los colores, números, figuras y objetos contribuyen al mensaje. Con el tiempo desarrollarás tu propio vocabulario intuitivo.\n\n### Llevar un Diario\nRegistra tu carta diaria y tus impresiones. Revisa al final de la semana — notarás patrones y tu intuición se fortalecerá."
       }
     },
     "symbol": {
@@ -1461,19 +1467,23 @@
         "intro": "Los cuatro elementos clásicos forman la base del simbolismo del tarot.",
         "fire": {
           "name": "Fuego",
-          "meaning": "Pasión, voluntad, transformación, creatividad."
+          "meaning": "Pasión, voluntad, transformación, creatividad.",
+          "cards": "Palo de Bastos, La Torre, La Fuerza"
         },
         "water": {
           "name": "Agua",
-          "meaning": "Emociones, intuición, inconsciente, sanación."
+          "meaning": "Emociones, intuición, inconsciente, sanación.",
+          "cards": "Palo de Copas, La Luna, La Estrella"
         },
         "air": {
           "name": "Aire",
-          "meaning": "Intelecto, comunicación, verdad, conflicto."
+          "meaning": "Intelecto, comunicación, verdad, conflicto.",
+          "cards": "Palo de Espadas, La Justicia, El Loco"
         },
         "earth": {
           "name": "Tierra",
-          "meaning": "Mundo material, estabilidad, crecimiento, abundancia."
+          "meaning": "Mundo material, estabilidad, crecimiento, abundancia.",
+          "cards": "Palo de Oros, La Emperatriz, El Mundo"
         }
       },
       "celestial": {
@@ -1481,19 +1491,23 @@
         "intro": "El sol, la luna y las estrellas aparecen en todo el tarot.",
         "sun": {
           "name": "Sol",
-          "meaning": "Conciencia, alegría, éxito, claridad."
+          "meaning": "Conciencia, alegría, éxito, claridad.",
+          "cards": "El Sol (XIX), As de Bastos"
         },
         "moon": {
           "name": "Luna",
-          "meaning": "Inconsciente, sueños, ilusión, misterio."
+          "meaning": "Inconsciente, sueños, ilusión, misterio.",
+          "cards": "La Luna (XVIII), La Sacerdotisa"
         },
         "star": {
           "name": "Estrellas",
-          "meaning": "Esperanza, guía, inspiración divina."
+          "meaning": "Esperanza, guía, inspiración divina.",
+          "cards": "La Estrella (XVII), El Ermitaño"
         },
         "tower": {
           "name": "Rayo",
-          "meaning": "Revelación repentina, intervención divina."
+          "meaning": "Revelación repentina, intervención divina.",
+          "cards": "La Torre (XVI), As de Espadas"
         }
       },
       "figures": {
@@ -1501,19 +1515,23 @@
         "intro": "Las figuras clave de los Arcanos Mayores representan experiencias humanas universales.",
         "fool": {
           "name": "El Loco",
-          "meaning": "Inocencia, potencial, el comienzo de todos los viajes."
+          "meaning": "Inocencia, potencial, el comienzo de todos los viajes.",
+          "cards": "El Loco (0)"
         },
         "magician": {
           "name": "El Mago",
-          "meaning": "Dominio de los elementos, voluntad, manifestación."
+          "meaning": "Dominio de los elementos, voluntad, manifestación.",
+          "cards": "El Mago (I)"
         },
         "priestess": {
           "name": "La Sacerdotisa",
-          "meaning": "Conocimiento oculto, intuición, el velo entre mundos."
+          "meaning": "Conocimiento oculto, intuición, el velo entre mundos.",
+          "cards": "La Sacerdotisa (II)"
         },
         "empress": {
           "name": "La Emperatriz",
-          "meaning": "Fertilidad, abundancia, nutrición."
+          "meaning": "Fertilidad, abundancia, nutrición.",
+          "cards": "La Emperatriz (III)"
         }
       },
       "animals": {
@@ -1521,19 +1539,23 @@
         "intro": "Los animales en el tarot llevan un significado simbólico profundo.",
         "lion": {
           "name": "León",
-          "meaning": "Coraje, fuerza, nobleza."
+          "meaning": "Coraje, fuerza, nobleza.",
+          "cards": "La Fuerza (VIII), Rey de Bastos"
         },
         "eagle": {
           "name": "Águila",
-          "meaning": "Visión, ascensión espiritual, poder."
+          "meaning": "Visión, ascensión espiritual, poder.",
+          "cards": "El Mundo (XXI), Caballero de Espadas"
         },
         "bull": {
           "name": "Toro",
-          "meaning": "Determinación, poder terrenal, fertilidad."
+          "meaning": "Determinación, poder terrenal, fertilidad.",
+          "cards": "El Mundo (XXI), Rey de Oros"
         },
         "sphinx": {
           "name": "Esfinge",
-          "meaning": "Misterio, acertijos, guardián del conocimiento sagrado."
+          "meaning": "Misterio, acertijos, guardián del conocimiento sagrado.",
+          "cards": "La Rueda de la Fortuna (X), El Carro (VII)"
         }
       },
       "objects": {
@@ -1541,19 +1563,23 @@
         "intro": "Los cuatro símbolos de palo representan herramientas de práctica espiritual.",
         "sword": {
           "name": "Espada",
-          "meaning": "Verdad, justicia, claridad mental."
+          "meaning": "Verdad, justicia, claridad mental.",
+          "cards": "Todas las cartas de Espadas, La Justicia (XI)"
         },
         "cup": {
           "name": "Copa",
-          "meaning": "Satisfacción emocional, amor, nutrición espiritual."
+          "meaning": "Satisfacción emocional, amor, nutrición espiritual.",
+          "cards": "Todas las cartas de Copas, La Estrella (XVII)"
         },
         "wand": {
           "name": "Vara",
-          "meaning": "Poder creativo, voluntad, autoridad espiritual."
+          "meaning": "Poder creativo, voluntad, autoridad espiritual.",
+          "cards": "Todas las cartas de Bastos, El Mago (I)"
         },
         "pentacle": {
           "name": "Pentáculo",
-          "meaning": "Manifestación material, sabiduría terrenal."
+          "meaning": "Manifestación material, sabiduría terrenal.",
+          "cards": "Todas las cartas de Oros, El Mundo (XXI)"
         }
       },
       "colors": {
@@ -1561,19 +1587,23 @@
         "intro": "Los colores en las imágenes del tarot llevan peso simbólico.",
         "red": {
           "name": "Rojo",
-          "meaning": "Pasión, deseo, vitalidad, acción."
+          "meaning": "Pasión, deseo, vitalidad, acción.",
+          "cards": "El Emperador, Caballero de Bastos"
         },
         "blue": {
           "name": "Azul",
-          "meaning": "Intuición, paz, profundidad espiritual."
+          "meaning": "Intuición, paz, profundidad espiritual.",
+          "cards": "La Sacerdotisa, Reina de Copas"
         },
         "gold": {
           "name": "Oro",
-          "meaning": "Conciencia, éxito, luz divina."
+          "meaning": "Conciencia, éxito, luz divina.",
+          "cards": "El Sol, As de Oros"
         },
         "white": {
           "name": "Blanco",
-          "meaning": "Pureza, claridad espiritual, nuevos comienzos."
+          "meaning": "Pureza, claridad espiritual, nuevos comienzos.",
+          "cards": "El Loco, La Estrella"
         }
       }
     }
