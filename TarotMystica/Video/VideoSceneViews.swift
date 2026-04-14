@@ -557,7 +557,7 @@ struct VideoCardRevealScene: View {
                     .background(gold.opacity(0.06))
                     .cornerRadius(16)
 
-                    Spacer().frame(height: 14)
+                    Spacer().frame(height: 48)
                 }
 
                 ZStack {
@@ -584,7 +584,7 @@ struct VideoCardRevealScene: View {
                 .frame(width: 170, height: 264)
                 .shadow(color: gold.opacity(0.25), radius: 16, y: 8)
 
-                Spacer().frame(height: 28)
+                Spacer().frame(height: 52)
 
                 if flipProgress >= 0.5 {
                     VStack(spacing: 10) {
@@ -741,17 +741,13 @@ struct VideoAllCardsScene: View {
 
     /// Compute a safe spread multiplier that prevents card overlap
     private var spreadMultiplier: CGFloat {
-        // Each card occupies roughly cardW+20 width, cardH+30 height
-        // Need enough spread so adjacent positions don't overlap
-        let cellW = cardW + 24
-        let cellH = cardH + 30
+        let cellW = cardW + 36
+        let cellH = cardH + 50
         let maxCell = max(cellW, cellH)
-        // Minimum distance between positions varies by spread; use 0.5 as typical min gap
         let minGap: CGFloat = 0.5
-        // Scale so that minGap * layoutSize * multiplier >= maxCell
         let layoutSize: CGFloat = videoLogicalSize.width - 40
         let needed = maxCell / (minGap * layoutSize)
-        return min(max(needed, 0.30), 0.42)
+        return min(max(needed, 0.30), 0.58)
     }
 
     private var spreadLayoutCards: some View {
@@ -776,37 +772,39 @@ struct VideoAllCardsScene: View {
     }
 
     private func spreadCardView(item: (card: DrawnCard, position: SpreadPosition, name: String), rotation: Double) -> some View {
-        VStack(spacing: 2) {
-            if !item.position.label.isEmpty {
-                Text(item.position.label)
-                    .font(.system(size: labelFont, weight: .bold))
-                    .foregroundColor(accent)
-                    .tracking(0.5)
-                    .lineLimit(1)
-                    .padding(.horizontal, 4)
-                    .padding(.vertical, 1)
-                    .background(accent.opacity(0.06))
-                    .cornerRadius(3)
+        cardImageView(item.card.card.image)
+            .frame(width: cardW, height: cardH)
+            .rotationEffect(item.card.reversed ? .degrees(180) : .zero)
+            .rotationEffect(.degrees(rotation))
+            .shadow(color: gold.opacity(0.15), radius: 4, y: 2)
+            .overlay(alignment: .top) {
+                if !item.position.label.isEmpty {
+                    Text(item.position.label)
+                        .font(.system(size: labelFont, weight: .bold))
+                        .foregroundColor(.white)
+                        .lineLimit(1)
+                        .padding(.horizontal, 5)
+                        .padding(.vertical, 2)
+                        .background(accent.opacity(0.85))
+                        .cornerRadius(4)
+                        .offset(y: -labelFont - 14)
+                }
             }
+            .overlay(alignment: .bottom) {
+                VStack(spacing: 1) {
+                    Text(item.name)
+                        .font(.system(size: nameFont, weight: .medium, design: .serif))
+                        .foregroundColor(dark)
+                        .lineLimit(1)
 
-            cardImageView(item.card.card.image)
-                .frame(width: cardW, height: cardH)
-                .rotationEffect(item.card.reversed ? .degrees(180) : .zero)
-                .rotationEffect(.degrees(rotation))
-                .shadow(color: gold.opacity(0.15), radius: 4, y: 2)
-
-            Text(item.name)
-                .font(.system(size: nameFont, weight: .medium, design: .serif))
-                .foregroundColor(dark)
-                .lineLimit(1)
-
-            if item.card.reversed {
-                Text("Rev.")
-                    .font(.system(size: max(labelFont - 2, 7), weight: .bold))
-                    .foregroundColor(accent.opacity(0.7))
+                    if item.card.reversed {
+                        Text("Rev.")
+                            .font(.system(size: max(labelFont - 2, 7), weight: .bold))
+                            .foregroundColor(accent.opacity(0.7))
+                    }
+                }
+                .offset(y: cardH * 0.08 + nameFont + 12)
             }
-        }
-        .frame(width: cardW + 16)
     }
 }
 
