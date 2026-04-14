@@ -1,0 +1,124 @@
+name: TarotMystica
+options:
+  bundleIdPrefix: com.yunzi
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+
+packages:
+  mlx-swift-lm:
+    url: https://github.com/ml-explore/mlx-swift-lm
+    from: "2.31.3"
+  mlx-swift:
+    url: https://github.com/ml-explore/mlx-swift
+    from: "0.31.3"
+  ZIPFoundation:
+    url: https://github.com/weichsel/ZIPFoundation
+    from: "0.9.19"
+  firebase-ios-sdk:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: "11.0.0"
+
+schemes:
+  TarotMystica:
+    build:
+      targets:
+        TarotMystica: all
+        DailyCardWidget: all
+    run:
+      config: Debug
+
+targets:
+  TarotMystica:
+    type: application
+    platform: iOS
+    bundleId: com.yunzi.tarotmystica
+    sources:
+      - path: TarotMystica
+        excludes:
+          - Resources
+      - path: TarotMystica/Resources
+        type: group
+        buildPhase: resources
+      - path: TarotMystica/Assets.xcassets
+        buildPhase: resources
+    dependencies:
+      - target: DailyCardWidget
+        embed: true
+      - package: mlx-swift-lm
+        product: MLXLLM
+      - package: mlx-swift-lm
+        product: MLXLMCommon
+      - package: mlx-swift
+        product: MLX
+      - package: mlx-swift
+        product: MLXNN
+      - package: mlx-swift
+        product: MLXFFT
+      - package: mlx-swift
+        product: MLXRandom
+      - package: ZIPFoundation
+      - package: firebase-ios-sdk
+        product: FirebaseCrashlytics
+      - package: firebase-ios-sdk
+        product: FirebaseAnalytics
+    preBuildScripts:
+      - name: Sync Shared Resources
+        script: |
+          SHARED_DIR="${SRCROOT}/../shared"
+          RESOURCES_DIR="${SRCROOT}/TarotMystica/Resources"
+          if [ -d "$SHARED_DIR" ]; then
+            mkdir -p "$RESOURCES_DIR"
+            cp "$SHARED_DIR"/config/*.json "$RESOURCES_DIR/" 2>/dev/null || true
+            cp "$SHARED_DIR"/i18n/*.json "$RESOURCES_DIR/" 2>/dev/null || true
+            cp "$SHARED_DIR"/cards/*.webp "$RESOURCES_DIR/" 2>/dev/null || true
+            echo "Synced shared resources → $RESOURCES_DIR"
+          fi
+        basedOnDependencyAnalysis: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yunzi.tarotmystica
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "Save tarot reading poster to your photo library"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait"
+        SWIFT_VERSION: "5.9"
+        SWIFT_ENABLE_EXPLICIT_MODULES: NO
+        CLANG_ENABLE_EXPLICIT_MODULES: NO
+        GENERATE_INFOPLIST_FILE: YES
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 1.0
+        DEVELOPMENT_TEAM: ZH47R7RVKB
+        CODE_SIGN_STYLE: Automatic
+
+  DailyCardWidget:
+    type: app-extension
+    platform: iOS
+    bundleId: com.yunzi.tarotmystica.widget
+    product: DailyCardWidget
+    info:
+      path: DailyCardWidget/Info.plist
+      properties:
+        CFBundleDisplayName: Daily Card
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    sources:
+      - path: DailyCardWidget
+        excludes:
+          - Info.plist
+      - path: TarotMystica/Resources
+        type: group
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yunzi.tarotmystica.widget
+        SWIFT_VERSION: "5.9"
+        SWIFT_ENABLE_EXPLICIT_MODULES: NO
+        CLANG_ENABLE_EXPLICIT_MODULES: NO
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 1.0
+        DEVELOPMENT_TEAM: ZH47R7RVKB
+        CODE_SIGN_STYLE: Automatic
