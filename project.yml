@@ -12,9 +12,6 @@ packages:
   mlx-swift:
     url: https://github.com/ml-explore/mlx-swift
     from: "0.31.3"
-  ZIPFoundation:
-    url: https://github.com/weichsel/ZIPFoundation
-    from: "0.9.19"
   firebase-ios-sdk:
     url: https://github.com/firebase/firebase-ios-sdk
     from: "11.0.0"
@@ -51,13 +48,6 @@ targets:
         product: MLXLMCommon
       - package: mlx-swift
         product: MLX
-      - package: mlx-swift
-        product: MLXNN
-      - package: mlx-swift
-        product: MLXFFT
-      - package: mlx-swift
-        product: MLXRandom
-      - package: ZIPFoundation
       - package: firebase-ios-sdk
         product: FirebaseCrashlytics
       - package: firebase-ios-sdk

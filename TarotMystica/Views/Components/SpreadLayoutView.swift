@@ -1,6 +1,5 @@
 import SwiftUI
 
-/// Mini card layout preview showing the shape of a spread
 struct SpreadLayoutView: View {
     let spreadKey: String
     let count: Int
@@ -36,7 +35,6 @@ struct SpreadLayoutView: View {
         let rotation: Double
     }
 
-    /// Layout coordinates for each spread type
     static func layoutPositions(for key: String, count: Int) -> [CardPosition] {
         switch key {
         case "single":
@@ -51,27 +49,27 @@ struct SpreadLayoutView: View {
 
         case "mindBodySpirit":
             return [
-                CardPosition(x: 0, y: -0.6, rotation: 0),     // Mind (top)
-                CardPosition(x: -0.5, y: 0.4, rotation: 0),    // Body (bottom-left)
-                CardPosition(x: 0.5, y: 0.4, rotation: 0),     // Spirit (bottom-right)
+                CardPosition(x: 0, y: -0.6, rotation: 0),
+                CardPosition(x: -0.5, y: 0.4, rotation: 0),
+                CardPosition(x: 0.5, y: 0.4, rotation: 0),
             ]
 
         case "fiveCard", "gypsyCross":
             return [
-                CardPosition(x: -0.7, y: 0, rotation: 0),     // Left
-                CardPosition(x: 0, y: -0.6, rotation: 0),      // Top
-                CardPosition(x: 0, y: 0, rotation: 0),         // Center
-                CardPosition(x: 0, y: 0.6, rotation: 0),       // Bottom
-                CardPosition(x: 0.7, y: 0, rotation: 0),       // Right
+                CardPosition(x: -0.7, y: 0, rotation: 0),
+                CardPosition(x: 0, y: -0.6, rotation: 0),
+                CardPosition(x: 0, y: 0, rotation: 0),
+                CardPosition(x: 0, y: 0.6, rotation: 0),
+                CardPosition(x: 0.7, y: 0, rotation: 0),
             ]
 
         case "relationship":
             return [
-                CardPosition(x: -0.5, y: -0.5, rotation: 0),  // You
-                CardPosition(x: 0.5, y: -0.5, rotation: 0),    // Partner
-                CardPosition(x: -0.5, y: 0.2, rotation: 0),    // Your feelings
-                CardPosition(x: 0.5, y: 0.2, rotation: 0),     // Their feelings
-                CardPosition(x: 0, y: 0.7, rotation: 0),       // Outcome
+                CardPosition(x: -0.5, y: -0.5, rotation: 0),
+                CardPosition(x: 0.5, y: -0.5, rotation: 0),
+                CardPosition(x: -0.5, y: 0.2, rotation: 0),
+                CardPosition(x: 0.5, y: 0.2, rotation: 0),
+                CardPosition(x: 0, y: 0.7, rotation: 0),
             ]
 
         case "horseshoe":
@@ -87,25 +85,25 @@ struct SpreadLayoutView: View {
 
         case "celtic":
             return [
-                CardPosition(x: -0.3, y: 0, rotation: 0),      // 1: Present
-                CardPosition(x: -0.3, y: 0, rotation: 90),      // 2: Challenge (cross)
-                CardPosition(x: -0.3, y: -0.65, rotation: 0),   // 3: Above
-                CardPosition(x: -0.3, y: 0.65, rotation: 0),    // 4: Below
-                CardPosition(x: -0.9, y: 0, rotation: 0),       // 5: Past
-                CardPosition(x: 0.3, y: 0, rotation: 0),        // 6: Future
-                CardPosition(x: 0.8, y: 0.7, rotation: 0),      // 7: Self
-                CardPosition(x: 0.8, y: 0.23, rotation: 0),     // 8: Environment
-                CardPosition(x: 0.8, y: -0.23, rotation: 0),    // 9: Hopes
-                CardPosition(x: 0.8, y: -0.7, rotation: 0),     // 10: Outcome
+                CardPosition(x: -0.3, y: 0, rotation: 0),
+                CardPosition(x: -0.3, y: 0, rotation: 90),
+                CardPosition(x: -0.3, y: -0.65, rotation: 0),
+                CardPosition(x: -0.3, y: 0.65, rotation: 0),
+                CardPosition(x: -0.9, y: 0, rotation: 0),
+                CardPosition(x: 0.3, y: 0, rotation: 0),
+                CardPosition(x: 0.8, y: 0.7, rotation: 0),
+                CardPosition(x: 0.8, y: 0.23, rotation: 0),
+                CardPosition(x: 0.8, y: -0.23, rotation: 0),
+                CardPosition(x: 0.8, y: -0.7, rotation: 0),
             ]
 
         case "twoPaths":
             return [
-                CardPosition(x: 0, y: 0.6, rotation: 0),       // Situation
-                CardPosition(x: -0.6, y: 0, rotation: 0),       // Path A
-                CardPosition(x: -0.6, y: -0.6, rotation: 0),    // Outcome A
-                CardPosition(x: 0.6, y: 0, rotation: 0),        // Path B
-                CardPosition(x: 0.6, y: -0.6, rotation: 0),     // Outcome B
+                CardPosition(x: 0, y: 0.6, rotation: 0),
+                CardPosition(x: -0.6, y: 0, rotation: 0),
+                CardPosition(x: -0.6, y: -0.6, rotation: 0),
+                CardPosition(x: 0.6, y: 0, rotation: 0),
+                CardPosition(x: 0.6, y: -0.6, rotation: 0),
             ]
 
         case "hexagram":
@@ -116,7 +114,7 @@ struct SpreadLayoutView: View {
                     y: CGFloat(sin(angle)) * 0.7,
                     rotation: 0
                 )
-            } + [CardPosition(x: 0, y: 0, rotation: 0)]  // Center
+            } + [CardPosition(x: 0, y: 0, rotation: 0)]
 
         case "pentagram", "mirrorOfSelf":
             return (0..<5).map { i in
@@ -151,33 +149,33 @@ struct SpreadLayoutView: View {
 
         case "career":
             return [
-                CardPosition(x: 0, y: 0.7, rotation: 0),       // Current
-                CardPosition(x: -0.6, y: 0.2, rotation: 0),     // Strength
-                CardPosition(x: 0.6, y: 0.2, rotation: 0),      // Challenge
-                CardPosition(x: -0.6, y: -0.3, rotation: 0),    // Action
-                CardPosition(x: 0.6, y: -0.3, rotation: 0),     // Environment
-                CardPosition(x: 0, y: -0.7, rotation: 0),       // Outcome
+                CardPosition(x: 0, y: 0.7, rotation: 0),
+                CardPosition(x: -0.6, y: 0.2, rotation: 0),
+                CardPosition(x: 0.6, y: 0.2, rotation: 0),
+                CardPosition(x: -0.6, y: -0.3, rotation: 0),
+                CardPosition(x: 0.6, y: -0.3, rotation: 0),
+                CardPosition(x: 0, y: -0.7, rotation: 0),
             ]
 
         case "treeOfLife":
             return [
-                CardPosition(x: 0, y: -0.85, rotation: 0),     // Kether
-                CardPosition(x: -0.6, y: -0.55, rotation: 0),   // Chokmah
-                CardPosition(x: 0.6, y: -0.55, rotation: 0),    // Binah
-                CardPosition(x: -0.6, y: -0.1, rotation: 0),    // Chesed
-                CardPosition(x: 0.6, y: -0.1, rotation: 0),     // Geburah
-                CardPosition(x: 0, y: 0.05, rotation: 0),       // Tiphareth
-                CardPosition(x: -0.6, y: 0.35, rotation: 0),    // Netzach
-                CardPosition(x: 0.6, y: 0.35, rotation: 0),     // Hod
-                CardPosition(x: 0, y: 0.55, rotation: 0),       // Yesod
-                CardPosition(x: 0, y: 0.85, rotation: 0),       // Malkuth
+                CardPosition(x: 0, y: -0.85, rotation: 0),
+                CardPosition(x: -0.6, y: -0.55, rotation: 0),
+                CardPosition(x: 0.6, y: -0.55, rotation: 0),
+                CardPosition(x: -0.6, y: -0.1, rotation: 0),
+                CardPosition(x: 0.6, y: -0.1, rotation: 0),
+                CardPosition(x: 0, y: 0.05, rotation: 0),
+                CardPosition(x: -0.6, y: 0.35, rotation: 0),
+                CardPosition(x: 0.6, y: 0.35, rotation: 0),
+                CardPosition(x: 0, y: 0.55, rotation: 0),
+                CardPosition(x: 0, y: 0.85, rotation: 0),
             ]
 
         case "loversTree":
             return [
-                CardPosition(x: 0, y: -0.7, rotation: 0),       // Root
-                CardPosition(x: -0.5, y: -0.25, rotation: 0),    // You
-                CardPosition(x: 0.5, y: -0.25, rotation: 0),     // Partner
+                CardPosition(x: 0, y: -0.7, rotation: 0),
+                CardPosition(x: -0.5, y: -0.25, rotation: 0),
+                CardPosition(x: 0.5, y: -0.25, rotation: 0),
                 CardPosition(x: -0.7, y: 0.25, rotation: 0),
                 CardPosition(x: 0.7, y: 0.25, rotation: 0),
                 CardPosition(x: -0.3, y: 0.65, rotation: 0),

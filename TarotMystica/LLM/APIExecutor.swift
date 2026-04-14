@@ -26,7 +26,6 @@ actor APIExecutor {
             throw LLMError.providerNotFound(providerKey)
         }
 
-        // Build endpoint URL
         let baseUrl: String
         if providerKey == "custom" && !config.apiBaseUrl.isEmpty {
             baseUrl = config.apiBaseUrl + provider.chatEndpoint
@@ -37,7 +36,6 @@ actor APIExecutor {
             throw LLMError.invalidURL(baseUrl)
         }
 
-        // Build headers from provider config template
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -47,13 +45,11 @@ actor APIExecutor {
             request.setValue(value, forHTTPHeaderField: headerName)
         }
 
-        // Build body
         var body: [String: Any] = [
             "model": config.apiModel,
             "stream": true,
         ]
 
-        // Handle system message location
         if provider.systemMessageLocation == "separateField" {
             let systemContent = messages.first(where: { $0.role == "system" })?.content ?? ""
             let fieldName = provider.systemFieldName ?? "system"
@@ -67,7 +63,6 @@ actor APIExecutor {
             }
         }
 
-        // Temperature (skip for reasoning models, use conditional fields config)
         let isReasoning = isReasoningModel(config.apiModel)
         let tempCondition = provider.conditionalFields["temperature"]
         if let tempCondition {
@@ -79,14 +74,12 @@ actor APIExecutor {
             body["temperature"] = providersConfig.temperatures["interpretation"] ?? 0.9
         }
 
-        // max_tokens from body template
         if let maxTokens = provider.bodyTemplate["max_tokens"] as? Int {
             body["max_tokens"] = maxTokens
         }
 
         request.httpBody = try JSONSerialization.data(withJSONObject: body)
 
-        // Stream SSE
         let (bytes, response) = try await URLSession.shared.bytes(for: request)
 
         if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
@@ -113,14 +106,12 @@ actor APIExecutor {
                 continue
             }
 
-            // Event filter (e.g., Anthropic requires type == "content_block_delta")
             if let filter = eventFilter {
                 guard let eventType = parsed["type"] as? String, eventType == filter else {
                     continue
                 }
             }
 
-            // Extract delta text via dot-path traversal
             let delta = resolveDotPath(deltaPath, in: parsed) as? String ?? ""
             fullText += delta
             let display = filterThinkTags(fullText)
@@ -139,8 +130,6 @@ actor APIExecutor {
         result = try await streamChat(config: config, messages: messages) { _ in }
         return result
     }
-
-    // MARK: - Helpers
 
     private func isReasoningModel(_ model: String) -> Bool {
         guard let regex = try? NSRegularExpression(pattern: providersConfig.reasoningModelPattern) else {

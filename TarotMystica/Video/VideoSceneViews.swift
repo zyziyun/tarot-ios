@@ -90,10 +90,8 @@ private struct VideoAppChrome<Content: View>: View {
             CelestialBackground(opacity: 0.04)
 
             VStack(spacing: 0) {
-                // Dynamic Island / notch spacer (~54pt simulates iPhone top inset)
                 Color.clear.frame(height: 54)
 
-                // Status bar
                 HStack {
                     Text("9:41")
                         .font(.system(size: 12, weight: .medium))
@@ -110,7 +108,6 @@ private struct VideoAppChrome<Content: View>: View {
                 .padding(.horizontal, 24)
                 .padding(.bottom, 4)
 
-                // Nav bar
                 HStack {
                     Text("✦")
                         .font(.system(size: 16))
@@ -138,10 +135,8 @@ private struct VideoAppChrome<Content: View>: View {
                     .fill(gold.opacity(0.1))
                     .frame(height: 0.5)
 
-                // Main content — fills available space
                 content()
 
-                // Home indicator spacer (no tab bar)
                 Color.clear.frame(height: 34)
             }
 
@@ -169,7 +164,6 @@ struct VideoTitleScene: View {
             VStack(spacing: 0) {
                 Spacer()
 
-                // Top ornament
                 OrnamentalDivider(width: 140, symbol: "☽")
                 Spacer().frame(height: 20)
 
@@ -185,7 +179,6 @@ struct VideoTitleScene: View {
 
                 Spacer().frame(height: 40)
 
-                // Spread name — BIG
                 Text(spreadName)
                     .font(.system(size: 44, weight: .light, design: .serif))
                     .foregroundColor(dark)
@@ -218,7 +211,6 @@ struct VideoTitleScene: View {
 
                 Spacer()
 
-                // Bottom decorative area
                 VStack(spacing: 12) {
                     MoonPhaseRow()
                     HStack(spacing: -8) {
@@ -273,7 +265,6 @@ struct VideoSpreadLayoutScene: View {
             VStack(spacing: 0) {
                 Spacer().frame(height: 10)
 
-                // Spread type chips
                 HStack(spacing: 10) {
                     spreadChip("Past-Present-Future", active: spreadKey == "three_card")
                     spreadChip("Celtic Cross", active: spreadKey == "celtic_cross")
@@ -283,7 +274,6 @@ struct VideoSpreadLayoutScene: View {
 
                 Spacer()
 
-                // Spread layout card — vertically centered
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(surface)
@@ -327,7 +317,6 @@ struct VideoSpreadLayoutScene: View {
 
                 Spacer()
 
-                // Begin Reading button
                 HStack(spacing: 8) {
                     Image(systemName: "sparkles")
                         .font(.system(size: 14))
@@ -387,7 +376,6 @@ struct VideoCardDrawScene: View {
             VStack(spacing: 0) {
                 Spacer().frame(height: 28)
 
-                // Progress bar
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 3)
                         .fill(gold.opacity(0.08))
@@ -400,7 +388,6 @@ struct VideoCardDrawScene: View {
 
                 Spacer().frame(height: 10)
 
-                // Progress dots
                 HStack(spacing: 8) {
                     ForEach(0..<cards.count, id: \.self) { i in
                         Circle()
@@ -409,7 +396,6 @@ struct VideoCardDrawScene: View {
                     }
                 }
 
-                // Current position label
                 if visibleCount > 0 && visibleCount <= cards.count {
                     let currentLabel = cards[visibleCount - 1].position.label
                     if !currentLabel.isEmpty {
@@ -422,12 +408,10 @@ struct VideoCardDrawScene: View {
 
                 Spacer()
 
-                // Cards — vertically centered
                 cardLayout(visibleCount: visibleCount)
 
                 Spacer()
 
-                // Hint text
                 Text("Concentrate on your question...")
                     .font(.system(size: 12, design: .serif))
                     .foregroundColor(gold.opacity(0.35))
@@ -558,7 +542,6 @@ struct VideoCardRevealScene: View {
             VStack(spacing: 0) {
                 Spacer()
 
-                // Position chip — always visible above card
                 if !positionLabel.isEmpty {
                     HStack(spacing: 6) {
                         Circle()
@@ -577,7 +560,6 @@ struct VideoCardRevealScene: View {
                     Spacer().frame(height: 14)
                 }
 
-                // Card with flip + glow (smaller to leave room)
                 ZStack {
                     if flipProgress > 0.5 {
                         RoundedRectangle(cornerRadius: 14)
@@ -604,7 +586,6 @@ struct VideoCardRevealScene: View {
 
                 Spacer().frame(height: 28)
 
-                // Card name + badge
                 if flipProgress >= 0.5 {
                     VStack(spacing: 10) {
                         Text(cardName)
@@ -635,7 +616,6 @@ struct VideoCardRevealScene: View {
 
                 Spacer()
 
-                // Bottom ornament
                 if flipProgress >= 0.8 {
                     OrnamentalDivider(width: 60, symbol: "✦")
                         .opacity(min(1.0, (flipProgress - 0.8) * 5))
@@ -723,18 +703,15 @@ struct VideoAllCardsScene: View {
             VStack(spacing: 0) {
                 Spacer().frame(height: 10)
 
-                // Segmented control mock
                 mockSegmentedControl(leftTitle: "✦ AI Reading", rightTitle: "Cards (\(cards.count))", rightActive: true)
                     .padding(.horizontal, 24)
 
                 Spacer()
 
-                // Cards in spread layout
                 spreadLayoutCards
 
                 Spacer().frame(height: 16)
 
-                // Summary bar
                 HStack(spacing: 8) {
                     summaryChip(icon: "arrow.up", count: cards.filter { !$0.card.reversed }.count, label: "Upright", color: gold)
                     summaryChip(icon: "arrow.down", count: cards.filter { $0.card.reversed }.count, label: "Reversed", color: accent)
@@ -800,7 +777,6 @@ struct VideoAllCardsScene: View {
 
     private func spreadCardView(item: (card: DrawnCard, position: SpreadPosition, name: String), rotation: Double) -> some View {
         VStack(spacing: 2) {
-            // Position label
             if !item.position.label.isEmpty {
                 Text(item.position.label)
                     .font(.system(size: labelFont, weight: .bold))
@@ -813,20 +789,17 @@ struct VideoAllCardsScene: View {
                     .cornerRadius(3)
             }
 
-            // Card image
             cardImageView(item.card.card.image)
                 .frame(width: cardW, height: cardH)
                 .rotationEffect(item.card.reversed ? .degrees(180) : .zero)
                 .rotationEffect(.degrees(rotation))
                 .shadow(color: gold.opacity(0.15), radius: 4, y: 2)
 
-            // Card name
             Text(item.name)
                 .font(.system(size: nameFont, weight: .medium, design: .serif))
                 .foregroundColor(dark)
                 .lineLimit(1)
 
-            // Reversed badge
             if item.card.reversed {
                 Text("Rev.")
                     .font(.system(size: max(labelFont - 2, 7), weight: .bold))
@@ -855,7 +828,6 @@ struct VideoAISummaryScene: View {
 
                 Spacer().frame(height: 12)
 
-                // Card thumbnails row with position labels
                 HStack(spacing: cards.count > 7 ? 4 : 8) {
                     ForEach(Array(cards.enumerated()), id: \.offset) { _, item in
                         VStack(spacing: 4) {
@@ -879,9 +851,7 @@ struct VideoAISummaryScene: View {
 
                 Spacer().frame(height: 14)
 
-                // AI content card — clipped to available space
                 VStack(alignment: .leading, spacing: 10) {
-                    // Header: green dot + title
                     HStack(spacing: 6) {
                         Circle()
                             .fill(Color.green)
@@ -908,7 +878,6 @@ struct VideoAISummaryScene: View {
 
                 Spacer().frame(height: 10)
 
-                // Follow-up chat button mock
                 HStack(spacing: 8) {
                     Image(systemName: "bubble.left.and.bubble.right")
                         .font(.system(size: 13))
@@ -986,7 +955,6 @@ struct VideoOutroScene: View {
                 OrnamentalDivider(width: 100, symbol: "☽")
                 Spacer().frame(height: 28)
 
-                // App icon
                 ZStack {
                     RoundedRectangle(cornerRadius: 26)
                         .fill(LinearGradient(
@@ -1019,7 +987,6 @@ struct VideoOutroScene: View {
 
                 Spacer().frame(height: 28)
 
-                // Feature highlights
                 VStack(spacing: 12) {
                     featureRow(icon: "brain.head.profile", text: "On-Device AI Interpretation")
                     featureRow(icon: "lock.shield", text: "100% Private & Secure")
@@ -1029,7 +996,6 @@ struct VideoOutroScene: View {
 
                 Spacer().frame(height: 28)
 
-                // Star rating
                 HStack(spacing: 4) {
                     ForEach(0..<5, id: \.self) { _ in
                         Image(systemName: "star.fill")

@@ -1,8 +1,6 @@
 import Foundation
 import SwiftData
 
-// MARK: - Schema versioning (add new versions here when modifying ReadingEntry)
-
 enum ReadingSchemaV1: VersionedSchema {
     static var versionIdentifier = Schema.Version(1, 0, 0)
     static var models: [any PersistentModel.Type] { [ReadingEntry.self] }

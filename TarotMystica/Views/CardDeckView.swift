@@ -14,25 +14,20 @@ struct CardDeckView: View {
     @State private var shuffled = false
     @State private var isDrawing = false
 
-    // Shuffle animation state (10 cards like web)
     @State private var shufflePhase = 0
     @State private var shuffleCardX: [CGFloat] = Array(repeating: 0, count: 10)
     @State private var shuffleCardY: [CGFloat] = Array(repeating: 0, count: 10)
     @State private var shuffleCardAngle: [Double] = Array(repeating: 0, count: 10)
     @State private var shuffleCardScale: [CGFloat] = Array(repeating: 1, count: 10)
 
-    // Card reveal overlay
     @State private var revealCard: DrawnCard?
     @State private var revealVisible = false
     @State private var revealFlipped = false
 
-    // Pulse animation for card stack
     @State private var pulseScale: CGFloat = 1.0
 
-    // Card enlarge overlay (for allDrawnSummary)
     @State private var enlargedCard: DrawnCard?
 
-    // Bottom drawer
     @State private var drawerExpanded = false
 
     private var totalNeeded: Int {
@@ -49,7 +44,6 @@ struct CardDeckView: View {
 
     var body: some View {
         ZStack {
-            // Main content
             VStack(spacing: 0) {
                 header
 
@@ -58,22 +52,18 @@ struct CardDeckView: View {
                     shuffleSection
                     Spacer()
                 } else if !allDrawn {
-                    // Immersive draw mode
                     Spacer()
                     drawFocusSection
                     Spacer()
                 } else {
-                    // All drawn — show summary
                     allDrawnSummary
                 }
             }
 
-            // Bottom drawer for drawn cards (visible during drawing)
             if !drawnCards.isEmpty && !allDrawn {
                 drawnCardsDrawer
             }
 
-            // Fullscreen card reveal overlay
             if revealVisible, let card = revealCard {
                 cardRevealOverlay(card)
                     .transition(.opacity)
@@ -210,9 +200,7 @@ struct CardDeckView: View {
 
     private var drawFocusSection: some View {
         VStack(spacing: 28) {
-            // Current position info
             VStack(spacing: 8) {
-                // Spread mini-map showing which position we're drawing
                 if let key = state.activeSpreadKey {
                     SpreadLayoutView(
                         spreadKey: key,
@@ -234,7 +222,6 @@ struct CardDeckView: View {
                     .foregroundColor(theme.colors.foreground)
             }
 
-            // Tap to draw — large card stack
             Button {
                 drawCard()
             } label: {
@@ -270,7 +257,6 @@ struct CardDeckView: View {
             Spacer()
 
             VStack(spacing: 0) {
-                // Drag handle
                 Button {
                     withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
                         drawerExpanded.toggle()
@@ -292,7 +278,6 @@ struct CardDeckView: View {
                 }
 
                 if drawerExpanded {
-                    // Expanded: show card list
                     ScrollView {
                         VStack(spacing: 10) {
                             ForEach(Array(drawnCards.enumerated()), id: \.element.id) { idx, drawn in
@@ -335,7 +320,6 @@ struct CardDeckView: View {
                     .frame(maxHeight: 240)
                     .transition(.opacity.combined(with: .move(edge: .bottom)))
                 } else {
-                    // Collapsed: horizontal thumbnail strip
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 8) {
                             ForEach(drawnCards) { drawn in
@@ -367,7 +351,6 @@ struct CardDeckView: View {
     private var allDrawnSummary: some View {
         ScrollView {
             VStack(spacing: 20) {
-                // Spread layout overview
                 if let key = state.activeSpreadKey {
                     SpreadLayoutView(
                         spreadKey: key,
@@ -389,7 +372,6 @@ struct CardDeckView: View {
                         .foregroundColor(theme.colors.muted.opacity(0.6))
                 }
 
-                // Card list (tap to enlarge)
                 VStack(spacing: 12) {
                     ForEach(Array(drawnCards.enumerated()), id: \.element.id) { idx, drawn in
                         Button {
@@ -441,7 +423,6 @@ struct CardDeckView: View {
                     }
                 }
 
-                // Primary AI Reading button
                 Button {
                     Haptic.primaryAction()
                     state.drawnCards = drawnCards
@@ -474,7 +455,6 @@ struct CardDeckView: View {
             }
         }
         .overlay {
-            // Card enlarge overlay
             if let card = enlargedCard {
                 ZStack {
                     Color.black.opacity(0.6)
@@ -516,13 +496,11 @@ struct CardDeckView: View {
     @ViewBuilder
     private func cardRevealOverlay(_ drawn: DrawnCard) -> some View {
         ZStack {
-            // Dim background
             Color.black.opacity(0.55)
                 .ignoresSafeArea()
                 .onTapGesture { dismissRevealAndAddCard() }
 
             VStack(spacing: 16) {
-                // Position label — prominent
                 if drawn.id < state.resolvedPositions.count {
                     Text(state.resolvedPositions[drawn.id].label)
                         .font(.system(size: 16, weight: .semibold, design: .serif))
@@ -533,7 +511,6 @@ struct CardDeckView: View {
                         .cornerRadius(12)
                 }
 
-                // Card — no background, just image + mask
                 ZStack {
                     if revealFlipped {
                         cardImage(drawn.card.image)
@@ -554,7 +531,6 @@ struct CardDeckView: View {
                     perspective: 0.5
                 )
 
-                // Card info
                 if revealFlipped {
                     VStack(spacing: 8) {
                         Text(cardName(drawn.card))
@@ -571,7 +547,6 @@ struct CardDeckView: View {
                                 .cornerRadius(8)
                         }
 
-                        // Card meaning
                         Text(drawn.reversed ? cardText(drawn.card, "reversed") : cardText(drawn.card, "upright"))
                             .font(.system(size: 12))
                             .foregroundColor(.white.opacity(0.6))
@@ -681,7 +656,6 @@ struct CardDeckView: View {
         let reversed = Double.random(in: 0...1) < reversalChance
         let drawn = DrawnCard(id: idx, card: card, reversed: reversed)
 
-        // Show fullscreen reveal
         revealCard = drawn
         revealFlipped = false
         withAnimation(.easeOut(duration: 0.3)) {

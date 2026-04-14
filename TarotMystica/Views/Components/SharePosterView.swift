@@ -1,6 +1,5 @@
 import SwiftUI
 
-/// Generates a beautiful shareable long-form poster image from a tarot reading
 struct SharePosterView: View {
     let question: String
     let spreadName: String
@@ -22,10 +21,8 @@ struct SharePosterView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            // === Top section: branding + cards ===
             topSection
 
-            // === Divider ===
             HStack(spacing: 12) {
                 Rectangle().fill(gold.opacity(0.15)).frame(height: 0.5)
                 Text("✦")
@@ -36,12 +33,10 @@ struct SharePosterView: View {
             .padding(.horizontal, 40)
             .padding(.vertical, 20)
 
-            // === AI Reading section ===
             if !aiReading.isEmpty {
                 aiReadingSection
             }
 
-            // === Bottom branding ===
             bottomBranding
         }
         .frame(width: posterWidth)
@@ -56,11 +51,8 @@ struct SharePosterView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 
-    // MARK: - Top Section
-
     private var topSection: some View {
         VStack(spacing: 0) {
-            // Branding
             VStack(spacing: 6) {
                 Text("✦")
                     .font(.system(size: 10))
@@ -72,14 +64,12 @@ struct SharePosterView: View {
             }
             .padding(.top, 28)
 
-            // Spread name
             Text(spreadName)
                 .font(.system(size: 22, weight: .light, design: .serif))
                 .foregroundColor(dark)
                 .multilineTextAlignment(.center)
                 .padding(.top, 16)
 
-            // Question
             if !question.isEmpty {
                 Text("「\(question)」")
                     .font(.system(size: 11))
@@ -90,20 +80,16 @@ struct SharePosterView: View {
                     .padding(.top, 8)
             }
 
-            // Gold line
             Rectangle()
                 .fill(gold.opacity(0.2))
                 .frame(width: 32, height: 0.5)
                 .padding(.top, 16)
 
-            // Cards
             cardDisplay
                 .padding(.top, 16)
                 .padding(.bottom, 4)
         }
     }
-
-    // MARK: - Card Display
 
     @ViewBuilder
     private var cardDisplay: some View {
@@ -246,8 +232,6 @@ struct SharePosterView: View {
             .cornerRadius(3)
     }
 
-    // MARK: - AI Reading Section
-
     private var aiReadingSection: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 6) {
@@ -259,14 +243,12 @@ struct SharePosterView: View {
                     .foregroundColor(dark)
             }
 
-            // Render truncated AI text — poster shows summary only
             posterMarkdown(truncatedReading)
         }
         .padding(.horizontal, 28)
         .padding(.bottom, 24)
     }
 
-    /// Truncate AI reading for poster — keep first ~400 chars (roughly first 2 sections)
     private var truncatedReading: String {
         let lines = aiReading.components(separatedBy: "\n")
         var result: [String] = []
@@ -289,10 +271,8 @@ struct SharePosterView: View {
         return text
     }
 
-    /// Strip inline markdown: **bold**, *italic*, __bold__, _italic_
     private func stripInlineMarkdown(_ text: String) -> String {
         var s = text
-        // Bold: **text** or __text__
         while let range = s.range(of: #"\*\*(.+?)\*\*"#, options: .regularExpression) {
             let inner = s[range].dropFirst(2).dropLast(2)
             s.replaceSubrange(range, with: inner)
@@ -301,7 +281,6 @@ struct SharePosterView: View {
             let inner = s[range].dropFirst(2).dropLast(2)
             s.replaceSubrange(range, with: inner)
         }
-        // Italic: *text* or _text_
         while let range = s.range(of: #"\*(.+?)\*"#, options: .regularExpression) {
             let inner = s[range].dropFirst(1).dropLast(1)
             s.replaceSubrange(range, with: inner)
@@ -313,7 +292,6 @@ struct SharePosterView: View {
         return s
     }
 
-    /// Simple markdown rendering for the poster (no ThemeManager dependency)
     @ViewBuilder
     private func posterMarkdown(_ text: String) -> some View {
         let lines = text.components(separatedBy: "\n")
@@ -365,15 +343,12 @@ struct SharePosterView: View {
         }
     }
 
-    // MARK: - Bottom Branding
-
     private var bottomBranding: some View {
         VStack(spacing: 10) {
             Rectangle()
                 .fill(gold.opacity(0.15))
                 .frame(width: 24, height: 0.5)
 
-            // App icon placeholder
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(
@@ -405,8 +380,6 @@ struct SharePosterView: View {
         .padding(.bottom, 28)
     }
 
-    // MARK: - Card Image
-
     private func cardImageView(_ filename: String) -> some View {
         let name = filename.replacingOccurrences(of: ".webp", with: "")
         if let path = Bundle.main.path(forResource: name, ofType: "webp"),
@@ -424,8 +397,6 @@ struct SharePosterView: View {
         )
     }
 }
-
-// MARK: - Poster Renderer
 
 @MainActor
 struct PosterRenderer {

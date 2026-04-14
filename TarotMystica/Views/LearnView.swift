@@ -1,7 +1,5 @@
 import SwiftUI
 
-// MARK: - Learn Hub (Tarot Lessons + Symbol Guide)
-
 struct LearnView: View {
     @Environment(LocalizationManager.self) private var i18n
     @Environment(ThemeManager.self) private var theme
@@ -20,7 +18,6 @@ struct LearnView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                // Section toggle
                 HStack(spacing: 0) {
                     sectionTab(title: t("learn.lessons"), icon: "book.pages", section: .lessons)
                     sectionTab(title: t("learn.symbols"), icon: "eye", section: .symbols)
@@ -68,8 +65,6 @@ struct LearnView: View {
             .padding(2)
         }
     }
-
-    // MARK: - Lessons Section
 
     private var lessonsSection: some View {
         ScrollView {
@@ -134,8 +129,6 @@ struct LearnView: View {
                 .stroke(theme.colors.border.opacity(0.3), lineWidth: 0.5)
         )
     }
-
-    // MARK: - Symbols Section
 
     private var symbolsSection: some View {
         ScrollView {
@@ -216,8 +209,6 @@ struct LearnView: View {
     }
 }
 
-// MARK: - Data Types
-
 struct LessonTopic {
     let key: String
     let icon: String
@@ -230,8 +221,6 @@ struct SymbolCategory {
     let symbols: [String]
 }
 
-// MARK: - Lesson Detail
-
 struct LessonDetailView: View {
     @Environment(LocalizationManager.self) private var i18n
     @Environment(ThemeManager.self) private var theme
@@ -243,7 +232,6 @@ struct LessonDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                // Header
                 HStack(spacing: 12) {
                     Image(systemName: topic.icon)
                         .font(.system(size: 24))
@@ -261,7 +249,6 @@ struct LessonDetailView: View {
                     .fill(theme.colors.border.opacity(0.3))
                     .frame(height: 0.5)
 
-                // Content
                 let content = t("learn.lesson.\(topic.key).content")
                 if content != "learn.lesson.\(topic.key).content" {
                     MarkdownText(content, theme: theme)
@@ -282,8 +269,6 @@ struct LessonDetailView: View {
     }
 }
 
-// MARK: - Symbol Detail
-
 struct SymbolDetailView: View {
     @Environment(LocalizationManager.self) private var i18n
     @Environment(ThemeManager.self) private var theme
@@ -295,7 +280,6 @@ struct SymbolDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                // Category description
                 let intro = t("learn.symbol.\(category.key).intro")
                 if intro != "learn.symbol.\(category.key).intro" {
                     Text(intro)
@@ -303,7 +287,6 @@ struct SymbolDetailView: View {
                         .foregroundColor(theme.colors.muted)
                 }
 
-                // Symbol cards
                 ForEach(category.symbols, id: \.self) { symbol in
                     VStack(alignment: .leading, spacing: 8) {
                         Text(t("learn.symbol.\(category.key).\(symbol).name"))

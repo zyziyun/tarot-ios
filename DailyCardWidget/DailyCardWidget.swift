@@ -1,8 +1,6 @@
 import WidgetKit
 import SwiftUI
 
-// MARK: - Timeline Provider
-
 struct DailyCardProvider: TimelineProvider {
 
     func placeholder(in context: Context) -> DailyCardEntry {
@@ -53,8 +51,6 @@ struct DailyCardProvider: TimelineProvider {
         )
     }
 
-    // MARK: - Data Loading
-
     private struct SimpleCard {
         let id: Int
         let image: String
@@ -70,7 +66,6 @@ struct DailyCardProvider: TimelineProvider {
 
         var result: [SimpleCard] = []
 
-        // Major arcana
         if let majors = json["majorArcana"] as? [[String: Any]] {
             for m in majors {
                 let id = m["id"] as? Int ?? 0
@@ -79,7 +74,6 @@ struct DailyCardProvider: TimelineProvider {
             }
         }
 
-        // Minor arcana
         if let minor = json["minorArcana"] as? [String: Any],
            let suits = minor["suits"] as? [String],
            let ranks = minor["ranks"] as? [String],
@@ -110,7 +104,6 @@ struct DailyCardProvider: TimelineProvider {
             return [:]
         }
 
-        // Flatten nested JSON into dot-notation keys
         var flat: [String: String] = [:]
         func flatten(_ dict: [String: Any], prefix: String) {
             for (k, v) in dict {
@@ -127,8 +120,6 @@ struct DailyCardProvider: TimelineProvider {
     }
 }
 
-// MARK: - Entry
-
 struct DailyCardEntry: TimelineEntry {
     let date: Date
     let cardId: Int
@@ -137,8 +128,6 @@ struct DailyCardEntry: TimelineEntry {
     let isReversed: Bool
     let meaning: String
 }
-
-// MARK: - Widget View
 
 struct DailyCardWidgetView: View {
     @Environment(\.widgetFamily) var family
@@ -155,11 +144,8 @@ struct DailyCardWidgetView: View {
         }
     }
 
-    // MARK: - Small Widget
-
     private var smallWidget: some View {
         ZStack {
-            // Background
             LinearGradient(
                 colors: [Color(hex: 0x1a1225), Color(hex: 0x0d0a14)],
                 startPoint: .topLeading,
@@ -167,7 +153,6 @@ struct DailyCardWidgetView: View {
             )
 
             VStack(spacing: 6) {
-                // Card image
                 cardImageView
                     .frame(width: 60, height: 90)
                     .rotationEffect(entry.isReversed ? .degrees(180) : .zero)
@@ -189,8 +174,6 @@ struct DailyCardWidgetView: View {
         }
     }
 
-    // MARK: - Medium Widget
-
     private var mediumWidget: some View {
         ZStack {
             LinearGradient(
@@ -200,14 +183,12 @@ struct DailyCardWidgetView: View {
             )
 
             HStack(spacing: 16) {
-                // Card
                 cardImageView
                     .frame(width: 80, height: 120)
                     .rotationEffect(entry.isReversed ? .degrees(180) : .zero)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .shadow(color: Color(hex: 0xc9a84c).opacity(0.3), radius: 10)
 
-                // Info
                 VStack(alignment: .leading, spacing: 6) {
                     Text("✦ Daily Card")
                         .font(.system(size: 9, weight: .medium))
@@ -241,8 +222,6 @@ struct DailyCardWidgetView: View {
         }
     }
 
-    // MARK: - Card Image
-
     @ViewBuilder
     private var cardImageView: some View {
         let name = entry.cardImage.replacingOccurrences(of: ".webp", with: "")
@@ -269,8 +248,6 @@ struct DailyCardWidgetView: View {
     }
 }
 
-// MARK: - Widget Configuration
-
 @main
 struct DailyCardWidgetBundle: Widget {
     let kind: String = "DailyCardWidget"
@@ -288,8 +265,6 @@ struct DailyCardWidgetBundle: Widget {
     }
 }
 
-// MARK: - Color Extension
-
 extension Color {
     init(hex: UInt, alpha: Double = 1) {
         self.init(
@@ -301,8 +276,6 @@ extension Color {
         )
     }
 }
-
-// MARK: - Preview
 
 #Preview(as: .systemSmall) {
     DailyCardWidgetBundle()

@@ -1,7 +1,5 @@
 import SwiftUI
 
-/// Renders markdown text with proper styling for tarot reading interpretations.
-/// Supports: headings (###), bold (**), italic (*), bullet lists (- / *), and paragraphs.
 struct MarkdownText: View {
     let text: String
     let theme: ThemeManager
@@ -19,16 +17,12 @@ struct MarkdownText: View {
         }
     }
 
-    // MARK: - Block types
-
     private enum Block {
         case heading(String, Int)      // text, level (1-3)
         case paragraph(String)
         case bullet(String)
         case divider
     }
-
-    // MARK: - Parser
 
     private func parseBlocks() -> [Block] {
         var blocks: [Block] = []
@@ -51,7 +45,6 @@ struct MarkdownText: View {
                 continue
             }
 
-            // Heading: ### / ## / #
             if trimmed.hasPrefix("###") {
                 flushParagraph()
                 let content = trimmed.drop(while: { $0 == "#" }).trimmingCharacters(in: .whitespaces)
@@ -65,18 +58,15 @@ struct MarkdownText: View {
                 let content = trimmed.drop(while: { $0 == "#" }).trimmingCharacters(in: .whitespaces)
                 blocks.append(.heading(content, 1))
             }
-            // Divider: --- or ***
             else if trimmed.allSatisfy({ $0 == "-" || $0 == "*" || $0 == " " }) && trimmed.count >= 3 {
                 flushParagraph()
                 blocks.append(.divider)
             }
-            // Bullet: - text or * text
             else if (trimmed.hasPrefix("- ") || trimmed.hasPrefix("* ")) {
                 flushParagraph()
                 let content = String(trimmed.dropFirst(2))
                 blocks.append(.bullet(content))
             }
-            // Continuation of paragraph
             else {
                 if !paragraphBuffer.isEmpty {
                     paragraphBuffer += " "
@@ -88,15 +78,12 @@ struct MarkdownText: View {
         return blocks
     }
 
-    // MARK: - Render blocks
-
     @ViewBuilder
     private func blockView(_ block: Block, isFirst: Bool = false) -> some View {
         switch block {
         case .heading(let text, let level):
             VStack(alignment: .leading, spacing: 0) {
                 if !isFirst {
-                    // Add visual separator before headings for better structure
                     Rectangle()
                         .fill(theme.colors.border.opacity(0.3))
                         .frame(height: 0.5)
@@ -146,9 +133,6 @@ struct MarkdownText: View {
         }
     }
 
-    // MARK: - Inline styling (bold, italic)
-
-    /// Converts markdown inline formatting (**bold**, *italic*) to SwiftUI Text
     private func styledInlineText(_ input: String) -> Text {
         var result = Text("")
         var remaining = input[input.startIndex...]

@@ -87,8 +87,6 @@ struct AnimationParams {
     let drawCompleteDelay: Double
 }
 
-// MARK: - Color hex init
-
 extension Color {
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet(charactersIn: "#"))

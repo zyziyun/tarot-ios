@@ -20,12 +20,10 @@ struct ReadingResultView: View {
     @State private var showResetConfirm = false
     @State private var enlargedCardInResult: DrawnCard?
 
-    // Follow-up chat
     @State private var showFollowUpChat = false
     @State private var savedToJournal = false
     @State private var showVideoGenerator = false
 
-    // Video generation (inline overlay)
     @State private var videoGenState: VideoGenState = .idle
     @State private var videoProgress: Float = 0
     @State private var videoURL: URL?
@@ -50,24 +48,19 @@ struct ReadingResultView: View {
             ScrollViewReader { proxy in
                 ScrollView {
                     VStack(spacing: 0) {
-                        // Header — scrolls away normally
                         headerSection
 
-                        // LazyVStack for sticky tab + lazy content
                         LazyVStack(spacing: 0, pinnedViews: [.sectionHeaders]) {
                             Section {
-                                // Tab content
                                 if activeTab == .aiReading {
                                     aiReadingContent
                                 } else {
                                     cardsContent
                                 }
 
-                                // Auto-scroll anchor
                                 Color.clear.frame(height: 1).id("bottom")
                                 Spacer().frame(height: 24)
                             } header: {
-                                // Sticky segmented control — pins to top when scrolled
                                 segmentedControl
                                     .padding(.vertical, 8)
                                     .frame(maxWidth: .infinity)
@@ -89,7 +82,6 @@ struct ReadingResultView: View {
                 }
             }
 
-            // Fixed bottom bar
             bottomBar
         }
         .overlay {
@@ -141,7 +133,6 @@ struct ReadingResultView: View {
 
     private var headerSection: some View {
         VStack(spacing: 10) {
-            // Spread diagram for multi-card spreads
             if let key = state.activeSpreadKey, state.drawnCards.count > 1 {
                 SpreadLayoutView(
                     spreadKey: key,
@@ -152,14 +143,12 @@ struct ReadingResultView: View {
                 )
             }
 
-            // Spread name
             if !spreadName.isEmpty {
                 Text(spreadName)
                     .font(.system(size: 18, weight: .light, design: .serif))
                     .foregroundColor(theme.colors.foreground)
             }
 
-            // Question
             if !state.question.isEmpty {
                 Text("「\(state.question)」")
                     .font(.system(size: 12))
@@ -169,7 +158,6 @@ struct ReadingResultView: View {
                     .padding(.horizontal, 32)
             }
 
-            // Card thumbnails with position labels
             cardStrip
         }
         .padding(.top, 12)
@@ -217,7 +205,6 @@ struct ReadingResultView: View {
 
     private var bottomBar: some View {
         HStack(spacing: 10) {
-            // Restart (with confirmation)
             Button {
                 Haptic.warning()
                 showResetConfirm = true
@@ -234,7 +221,6 @@ struct ReadingResultView: View {
                     )
             }
 
-            // Save to journal
             Button {
                 saveToJournal()
             } label: {
@@ -254,7 +240,6 @@ struct ReadingResultView: View {
             }
             .disabled(savedToJournal || aiInterpretation.isEmpty)
 
-            // Video share
             if !aiInterpretation.isEmpty {
                 Button {
                     showVideoGenerator = true
@@ -272,7 +257,6 @@ struct ReadingResultView: View {
                 }
             }
 
-            // Share (primary)
             Button {
                 generateAndShare()
             } label: {
@@ -305,7 +289,6 @@ struct ReadingResultView: View {
                 .padding(.horizontal, 20)
                 .padding(.top, 16)
 
-            // Follow-up chat button (only after AI interpretation is done)
             if !aiInterpretation.isEmpty && !llm.isGenerating {
                 Button {
                     Haptic.primaryAction()
@@ -505,7 +488,6 @@ struct ReadingResultView: View {
                                 .font(.system(size: 14, weight: .medium, design: .serif))
                                 .foregroundColor(theme.colors.foreground)
 
-                            // Always show upright/reversed badge
                             Text(drawn.reversed ? t("result.reversed") : t("result.upright"))
                                 .font(.system(size: 9, weight: .bold))
                                 .foregroundColor(.white)
@@ -563,7 +545,6 @@ struct ReadingResultView: View {
 
             Divider()
 
-            // Core meaning section header
             HStack(spacing: 6) {
                 Image(systemName: "sparkle")
                     .font(.system(size: 10))
@@ -863,7 +844,6 @@ struct ReadingResultView: View {
 
     private var videoGeneratorOverlay: some View {
         ZStack {
-            // Dimmed background
             Color.black.opacity(0.6)
                 .ignoresSafeArea()
                 .onTapGesture {
@@ -877,9 +857,7 @@ struct ReadingResultView: View {
                     }
                 }
 
-            // Popup card
             VStack(spacing: 0) {
-                // Close button
                 HStack {
                     Spacer()
                     Button {
@@ -898,7 +876,6 @@ struct ReadingResultView: View {
                 .padding(.horizontal, 20)
                 .padding(.top, 16)
 
-                // Content
                 switch videoGenState {
                 case .idle:
                     videoIdleContent
@@ -987,7 +964,6 @@ struct ReadingResultView: View {
 
     private var videoDoneContent: some View {
         VStack(spacing: 14) {
-            // Video preview
             if let player = videoPlayer {
                 VideoPlayer(player: player)
                     .frame(width: 180, height: 320)
@@ -997,7 +973,6 @@ struct ReadingResultView: View {
                     .padding(.top, 4)
             }
 
-            // Action buttons
             HStack(spacing: 10) {
                 Button {
                     saveVideoToPhotos()

@@ -47,13 +47,11 @@ struct ContentView: View {
         }
         .animation(.easeInOut(duration: 0.4), value: state.phase)
         .onChange(of: state.phase) { _, newPhase in
-            // Start recommendation early — when leaving question page
             if newPhase == .choose && state.aiRecommendation == nil {
                 triggerRecommendation()
             }
         }
         .onChange(of: state.question) { _, newQuestion in
-            // Pre-trigger recommendation as soon as question is set
             if !newQuestion.isEmpty && llm.isReady {
                 triggerRecommendation()
             }

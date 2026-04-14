@@ -64,10 +64,8 @@ struct VideoStoryboard {
     ) -> VideoStoryboard {
         var scenes: [VideoScene] = []
 
-        // 1. Title card — question + spread name
         scenes.append(.titleCard(question: question, spreadName: spreadName))
 
-        // 2. Spread layout — show the spread pattern (skip for single card)
         let cardCount = positions.count > 0 ? positions.count : drawnCards.count
         if let key = spreadKey, cardCount > 1 {
             scenes.append(.spreadLayout(
@@ -77,14 +75,12 @@ struct VideoStoryboard {
             ))
         }
 
-        // 3. Card draw — cards appearing face-down one by one
         let allCardData = drawnCards.enumerated().map { idx, drawn in
             let pos = idx < positions.count ? positions[idx] : SpreadPosition(label: "", description: "")
             return (card: drawn, position: pos, name: cardNameFn(drawn.card))
         }
         scenes.append(.cardDraw(cards: allCardData, progress: 0))
 
-        // 4. Card reveals — flip each card (up to 3 individually)
         let maxIndividual = min(drawnCards.count, 3)
         for i in 0..<maxIndividual {
             let pos = i < positions.count ? positions[i] : SpreadPosition(label: "", description: "")
@@ -95,17 +91,14 @@ struct VideoStoryboard {
             ))
         }
 
-        // 5. All cards summary
         scenes.append(.allCards(cards: allCardData, spreadKey: spreadKey))
 
-        // 6. AI summary (first ~300 chars, cleaned)
         if !aiReading.isEmpty {
             let cleaned = cleanCodeFences(aiReading)
             let truncated = truncateReading(cleaned)
             scenes.append(.aiSummary(text: truncated, question: question, spreadName: spreadName, cards: allCardData))
         }
 
-        // 7. Outro
         scenes.append(.outro)
 
         return VideoStoryboard(scenes: scenes)

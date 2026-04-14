@@ -61,7 +61,6 @@ struct JournalView: View {
 
     private var journalList: some View {
         ScrollView {
-            // Stats summary
             if entries.count >= 3 {
                 statsSummary
                     .padding(.horizontal, 20)
@@ -81,8 +80,6 @@ struct JournalView: View {
             .padding(.bottom, 24)
         }
     }
-
-    // MARK: - Stats Summary
 
     private var statsSummary: some View {
         let totalReadings = entries.count
@@ -131,8 +128,6 @@ struct JournalView: View {
         .frame(maxWidth: .infinity)
     }
 
-    // MARK: - Journal Card
-
     private func journalCard(_ entry: ReadingEntry) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
@@ -154,7 +149,6 @@ struct JournalView: View {
                     .lineLimit(2)
             }
 
-            // Card pills
             HStack(spacing: 6) {
                 ForEach(entry.cards, id: \.cardId) { card in
                     HStack(spacing: 3) {
@@ -174,7 +168,6 @@ struct JournalView: View {
                 }
             }
 
-            // Preview of interpretation
             Text(entry.interpretation)
                 .font(.system(size: 11))
                 .foregroundColor(theme.colors.muted.opacity(0.7))
@@ -198,8 +191,6 @@ struct JournalView: View {
     }
 }
 
-// MARK: - Journal Detail View
-
 struct JournalDetailView: View {
     @Environment(LocalizationManager.self) private var i18n
     @Environment(ThemeManager.self) private var theme
@@ -215,7 +206,6 @@ struct JournalDetailView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    // Header
                     VStack(alignment: .leading, spacing: 8) {
                         Text(entry.spreadName)
                             .font(.system(size: 22, weight: .light, design: .serif))
@@ -235,7 +225,6 @@ struct JournalDetailView: View {
                         .foregroundColor(theme.colors.muted.opacity(0.6))
                     }
 
-                    // Cards
                     VStack(spacing: 10) {
                         ForEach(entry.cards, id: \.cardId) { card in
                             HStack(spacing: 10) {
@@ -270,7 +259,6 @@ struct JournalDetailView: View {
                         }
                     }
 
-                    // Interpretation
                     VStack(alignment: .leading, spacing: 8) {
                         HStack(spacing: 6) {
                             Image(systemName: "sparkles")

@@ -19,7 +19,6 @@
 		0B5573F1257F6A3CC12D2C75 /* swords-knight.webp in Resources */ = {isa = PBXBuildFile; fileRef = 3E21846FB4E1180B62F725C7 /* swords-knight.webp */; };
 		0DAF3E16CBF5383F92A90220 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5F65BDB60F3CBBC3017BDC /* DataLoader.swift */; };
 		10C73D5EF412561D4A1F3A7B /* pentacles-10.webp in Resources */ = {isa = PBXBuildFile; fileRef = D25A4EB6644E31B951889663 /* pentacles-10.webp */; };
-		11AC93F53431D246827153B6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A44FFF347CD08DAFC71A4D12 /* FirebaseAnalytics */; };
 		12B08207196F187AB7A01665 /* fr.json in Resources */ = {isa = PBXBuildFile; fileRef = C5D0F3BD07BE95CD0A516990 /* fr.json */; };
 		12C7B808CA7F823647275142 /* cups-10.webp in Resources */ = {isa = PBXBuildFile; fileRef = 9E884A62D7DB745E91C3F747 /* cups-10.webp */; };
 		1355CB6582977F5263EE8914 /* swords-3.webp in Resources */ = {isa = PBXBuildFile; fileRef = 176061700A65A5946586EBB4 /* swords-3.webp */; };
@@ -58,7 +57,7 @@
 		33F52A09459C62405720823C /* 07-chariot.webp in Resources */ = {isa = PBXBuildFile; fileRef = 1FB2462114E53A170D7F0974 /* 07-chariot.webp */; };
 		349494B1330ED689D9070D27 /* 11-justice.webp in Resources */ = {isa = PBXBuildFile; fileRef = C3C6A7408559DF6A542F0ACE /* 11-justice.webp */; };
 		357F8261ADDB6F5C76ED502F /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66CE2D70DB99BEDD303DBFE /* MarkdownText.swift */; };
-		37080ECC5CD1D2ED1FC5EE9A /* MLXFFT in Frameworks */ = {isa = PBXBuildFile; productRef = E67A18FB64E100B784B540C7 /* MLXFFT */; };
+		37080ECC5CD1D2ED1FC5EE9A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A44FFF347CD08DAFC71A4D12 /* FirebaseAnalytics */; };
 		37D3949F4F0672B73937FDCB /* cups-4.webp in Resources */ = {isa = PBXBuildFile; fileRef = 17A76E8035BBC69331B8E632 /* cups-4.webp */; };
 		3853C2AE429484CE3ACD9E5C /* swords-7.webp in Resources */ = {isa = PBXBuildFile; fileRef = 19475AC489441E02AED11D65 /* swords-7.webp */; };
 		3A43F6943D93CB47F49BAFA3 /* pentacles-ace.webp in Resources */ = {isa = PBXBuildFile; fileRef = FBD3CF51F8DFAE8BF83B8449 /* pentacles-ace.webp */; };
@@ -119,7 +118,6 @@
 		7A8A3033E570926C4DFE976D /* 10-wheel.webp in Resources */ = {isa = PBXBuildFile; fileRef = 83511EB1F8F9B5590CE39FB7 /* 10-wheel.webp */; };
 		7B5A98DF927EECE021BBA1D8 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39378FB1EB639BD292064AF2 /* LocalizationManager.swift */; };
 		7D9CCD43CC14B05FF2E3CC9F /* wands-6.webp in Resources */ = {isa = PBXBuildFile; fileRef = AB282E11BD0BE97C52760C16 /* wands-6.webp */; };
-		7DAE25C8DAD59AD16E9C00D9 /* MLXRandom in Frameworks */ = {isa = PBXBuildFile; productRef = 8269727EC2C267AB594A97EC /* MLXRandom */; };
 		7F07E62A1A3C5D2CA43C5F0B /* FollowUpChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40775990FD61D09DB5891E01 /* FollowUpChatView.swift */; };
 		804D48D4A9941D4320AFC9FE /* wands-page.webp in Resources */ = {isa = PBXBuildFile; fileRef = 6B7726B801340D14D2085060 /* wands-page.webp */; };
 		8063337D8F3920097865F68F /* wands-2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22615EF105DB6C91355149B3 /* wands-2.webp */; };
@@ -137,12 +135,11 @@
 		8F4CBC8BD6D09125F9FCB20D /* pentacles-8.webp in Resources */ = {isa = PBXBuildFile; fileRef = 84A853C3166AB5E53D628EF6 /* pentacles-8.webp */; };
 		933902CE218D7966DA5F784B /* 02-high-priestess.webp in Resources */ = {isa = PBXBuildFile; fileRef = D1B6105FD2F5915FE75F3A29 /* 02-high-priestess.webp */; };
 		934E8C4B911237699C3255A2 /* 14-temperance.webp in Resources */ = {isa = PBXBuildFile; fileRef = D4EB6C890F49BFA84C28F199 /* 14-temperance.webp */; };
-		937A8AA4DAB56C92D1B22938 /* MLXNN in Frameworks */ = {isa = PBXBuildFile; productRef = 6A17A5B4EE51747A15202447 /* MLXNN */; };
+		937A8AA4DAB56C92D1B22938 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 459CACF84EE7317ABB24D61D /* FirebaseCrashlytics */; };
 		93E8F60039BE52C6FDD1879D /* pentacles-page.webp in Resources */ = {isa = PBXBuildFile; fileRef = 97CBE64D4F0A0A0A049CBFF8 /* pentacles-page.webp */; };
 		946D92E9E0017991725A468A /* wands-3.webp in Resources */ = {isa = PBXBuildFile; fileRef = C551D139DDA45F017A48D209 /* wands-3.webp */; };
 		95498974559C12B50ECC52D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3417E2C705183A66F4E275F2 /* GoogleService-Info.plist */; };
 		9559D89FAC9DFD1C5B63EA3B /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = B83D4697B1A895316A259CBF /* cards.json */; };
-		99DED1F84AFB6F8A9F58C3E8 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 459CACF84EE7317ABB24D61D /* FirebaseCrashlytics */; };
 		9B793AF662A2824D248E8F3C /* swords-3.webp in Resources */ = {isa = PBXBuildFile; fileRef = 176061700A65A5946586EBB4 /* swords-3.webp */; };
 		9D0007F352F3BE27273EB12A /* pentacles-10.webp in Resources */ = {isa = PBXBuildFile; fileRef = D25A4EB6644E31B951889663 /* pentacles-10.webp */; };
 		9E64FC1A05FF84FA8E041F96 /* 06-lovers.webp in Resources */ = {isa = PBXBuildFile; fileRef = 763A23724328537BE1468A28 /* 06-lovers.webp */; };
@@ -158,7 +155,6 @@
 		ADB5A05FD4A253E6D8A175D9 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7984653ACCB8F6A38674E600 /* HapticManager.swift */; };
 		AE358EBDEE4E55015C6FB441 /* LLMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DE6899BA6780D99CAACDC /* LLMService.swift */; };
 		AF9CEFD3208D88FA4DA65887 /* swords-queen.webp in Resources */ = {isa = PBXBuildFile; fileRef = 52BA5AFC31964E5E0E52FC55 /* swords-queen.webp */; };
-		B0DEEEB08ABC20D73738F8AF /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 94284EB6CB8DAE2763BAAC12 /* ZIPFoundation */; };
 		B201F47AF17DF6B7D6AC47DD /* pentacles-7.webp in Resources */ = {isa = PBXBuildFile; fileRef = 5DA828478E98756663D6010F /* pentacles-7.webp */; };
 		B34D484093ECC03B9E170ED5 /* wands-page.webp in Resources */ = {isa = PBXBuildFile; fileRef = 6B7726B801340D14D2085060 /* wands-page.webp */; };
 		B3B3D75DD56E5D1B0636D1B3 /* pentacles-5.webp in Resources */ = {isa = PBXBuildFile; fileRef = 902DE66D2207E3883E7495F9 /* pentacles-5.webp */; };
@@ -166,7 +162,6 @@
 		B51B48C38694194BFE8878EA /* spreads.json in Resources */ = {isa = PBXBuildFile; fileRef = 51955591C802CBFBF840466B /* spreads.json */; };
 		B690CB7ADEAFF0D9D80D48A1 /* pentacles-4.webp in Resources */ = {isa = PBXBuildFile; fileRef = E05E8473B074B9D430E691A1 /* pentacles-4.webp */; };
 		B711E1AACD272A85C3A89DE3 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96023CCC0110992B8C15C65 /* LearnView.swift */; };
-		B7C10EE0E9EC71A8D966AF31 /* VideoFrameRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324B6852604CCF84C942DAD6 /* VideoFrameRenderer.swift */; };
 		B7EA72DD2D77C8CE96F06E70 /* MLXLLM in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCB387FB4E721B004FBBA1C /* MLXLLM */; };
 		B85B119B68C562B34E3053FD /* wands-3.webp in Resources */ = {isa = PBXBuildFile; fileRef = C551D139DDA45F017A48D209 /* wands-3.webp */; };
 		B8E0B7F5680C6B395948142C /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EFBF96D453D92DD37B8ADD /* JournalView.swift */; };
@@ -186,7 +181,6 @@
 		C70A0AD44EF33DD41EC67C7D /* pentacles-knight.webp in Resources */ = {isa = PBXBuildFile; fileRef = 1F212B393CA3B09A0E966D54 /* pentacles-knight.webp */; };
 		C7941F7A2515DE17717F58C8 /* cups-king.webp in Resources */ = {isa = PBXBuildFile; fileRef = 999DF3812EE39374FD1B51D8 /* cups-king.webp */; };
 		C7F89F53D0CDD2560D1A1322 /* cups-3.webp in Resources */ = {isa = PBXBuildFile; fileRef = 02BE481242417EB3665A42AF /* cups-3.webp */; };
-		C94DC0F62915DEC21D5D2769 /* ShareVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F4AB254B6E61C3A3F52134 /* ShareVideoView.swift */; };
 		CB1120DA8EF1782C90C3C023 /* cups-3.webp in Resources */ = {isa = PBXBuildFile; fileRef = 02BE481242417EB3665A42AF /* cups-3.webp */; };
 		CEBC7737E1210F10573E7814 /* swords-king.webp in Resources */ = {isa = PBXBuildFile; fileRef = ECE6BF2280BF83AC6432C51A /* swords-king.webp */; };
 		CF6C54EC05BEB1C59EEB1994 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E654AADD4C7D8A964BFC54 /* ThemeManager.swift */; };
@@ -254,132 +248,130 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		01CFDD38C570BBD603BC4E16 /* cups-page.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-page.webp"; sourceTree = "<group>"; };
-		02BE481242417EB3665A42AF /* cups-3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-3.webp"; sourceTree = "<group>"; };
+		01CFDD38C570BBD603BC4E16 /* cups-page.webp */ = {isa = PBXFileReference; path = "cups-page.webp"; sourceTree = "<group>"; };
+		02BE481242417EB3665A42AF /* cups-3.webp */ = {isa = PBXFileReference; path = "cups-3.webp"; sourceTree = "<group>"; };
 		0660109037913E70B65810F0 /* VideoSceneViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSceneViews.swift; sourceTree = "<group>"; };
-		0690AFCB10929C20C5886490 /* swords-8.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-8.webp"; sourceTree = "<group>"; };
+		0690AFCB10929C20C5886490 /* swords-8.webp */ = {isa = PBXFileReference; path = "swords-8.webp"; sourceTree = "<group>"; };
 		0BD05049A455875A041BB178 /* providers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = providers.json; sourceTree = "<group>"; };
-		0D142CEDDDD3A2AADC5EC1F4 /* wands-10.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-10.webp"; sourceTree = "<group>"; };
-		0D6E3FB6CD6338286AAFDC0B /* pentacles-6.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-6.webp"; sourceTree = "<group>"; };
-		0D7E2A2F7039590E2BE57F85 /* swords-page.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-page.webp"; sourceTree = "<group>"; };
+		0D142CEDDDD3A2AADC5EC1F4 /* wands-10.webp */ = {isa = PBXFileReference; path = "wands-10.webp"; sourceTree = "<group>"; };
+		0D6E3FB6CD6338286AAFDC0B /* pentacles-6.webp */ = {isa = PBXFileReference; path = "pentacles-6.webp"; sourceTree = "<group>"; };
+		0D7E2A2F7039590E2BE57F85 /* swords-page.webp */ = {isa = PBXFileReference; path = "swords-page.webp"; sourceTree = "<group>"; };
 		0D9DE6899BA6780D99CAACDC /* LLMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMService.swift; sourceTree = "<group>"; };
-		0EC62C28D37CA6F6FEB5B057 /* 19-sun.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "19-sun.webp"; sourceTree = "<group>"; };
-		1406C5A4BC5E949D78823BA3 /* DailyCardWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.extensionkit-extension"; path = DailyCardWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EC62C28D37CA6F6FEB5B057 /* 19-sun.webp */ = {isa = PBXFileReference; path = "19-sun.webp"; sourceTree = "<group>"; };
+		1406C5A4BC5E949D78823BA3 /* DailyCardWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = DailyCardWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CD240B7734C019E37330BD /* AIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIConfig.swift; sourceTree = "<group>"; };
-		176061700A65A5946586EBB4 /* swords-3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-3.webp"; sourceTree = "<group>"; };
+		176061700A65A5946586EBB4 /* swords-3.webp */ = {isa = PBXFileReference; path = "swords-3.webp"; sourceTree = "<group>"; };
 		179C0379E7BFB57FB8B11173 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
-		17A76E8035BBC69331B8E632 /* cups-4.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-4.webp"; sourceTree = "<group>"; };
-		19475AC489441E02AED11D65 /* swords-7.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-7.webp"; sourceTree = "<group>"; };
-		1B109247F52B75C6F18BDBA9 /* 00-fool.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "00-fool.webp"; sourceTree = "<group>"; };
+		17A76E8035BBC69331B8E632 /* cups-4.webp */ = {isa = PBXFileReference; path = "cups-4.webp"; sourceTree = "<group>"; };
+		19475AC489441E02AED11D65 /* swords-7.webp */ = {isa = PBXFileReference; path = "swords-7.webp"; sourceTree = "<group>"; };
+		1B109247F52B75C6F18BDBA9 /* 00-fool.webp */ = {isa = PBXFileReference; path = "00-fool.webp"; sourceTree = "<group>"; };
 		1D7A3A13D530A053324702C5 /* ReadingJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingJournal.swift; sourceTree = "<group>"; };
-		1F212B393CA3B09A0E966D54 /* pentacles-knight.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-knight.webp"; sourceTree = "<group>"; };
-		1FB2462114E53A170D7F0974 /* 07-chariot.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "07-chariot.webp"; sourceTree = "<group>"; };
-		1FF55C549F9FFFB861C040FB /* TarotMystica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TarotMystica.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2031CE9EC50F4921DDDDB07C /* 17-star.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "17-star.webp"; sourceTree = "<group>"; };
-		22615EF105DB6C91355149B3 /* wands-2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-2.webp"; sourceTree = "<group>"; };
-		24D273CF5750494855604725 /* swords-9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-9.webp"; sourceTree = "<group>"; };
+		1F212B393CA3B09A0E966D54 /* pentacles-knight.webp */ = {isa = PBXFileReference; path = "pentacles-knight.webp"; sourceTree = "<group>"; };
+		1FB2462114E53A170D7F0974 /* 07-chariot.webp */ = {isa = PBXFileReference; path = "07-chariot.webp"; sourceTree = "<group>"; };
+		1FF55C549F9FFFB861C040FB /* TarotMystica.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TarotMystica.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2031CE9EC50F4921DDDDB07C /* 17-star.webp */ = {isa = PBXFileReference; path = "17-star.webp"; sourceTree = "<group>"; };
+		22615EF105DB6C91355149B3 /* wands-2.webp */ = {isa = PBXFileReference; path = "wands-2.webp"; sourceTree = "<group>"; };
+		24D273CF5750494855604725 /* swords-9.webp */ = {isa = PBXFileReference; path = "swords-9.webp"; sourceTree = "<group>"; };
 		2E31C9A3511BDEB29AF70FA1 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		2E7D2BD2D8C41BA6C2A526E2 /* cups-ace.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-ace.webp"; sourceTree = "<group>"; };
-		324B6852604CCF84C942DAD6 /* VideoFrameRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFrameRenderer.swift; sourceTree = "<group>"; };
-		32624DA034411747182269B7 /* wands-king.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-king.webp"; sourceTree = "<group>"; };
+		2E7D2BD2D8C41BA6C2A526E2 /* cups-ace.webp */ = {isa = PBXFileReference; path = "cups-ace.webp"; sourceTree = "<group>"; };
+		32624DA034411747182269B7 /* wands-king.webp */ = {isa = PBXFileReference; path = "wands-king.webp"; sourceTree = "<group>"; };
 		3417E2C705183A66F4E275F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		343E8BBFC3B5F61BF295F73A /* SpreadLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadLayoutView.swift; sourceTree = "<group>"; };
 		39378FB1EB639BD292064AF2 /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
-		39BEFB5F3C1206BC2252BEC4 /* 04-emperor.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04-emperor.webp"; sourceTree = "<group>"; };
-		39FB5FB293E52AD330A9B408 /* wands-knight.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-knight.webp"; sourceTree = "<group>"; };
+		39BEFB5F3C1206BC2252BEC4 /* 04-emperor.webp */ = {isa = PBXFileReference; path = "04-emperor.webp"; sourceTree = "<group>"; };
+		39FB5FB293E52AD330A9B408 /* wands-knight.webp */ = {isa = PBXFileReference; path = "wands-knight.webp"; sourceTree = "<group>"; };
 		3DDB237710B50B122010DD95 /* TarotMysticaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotMysticaApp.swift; sourceTree = "<group>"; };
-		3E21846FB4E1180B62F725C7 /* swords-knight.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-knight.webp"; sourceTree = "<group>"; };
+		3E21846FB4E1180B62F725C7 /* swords-knight.webp */ = {isa = PBXFileReference; path = "swords-knight.webp"; sourceTree = "<group>"; };
 		3F800C9BBED601B21810843D /* zh.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zh.json; sourceTree = "<group>"; };
 		40775990FD61D09DB5891E01 /* FollowUpChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUpChatView.swift; sourceTree = "<group>"; };
-		415F9A98AB00DBC9841ECC3E /* swords-10.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-10.webp"; sourceTree = "<group>"; };
-		49E4CF23C9CC620C3D24C0C0 /* cups-8.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-8.webp"; sourceTree = "<group>"; };
+		415F9A98AB00DBC9841ECC3E /* swords-10.webp */ = {isa = PBXFileReference; path = "swords-10.webp"; sourceTree = "<group>"; };
+		49E4CF23C9CC620C3D24C0C0 /* cups-8.webp */ = {isa = PBXFileReference; path = "cups-8.webp"; sourceTree = "<group>"; };
 		4B8740F0F63557698BFBF6BE /* PromptBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptBuilder.swift; sourceTree = "<group>"; };
-		4C2443EC49DCE8ABD9761E19 /* cups-queen.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-queen.webp"; sourceTree = "<group>"; };
-		4DBF96ED9E64345C48E2B9DC /* swords-4.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-4.webp"; sourceTree = "<group>"; };
+		4C2443EC49DCE8ABD9761E19 /* cups-queen.webp */ = {isa = PBXFileReference; path = "cups-queen.webp"; sourceTree = "<group>"; };
+		4DBF96ED9E64345C48E2B9DC /* swords-4.webp */ = {isa = PBXFileReference; path = "swords-4.webp"; sourceTree = "<group>"; };
 		51347A04271F6D5B019569D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		51955591C802CBFBF840466B /* spreads.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = spreads.json; sourceTree = "<group>"; };
-		52BA5AFC31964E5E0E52FC55 /* swords-queen.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-queen.webp"; sourceTree = "<group>"; };
-		534BEBD165586A74855BD27A /* pentacles-king.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-king.webp"; sourceTree = "<group>"; };
+		52BA5AFC31964E5E0E52FC55 /* swords-queen.webp */ = {isa = PBXFileReference; path = "swords-queen.webp"; sourceTree = "<group>"; };
+		534BEBD165586A74855BD27A /* pentacles-king.webp */ = {isa = PBXFileReference; path = "pentacles-king.webp"; sourceTree = "<group>"; };
 		581C30D0FED671029AAAE9BE /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		5842E02883A10C7E59C9AE65 /* DailyCardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCardWidget.swift; sourceTree = "<group>"; };
-		5CB46C67914BC5226E69CFE3 /* cups-9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-9.webp"; sourceTree = "<group>"; };
-		5D7A9F065BE8994060F7C6C4 /* swords-5.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-5.webp"; sourceTree = "<group>"; };
-		5DA828478E98756663D6010F /* pentacles-7.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-7.webp"; sourceTree = "<group>"; };
-		6B7726B801340D14D2085060 /* wands-page.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-page.webp"; sourceTree = "<group>"; };
+		5CB46C67914BC5226E69CFE3 /* cups-9.webp */ = {isa = PBXFileReference; path = "cups-9.webp"; sourceTree = "<group>"; };
+		5D7A9F065BE8994060F7C6C4 /* swords-5.webp */ = {isa = PBXFileReference; path = "swords-5.webp"; sourceTree = "<group>"; };
+		5DA828478E98756663D6010F /* pentacles-7.webp */ = {isa = PBXFileReference; path = "pentacles-7.webp"; sourceTree = "<group>"; };
+		6B7726B801340D14D2085060 /* wands-page.webp */ = {isa = PBXFileReference; path = "wands-page.webp"; sourceTree = "<group>"; };
 		6DF8A1C03F1D044568160511 /* ReadingResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingResultView.swift; sourceTree = "<group>"; };
 		6EBDFA6E9B40B33FFDBBD265 /* theme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = theme.json; sourceTree = "<group>"; };
-		726FFF8B333EDFA349603908 /* wands-5.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-5.webp"; sourceTree = "<group>"; };
-		758DBA3B3823E80D1D478433 /* wands-7.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-7.webp"; sourceTree = "<group>"; };
-		762852C311F36B383C0769EE /* cups-7.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-7.webp"; sourceTree = "<group>"; };
+		726FFF8B333EDFA349603908 /* wands-5.webp */ = {isa = PBXFileReference; path = "wands-5.webp"; sourceTree = "<group>"; };
+		758DBA3B3823E80D1D478433 /* wands-7.webp */ = {isa = PBXFileReference; path = "wands-7.webp"; sourceTree = "<group>"; };
+		762852C311F36B383C0769EE /* cups-7.webp */ = {isa = PBXFileReference; path = "cups-7.webp"; sourceTree = "<group>"; };
 		76331034CFEB7C72AB6CDC6F /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
-		763A23724328537BE1468A28 /* 06-lovers.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "06-lovers.webp"; sourceTree = "<group>"; };
-		772F09655A99D44469FC9177 /* cups-knight.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-knight.webp"; sourceTree = "<group>"; };
+		763A23724328537BE1468A28 /* 06-lovers.webp */ = {isa = PBXFileReference; path = "06-lovers.webp"; sourceTree = "<group>"; };
+		772F09655A99D44469FC9177 /* cups-knight.webp */ = {isa = PBXFileReference; path = "cups-knight.webp"; sourceTree = "<group>"; };
 		7984653ACCB8F6A38674E600 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		7A0CD3977CBE21E2A8F7F953 /* VideoComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoComposer.swift; sourceTree = "<group>"; };
-		83511EB1F8F9B5590CE39FB7 /* 10-wheel.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "10-wheel.webp"; sourceTree = "<group>"; };
+		83511EB1F8F9B5590CE39FB7 /* 10-wheel.webp */ = {isa = PBXFileReference; path = "10-wheel.webp"; sourceTree = "<group>"; };
 		845B756FCC66896DAAB23D48 /* MLXService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLXService.swift; sourceTree = "<group>"; };
-		84A853C3166AB5E53D628EF6 /* pentacles-8.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-8.webp"; sourceTree = "<group>"; };
+		84A853C3166AB5E53D628EF6 /* pentacles-8.webp */ = {isa = PBXFileReference; path = "pentacles-8.webp"; sourceTree = "<group>"; };
 		85EFBF96D453D92DD37B8ADD /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
-		8B4A19CD0CA93361DD97AC5F /* 20-judgement.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "20-judgement.webp"; sourceTree = "<group>"; };
-		902DE66D2207E3883E7495F9 /* pentacles-5.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-5.webp"; sourceTree = "<group>"; };
+		8B4A19CD0CA93361DD97AC5F /* 20-judgement.webp */ = {isa = PBXFileReference; path = "20-judgement.webp"; sourceTree = "<group>"; };
+		902DE66D2207E3883E7495F9 /* pentacles-5.webp */ = {isa = PBXFileReference; path = "pentacles-5.webp"; sourceTree = "<group>"; };
 		968E2C9C6728A3837B53A291 /* SpreadSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadSelectorView.swift; sourceTree = "<group>"; };
-		970614C5ABE93D0FAC3AB836 /* wands-8.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-8.webp"; sourceTree = "<group>"; };
-		97CBE64D4F0A0A0A049CBFF8 /* pentacles-page.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-page.webp"; sourceTree = "<group>"; };
-		999DF3812EE39374FD1B51D8 /* cups-king.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-king.webp"; sourceTree = "<group>"; };
-		9B01743E7BCB4D3B730373DB /* 15-devil.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "15-devil.webp"; sourceTree = "<group>"; };
+		970614C5ABE93D0FAC3AB836 /* wands-8.webp */ = {isa = PBXFileReference; path = "wands-8.webp"; sourceTree = "<group>"; };
+		97CBE64D4F0A0A0A049CBFF8 /* pentacles-page.webp */ = {isa = PBXFileReference; path = "pentacles-page.webp"; sourceTree = "<group>"; };
+		999DF3812EE39374FD1B51D8 /* cups-king.webp */ = {isa = PBXFileReference; path = "cups-king.webp"; sourceTree = "<group>"; };
+		9B01743E7BCB4D3B730373DB /* 15-devil.webp */ = {isa = PBXFileReference; path = "15-devil.webp"; sourceTree = "<group>"; };
 		9DB93633A21340FB9C4F9E58 /* SpreadLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadLoader.swift; sourceTree = "<group>"; };
-		9E884A62D7DB745E91C3F747 /* cups-10.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-10.webp"; sourceTree = "<group>"; };
+		9E884A62D7DB745E91C3F747 /* cups-10.webp */ = {isa = PBXFileReference; path = "cups-10.webp"; sourceTree = "<group>"; };
 		9F33F28D5CFFFF8A4EBF9547 /* VideoStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStoryboard.swift; sourceTree = "<group>"; };
-		9FF94E2B854C352EFE148227 /* 16-tower.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "16-tower.webp"; sourceTree = "<group>"; };
-		A44C6599AE1BC11C0A5E7B5B /* pentacles-9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-9.webp"; sourceTree = "<group>"; };
+		9FF94E2B854C352EFE148227 /* 16-tower.webp */ = {isa = PBXFileReference; path = "16-tower.webp"; sourceTree = "<group>"; };
+		A44C6599AE1BC11C0A5E7B5B /* pentacles-9.webp */ = {isa = PBXFileReference; path = "pentacles-9.webp"; sourceTree = "<group>"; };
 		A5E654AADD4C7D8A964BFC54 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
-		AB282E11BD0BE97C52760C16 /* wands-6.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-6.webp"; sourceTree = "<group>"; };
+		AB282E11BD0BE97C52760C16 /* wands-6.webp */ = {isa = PBXFileReference; path = "wands-6.webp"; sourceTree = "<group>"; };
 		AC12D9F6592B7E84958E27C9 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
-		AD75F3FDF8F9A1A0F52FD23A /* swords-6.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-6.webp"; sourceTree = "<group>"; };
-		B23D5EBB8CDD480D855EB0FB /* 03-empress.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03-empress.webp"; sourceTree = "<group>"; };
-		B6E50D2D2A8279C9F740DCBA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		B6E7EAAB3498357322F22348 /* 18-moon.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "18-moon.webp"; sourceTree = "<group>"; };
-		B6ECEC2B1C3833133F724BB4 /* cups-6.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-6.webp"; sourceTree = "<group>"; };
+		AD75F3FDF8F9A1A0F52FD23A /* swords-6.webp */ = {isa = PBXFileReference; path = "swords-6.webp"; sourceTree = "<group>"; };
+		B23D5EBB8CDD480D855EB0FB /* 03-empress.webp */ = {isa = PBXFileReference; path = "03-empress.webp"; sourceTree = "<group>"; };
+		B6E50D2D2A8279C9F740DCBA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		B6E7EAAB3498357322F22348 /* 18-moon.webp */ = {isa = PBXFileReference; path = "18-moon.webp"; sourceTree = "<group>"; };
+		B6ECEC2B1C3833133F724BB4 /* cups-6.webp */ = {isa = PBXFileReference; path = "cups-6.webp"; sourceTree = "<group>"; };
 		B83D4697B1A895316A259CBF /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
-		B959358F443FCAD5AF8F1828 /* swords-2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-2.webp"; sourceTree = "<group>"; };
+		B959358F443FCAD5AF8F1828 /* swords-2.webp */ = {isa = PBXFileReference; path = "swords-2.webp"; sourceTree = "<group>"; };
 		BB6FF836F1368A4AB6EF9A6F /* en.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
 		BF470FE42095FD9E56BCD63E /* es.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
 		BFE1245A5C7F1EDD15D651B4 /* SharePosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePosterView.swift; sourceTree = "<group>"; };
 		C1214A2FED30B317EBDB057F /* APIExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIExecutor.swift; sourceTree = "<group>"; };
-		C3C6A7408559DF6A542F0ACE /* 11-justice.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "11-justice.webp"; sourceTree = "<group>"; };
-		C4AD4D512DF158E214E1EDF2 /* cups-2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-2.webp"; sourceTree = "<group>"; };
-		C551D139DDA45F017A48D209 /* wands-3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-3.webp"; sourceTree = "<group>"; };
+		C3C6A7408559DF6A542F0ACE /* 11-justice.webp */ = {isa = PBXFileReference; path = "11-justice.webp"; sourceTree = "<group>"; };
+		C4AD4D512DF158E214E1EDF2 /* cups-2.webp */ = {isa = PBXFileReference; path = "cups-2.webp"; sourceTree = "<group>"; };
+		C551D139DDA45F017A48D209 /* wands-3.webp */ = {isa = PBXFileReference; path = "wands-3.webp"; sourceTree = "<group>"; };
 		C5D0F3BD07BE95CD0A516990 /* fr.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fr.json; sourceTree = "<group>"; };
 		C66CE2D70DB99BEDD303DBFE /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
-		C7067D4A2DFF6D8F93ED1BD4 /* wands-4.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-4.webp"; sourceTree = "<group>"; };
+		C7067D4A2DFF6D8F93ED1BD4 /* wands-4.webp */ = {isa = PBXFileReference; path = "wands-4.webp"; sourceTree = "<group>"; };
 		CA9F4C07BE1A92E421687812 /* TarotCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCard.swift; sourceTree = "<group>"; };
 		CB5F65BDB60F3CBBC3017BDC /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
-		CD5480EAF91698AAEC82D936 /* swords-ace.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-ace.webp"; sourceTree = "<group>"; };
-		CD70AF2761D42F2D59A915FA /* cups-5.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cups-5.webp"; sourceTree = "<group>"; };
-		D1B6105FD2F5915FE75F3A29 /* 02-high-priestess.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02-high-priestess.webp"; sourceTree = "<group>"; };
-		D25A4EB6644E31B951889663 /* pentacles-10.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-10.webp"; sourceTree = "<group>"; };
-		D37E69972338D4857E43E295 /* 01-magician.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01-magician.webp"; sourceTree = "<group>"; };
-		D4EB6C890F49BFA84C28F199 /* 14-temperance.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "14-temperance.webp"; sourceTree = "<group>"; };
+		CD5480EAF91698AAEC82D936 /* swords-ace.webp */ = {isa = PBXFileReference; path = "swords-ace.webp"; sourceTree = "<group>"; };
+		CD70AF2761D42F2D59A915FA /* cups-5.webp */ = {isa = PBXFileReference; path = "cups-5.webp"; sourceTree = "<group>"; };
+		D1B6105FD2F5915FE75F3A29 /* 02-high-priestess.webp */ = {isa = PBXFileReference; path = "02-high-priestess.webp"; sourceTree = "<group>"; };
+		D25A4EB6644E31B951889663 /* pentacles-10.webp */ = {isa = PBXFileReference; path = "pentacles-10.webp"; sourceTree = "<group>"; };
+		D37E69972338D4857E43E295 /* 01-magician.webp */ = {isa = PBXFileReference; path = "01-magician.webp"; sourceTree = "<group>"; };
+		D4EB6C890F49BFA84C28F199 /* 14-temperance.webp */ = {isa = PBXFileReference; path = "14-temperance.webp"; sourceTree = "<group>"; };
 		DE86858EC5D5FF72FCAA36EB /* CardDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeckView.swift; sourceTree = "<group>"; };
-		E05E8473B074B9D430E691A1 /* pentacles-4.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-4.webp"; sourceTree = "<group>"; };
-		E4703ADE968274D00EE27488 /* pentacles-queen.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-queen.webp"; sourceTree = "<group>"; };
-		E4A573D18B207EF992808825 /* 09-hermit.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "09-hermit.webp"; sourceTree = "<group>"; };
-		E4F4AB254B6E61C3A3F52134 /* ShareVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareVideoView.swift; sourceTree = "<group>"; };
-		E54837BDE9070919CD7B2CC3 /* wands-queen.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-queen.webp"; sourceTree = "<group>"; };
-		E892EA48EB605D87718D9BDD /* 21-world.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "21-world.webp"; sourceTree = "<group>"; };
-		EA509717A63FA254E6CDBA63 /* wands-9.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-9.webp"; sourceTree = "<group>"; };
-		EC234878E3F713AEF43A9B93 /* 05-hierophant.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "05-hierophant.webp"; sourceTree = "<group>"; };
-		ECE6BF2280BF83AC6432C51A /* swords-king.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "swords-king.webp"; sourceTree = "<group>"; };
-		EE28404430E9EB15754AE7AE /* 08-strength.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "08-strength.webp"; sourceTree = "<group>"; };
-		F35D53B52D74BC1990BAE3A4 /* 12-hanged-man.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12-hanged-man.webp"; sourceTree = "<group>"; };
-		F3D1F5A321154348113AB405 /* wands-ace.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wands-ace.webp"; sourceTree = "<group>"; };
+		E05E8473B074B9D430E691A1 /* pentacles-4.webp */ = {isa = PBXFileReference; path = "pentacles-4.webp"; sourceTree = "<group>"; };
+		E4703ADE968274D00EE27488 /* pentacles-queen.webp */ = {isa = PBXFileReference; path = "pentacles-queen.webp"; sourceTree = "<group>"; };
+		E4A573D18B207EF992808825 /* 09-hermit.webp */ = {isa = PBXFileReference; path = "09-hermit.webp"; sourceTree = "<group>"; };
+		E54837BDE9070919CD7B2CC3 /* wands-queen.webp */ = {isa = PBXFileReference; path = "wands-queen.webp"; sourceTree = "<group>"; };
+		E892EA48EB605D87718D9BDD /* 21-world.webp */ = {isa = PBXFileReference; path = "21-world.webp"; sourceTree = "<group>"; };
+		EA509717A63FA254E6CDBA63 /* wands-9.webp */ = {isa = PBXFileReference; path = "wands-9.webp"; sourceTree = "<group>"; };
+		EC234878E3F713AEF43A9B93 /* 05-hierophant.webp */ = {isa = PBXFileReference; path = "05-hierophant.webp"; sourceTree = "<group>"; };
+		ECE6BF2280BF83AC6432C51A /* swords-king.webp */ = {isa = PBXFileReference; path = "swords-king.webp"; sourceTree = "<group>"; };
+		EE28404430E9EB15754AE7AE /* 08-strength.webp */ = {isa = PBXFileReference; path = "08-strength.webp"; sourceTree = "<group>"; };
+		F35D53B52D74BC1990BAE3A4 /* 12-hanged-man.webp */ = {isa = PBXFileReference; path = "12-hanged-man.webp"; sourceTree = "<group>"; };
+		F3D1F5A321154348113AB405 /* wands-ace.webp */ = {isa = PBXFileReference; path = "wands-ace.webp"; sourceTree = "<group>"; };
 		F408881D6CCFD28B6E797B2C /* CardGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGenerator.swift; sourceTree = "<group>"; };
-		F59CDAA42E173D851667EC25 /* 13-death.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "13-death.webp"; sourceTree = "<group>"; };
+		F59CDAA42E173D851667EC25 /* 13-death.webp */ = {isa = PBXFileReference; path = "13-death.webp"; sourceTree = "<group>"; };
 		F6B4BA8D6903820863C75384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F6EE105103F802975206B626 /* pentacles-2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-2.webp"; sourceTree = "<group>"; };
+		F6EE105103F802975206B626 /* pentacles-2.webp */ = {isa = PBXFileReference; path = "pentacles-2.webp"; sourceTree = "<group>"; };
 		F96023CCC0110992B8C15C65 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
-		FBD3CF51F8DFAE8BF83B8449 /* pentacles-ace.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-ace.webp"; sourceTree = "<group>"; };
-		FF3C0B7864076D1A528EC17E /* pentacles-3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pentacles-3.webp"; sourceTree = "<group>"; };
+		FBD3CF51F8DFAE8BF83B8449 /* pentacles-ace.webp */ = {isa = PBXFileReference; path = "pentacles-ace.webp"; sourceTree = "<group>"; };
+		FF3C0B7864076D1A528EC17E /* pentacles-3.webp */ = {isa = PBXFileReference; path = "pentacles-3.webp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,12 +382,8 @@
 				B7EA72DD2D77C8CE96F06E70 /* MLXLLM in Frameworks */,
 				1386EC5A688603EBBCC76390 /* MLXLMCommon in Frameworks */,
 				DB3445A474B1C60B78727326 /* MLX in Frameworks */,
-				937A8AA4DAB56C92D1B22938 /* MLXNN in Frameworks */,
-				37080ECC5CD1D2ED1FC5EE9A /* MLXFFT in Frameworks */,
-				7DAE25C8DAD59AD16E9C00D9 /* MLXRandom in Frameworks */,
-				B0DEEEB08ABC20D73738F8AF /* ZIPFoundation in Frameworks */,
-				99DED1F84AFB6F8A9F58C3E8 /* FirebaseCrashlytics in Frameworks */,
-				11AC93F53431D246827153B6 /* FirebaseAnalytics in Frameworks */,
+				937A8AA4DAB56C92D1B22938 /* FirebaseCrashlytics in Frameworks */,
+				37080ECC5CD1D2ED1FC5EE9A /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,9 +424,7 @@
 		213063331C627248DEEF23FA /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				E4F4AB254B6E61C3A3F52134 /* ShareVideoView.swift */,
 				7A0CD3977CBE21E2A8F7F953 /* VideoComposer.swift */,
-				324B6852604CCF84C942DAD6 /* VideoFrameRenderer.swift */,
 				0660109037913E70B65810F0 /* VideoSceneViews.swift */,
 				9F33F28D5CFFFF8A4EBF9547 /* VideoStoryboard.swift */,
 			);
@@ -662,10 +648,6 @@
 				3FCB387FB4E721B004FBBA1C /* MLXLLM */,
 				39ACFC5455D07933E03C283C /* MLXLMCommon */,
 				23F391E75679345B9DEF282B /* MLX */,
-				6A17A5B4EE51747A15202447 /* MLXNN */,
-				E67A18FB64E100B784B540C7 /* MLXFFT */,
-				8269727EC2C267AB594A97EC /* MLXRandom */,
-				94284EB6CB8DAE2763BAAC12 /* ZIPFoundation */,
 				459CACF84EE7317ABB24D61D /* FirebaseCrashlytics */,
 				A44FFF347CD08DAFC71A4D12 /* FirebaseAnalytics */,
 			);
@@ -701,6 +683,7 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					021B345BA0CB0ECCB5A2CCEE = {
+						DevelopmentTeam = ZH47R7RVKB;
 						ProvisioningStyle = Automatic;
 					};
 					F5FEA3A46170DC7E0AE3D4F8 = {
@@ -719,7 +702,6 @@
 			mainGroup = 01B3293CC7F68081FD0D0286;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				B28AFBD6F328051B70B5E02F /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 				BE0E739A7735F080CF736BB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				F1C1141CA4823FD8D4A3445F /* XCRemoteSwiftPackageReference "mlx-swift" */,
 				544B3E7FD47647336ABBE3D6 /* XCRemoteSwiftPackageReference "mlx-swift-lm" */,
@@ -985,7 +967,6 @@
 				5EF08FD25C1B69E519A4EDF1 /* ReadingJournal.swift in Sources */,
 				56B6929F4030E30ADA6FB1C9 /* ReadingResultView.swift in Sources */,
 				78593DF33609B6722F99C9D3 /* SharePosterView.swift in Sources */,
-				C94DC0F62915DEC21D5D2769 /* ShareVideoView.swift in Sources */,
 				573593DF9E7572AB2B1167C2 /* SpreadLayoutView.swift in Sources */,
 				4A9E923CB16EB1B64CF31494 /* SpreadLoader.swift in Sources */,
 				F8817909ADBA37B4F1959F7E /* SpreadSelectorView.swift in Sources */,
@@ -993,7 +974,6 @@
 				509709DD4FBB7DF16C95A495 /* TarotMysticaApp.swift in Sources */,
 				CF6C54EC05BEB1C59EEB1994 /* ThemeManager.swift in Sources */,
 				15C982FE38E9E370AECE1148 /* VideoComposer.swift in Sources */,
-				B7C10EE0E9EC71A8D966AF31 /* VideoFrameRenderer.swift in Sources */,
 				EC7BF89BE5145FB695DC18C4 /* VideoSceneViews.swift in Sources */,
 				51D6A9D453C08EB5F88EEA4B /* VideoStoryboard.swift in Sources */,
 			);
@@ -1183,14 +1163,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZH47R7RVKB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = TarotMystica;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save tarot reading poster to your photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarHidden = NO;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1214,14 +1192,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZH47R7RVKB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = TarotMystica;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save tarot reading poster to your photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarHidden = NO;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1276,14 +1252,6 @@
 				minimumVersion = 2.31.3;
 			};
 		};
-		B28AFBD6F328051B70B5E02F /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/weichsel/ZIPFoundation";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.19;
-			};
-		};
 		BE0E739A7735F080CF736BB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1323,30 +1291,10 @@
 			package = BE0E739A7735F080CF736BB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
-		6A17A5B4EE51747A15202447 /* MLXNN */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F1C1141CA4823FD8D4A3445F /* XCRemoteSwiftPackageReference "mlx-swift" */;
-			productName = MLXNN;
-		};
-		8269727EC2C267AB594A97EC /* MLXRandom */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F1C1141CA4823FD8D4A3445F /* XCRemoteSwiftPackageReference "mlx-swift" */;
-			productName = MLXRandom;
-		};
-		94284EB6CB8DAE2763BAAC12 /* ZIPFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B28AFBD6F328051B70B5E02F /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
-			productName = ZIPFoundation;
-		};
 		A44FFF347CD08DAFC71A4D12 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BE0E739A7735F080CF736BB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
-		};
-		E67A18FB64E100B784B540C7 /* MLXFFT */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F1C1141CA4823FD8D4A3445F /* XCRemoteSwiftPackageReference "mlx-swift" */;
-			productName = MLXFFT;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -74,7 +74,6 @@ final class VideoComposer {
         for (sceneIdx, scene) in storyboard.scenes.enumerated() {
             let holdFrameCount = Int(scene.holdDuration * Double(fps))
 
-            // --- Crossfade from previous scene ---
             if sceneIdx > 0, let prevFrame = previousLastFrame {
                 let firstFrame = renderSceneFrame(scene, at: 0, totalHoldFrames: holdFrameCount)
                 if let toFrame = firstFrame {
@@ -91,12 +90,10 @@ final class VideoComposer {
                 }
             }
 
-            // --- Scene frames ---
             var lastSceneFrame: CGImage?
             let isAnimated = scene.isAnimated
 
             if !isAnimated {
-                // Static scene: render SwiftUI view once, reuse CGImage for all hold frames
                 let frame = renderSceneFrame(scene, at: 0, totalHoldFrames: holdFrameCount)
                 lastSceneFrame = frame
                 if let frame {
@@ -109,7 +106,6 @@ final class VideoComposer {
                     await Task.yield()
                 }
             } else {
-                // Animated scene (card flip): render each frame individually
                 for i in 0..<holdFrameCount {
                     let frame = renderSceneFrame(scene, at: i, totalHoldFrames: holdFrameCount)
                     if let frame {
@@ -242,7 +238,6 @@ final class VideoComposer {
         let w = config.width, h = config.height
         let size = CGSize(width: w, height: h)
 
-        // Render through UIGraphicsImageRenderer for correct coordinate handling
         let fmt = UIGraphicsImageRendererFormat()
         fmt.scale = 1.0
         fmt.opaque = true

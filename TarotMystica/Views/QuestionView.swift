@@ -27,9 +27,7 @@ struct QuestionView: View {
 
     var body: some View {
         ZStack {
-            // Main content — positioned at upper 1/3
             VStack(spacing: 0) {
-                // Back button
                 HStack {
                     Button {
                         withAnimation(.easeInOut(duration: 0.3)) { state.phase = .hero }
@@ -52,7 +50,6 @@ struct QuestionView: View {
 
                 Spacer().frame(height: 60)
 
-                // Content block — upper portion
                 VStack(spacing: 24) {
                     VStack(spacing: 12) {
                         Text(t("question.title"))
@@ -78,7 +75,6 @@ struct QuestionView: View {
                         .focused($isFocused)
                         .padding(.horizontal, 32)
 
-                    // Topic tags
                     topicTags
                         .padding(.horizontal, 32)
                 }
@@ -86,7 +82,6 @@ struct QuestionView: View {
 
                 Spacer()
 
-                // Bottom buttons
                 VStack(spacing: 14) {
                     Button {
                         submit(question: question)
@@ -121,8 +116,6 @@ struct QuestionView: View {
             }
         }
     }
-
-    // MARK: - Topic Tags
 
     private var topicTags: some View {
         ScrollView(.horizontal, showsIndicators: false) {

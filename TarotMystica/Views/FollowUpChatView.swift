@@ -27,27 +27,22 @@ struct FollowUpChatView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                // Chat messages
                 ScrollViewReader { proxy in
                     ScrollView {
                         VStack(spacing: 16) {
-                            // Context summary card
                             contextCard
                                 .padding(.top, 12)
 
-                            // Messages
                             ForEach(chatMessages, id: \.id) { msg in
                                 chatBubble(role: msg.role, content: msg.content)
                             }
 
-                            // Streaming response
                             if isChatting && !chatStreamingText.isEmpty {
                                 chatBubble(role: "assistant", content: chatStreamingText)
                             } else if isChatting {
                                 loadingBubble
                             }
 
-                            // AI-generated suggestions
                             if chatMessages.isEmpty && !isChatting {
                                 suggestionsSection
                             }
@@ -67,7 +62,6 @@ struct FollowUpChatView: View {
                     }
                 }
 
-                // Input bar
                 inputBar
             }
             .background(theme.colors.background)
@@ -158,7 +152,6 @@ struct FollowUpChatView: View {
     private var suggestionsSection: some View {
         VStack(alignment: .leading, spacing: 10) {
             if suggestedQuestions.isEmpty {
-                // Loading suggestions
                 HStack(spacing: 6) {
                     ProgressView().scaleEffect(0.6)
                     Text(t("chat.loadingSuggestions"))
@@ -290,7 +283,6 @@ struct FollowUpChatView: View {
     private func generateSuggestions() async {
         let locale = i18n.locale
 
-        // Build a short prompt asking the LLM to generate 3 follow-up questions
         let systemMsg = APIExecutor.Message(
             role: "system",
             content: """
@@ -316,7 +308,6 @@ struct FollowUpChatView: View {
         )
 
         if let result {
-            // Parse numbered questions
             let lines = result.components(separatedBy: "\n")
                 .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
                 .map { line in
