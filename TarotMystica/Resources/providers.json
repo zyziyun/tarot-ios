@@ -1,0 +1,280 @@
+{
+  "$schema": "tarot-providers-v1",
+  "storageKey": "tarot-ai-config",
+  "defaultConfig": {
+    "mode": "local",
+    "configured": false,
+    "apiProvider": "openai",
+    "apiModel": "gpt-4.1-mini",
+    "apiKey": "",
+    "apiBaseUrl": ""
+  },
+  "temperatures": {
+    "interpretation": 0.9,
+    "recommendation": 0.7
+  },
+  "reasoningModelPattern": "^(o[1-4]|deepseek-reasoner)",
+  "thinkTagFilters": [
+    "<think>[\\s\\S]*?<\\/think>",
+    "<think>[\\s\\S]*"
+  ],
+  "responseJsonExtractPattern": "\\{[\\s\\S]*\\}",
+  "providers": {
+    "openai": {
+      "name": "OpenAI",
+      "baseUrl": "https://api.openai.com/v1",
+      "defaultModel": "gpt-4.1-mini",
+      "models": ["gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano", "gpt-4o", "gpt-4o-mini", "o4-mini"],
+      "auth": {
+        "headers": {
+          "Authorization": "Bearer {apiKey}"
+        }
+      },
+      "endpoints": {
+        "chat": "/chat/completions"
+      },
+      "request": {
+        "bodyTemplate": {
+          "model": "{model}",
+          "messages": "{messages}",
+          "stream": true
+        },
+        "conditionalFields": {
+          "temperature": {
+            "skipWhen": "reasoningModel",
+            "value": "{temperature}"
+          }
+        },
+        "systemMessageLocation": "inMessages"
+      },
+      "sse": {
+        "doneSignal": "[DONE]",
+        "deltaPath": "choices[0].delta.content"
+      }
+    },
+    "deepseek": {
+      "name": "DeepSeek",
+      "baseUrl": "https://api.deepseek.com/v1",
+      "defaultModel": "deepseek-chat",
+      "models": ["deepseek-chat", "deepseek-reasoner"],
+      "auth": {
+        "headers": {
+          "Authorization": "Bearer {apiKey}"
+        }
+      },
+      "endpoints": {
+        "chat": "/chat/completions"
+      },
+      "request": {
+        "bodyTemplate": {
+          "model": "{model}",
+          "messages": "{messages}",
+          "stream": true
+        },
+        "conditionalFields": {
+          "temperature": {
+            "skipWhen": "reasoningModel",
+            "value": "{temperature}"
+          }
+        },
+        "systemMessageLocation": "inMessages"
+      },
+      "sse": {
+        "doneSignal": "[DONE]",
+        "deltaPath": "choices[0].delta.content"
+      }
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "baseUrl": "https://api.anthropic.com/v1",
+      "defaultModel": "claude-sonnet-4-20250514",
+      "models": ["claude-opus-4-0-20250514", "claude-sonnet-4-20250514", "claude-haiku-4-5-20251001"],
+      "auth": {
+        "headers": {
+          "x-api-key": "{apiKey}",
+          "anthropic-version": "2023-06-01",
+          "anthropic-dangerous-direct-browser-access": "true"
+        }
+      },
+      "endpoints": {
+        "chat": "/messages"
+      },
+      "request": {
+        "bodyTemplate": {
+          "model": "{model}",
+          "messages": "{messages}",
+          "stream": true,
+          "max_tokens": 1024
+        },
+        "conditionalFields": {},
+        "systemMessageLocation": "separateField",
+        "systemFieldName": "system"
+      },
+      "sse": {
+        "doneSignal": "[DONE]",
+        "eventFilter": "content_block_delta",
+        "deltaPath": "delta.text"
+      }
+    },
+    "google": {
+      "name": "Google Gemini",
+      "baseUrl": "https://generativelanguage.googleapis.com/v1beta/openai",
+      "defaultModel": "gemini-2.5-flash",
+      "models": ["gemini-2.5-pro", "gemini-2.5-flash", "gemini-2.0-flash"],
+      "auth": {
+        "headers": {
+          "Authorization": "Bearer {apiKey}"
+        }
+      },
+      "endpoints": {
+        "chat": "/chat/completions"
+      },
+      "request": {
+        "bodyTemplate": {
+          "model": "{model}",
+          "messages": "{messages}",
+          "stream": true
+        },
+        "conditionalFields": {
+          "temperature": {
+            "skipWhen": "reasoningModel",
+            "value": "{temperature}"
+          }
+        },
+        "systemMessageLocation": "inMessages"
+      },
+      "sse": {
+        "doneSignal": "[DONE]",
+        "deltaPath": "choices[0].delta.content"
+      }
+    },
+    "openrouter": {
+      "name": "OpenRouter",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "defaultModel": "anthropic/claude-sonnet-4",
+      "models": [
+        "anthropic/claude-sonnet-4",
+        "anthropic/claude-opus-4",
+        "google/gemini-2.5-pro",
+        "google/gemini-2.5-flash",
+        "openai/gpt-4.1",
+        "openai/gpt-4.1-mini",
+        "deepseek/deepseek-chat-v3-0324",
+        "deepseek/deepseek-r1"
+      ],
+      "auth": {
+        "headers": {
+          "Authorization": "Bearer {apiKey}"
+        }
+      },
+      "endpoints": {
+        "chat": "/chat/completions"
+      },
+      "request": {
+        "bodyTemplate": {
+          "model": "{model}",
+          "messages": "{messages}",
+          "stream": true
+        },
+        "conditionalFields": {
+          "temperature": {
+            "skipWhen": "reasoningModel",
+            "value": "{temperature}"
+          }
+        },
+        "systemMessageLocation": "inMessages"
+      },
+      "sse": {
+        "doneSignal": "[DONE]",
+        "deltaPath": "choices[0].delta.content"
+      }
+    },
+    "custom": {
+      "name": "Custom (OpenAI Compatible)",
+      "baseUrl": "",
+      "defaultModel": "",
+      "models": [],
+      "auth": {
+        "headers": {
+          "Authorization": "Bearer {apiKey}"
+        }
+      },
+      "endpoints": {
+        "chat": "/chat/completions"
+      },
+      "request": {
+        "bodyTemplate": {
+          "model": "{model}",
+          "messages": "{messages}",
+          "stream": true
+        },
+        "conditionalFields": {
+          "temperature": {
+            "skipWhen": "reasoningModel",
+            "value": "{temperature}"
+          }
+        },
+        "systemMessageLocation": "inMessages"
+      },
+      "sse": {
+        "doneSignal": "[DONE]",
+        "deltaPath": "choices[0].delta.content"
+      }
+    }
+  },
+  "localModels": {
+    "web": [
+      { "id": "gemma-2-2b-it-q4f16_1-MLC", "name": "Gemma 2 2B", "size": "~1.9GB" },
+      { "id": "Qwen2.5-1.5B-Instruct-q4f16_1-MLC", "name": "Qwen 2.5 1.5B", "size": "~1.6GB" },
+      { "id": "Qwen2.5-3B-Instruct-q4f16_1-MLC", "name": "Qwen 2.5 3B", "size": "~2.4GB" },
+      { "id": "Qwen3-4B-q4f16_1-MLC", "name": "Qwen 3 4B", "size": "~3.4GB" },
+      { "id": "Phi-3.5-mini-instruct-q4f16_1-MLC", "name": "Phi 3.5 Mini", "size": "~3.6GB" },
+      { "id": "Llama-3.1-8B-Instruct-q4f16_1-MLC", "name": "Llama 3.1 8B", "size": "~4.9GB" },
+      { "id": "Qwen2.5-7B-Instruct-q4f16_1-MLC", "name": "Qwen 2.5 7B", "size": "~5GB" },
+      { "id": "DeepSeek-R1-Distill-Qwen-7B-q4f16_1-MLC", "name": "DeepSeek R1 7B", "size": "~5GB" },
+      { "id": "Qwen3-8B-q4f16_1-MLC", "name": "Qwen 3 8B", "size": "~5.6GB" },
+      { "id": "gemma-2-9b-it-q4f16_1-MLC", "name": "Gemma 2 9B", "size": "~6.3GB" }
+    ],
+    "ios": [
+      { "id": "mlx-community/gemma-2-2b-it-4bit", "name": "Gemma 2 2B", "size": "~1.5GB" },
+      { "id": "mlx-community/Qwen2.5-1.5B-Instruct-4bit", "name": "Qwen 2.5 1.5B", "size": "~1.2GB" },
+      { "id": "mlx-community/Qwen2.5-3B-Instruct-4bit", "name": "Qwen 2.5 3B", "size": "~2.0GB" },
+      { "id": "mlx-community/Phi-3.5-mini-instruct-4bit", "name": "Phi 3.5 Mini", "size": "~2.3GB" },
+      { "id": "mlx-community/Llama-3.1-8B-Instruct-4bit", "name": "Llama 3.1 8B", "size": "~4.7GB" }
+    ],
+    "android": [
+      { "id": "gemma-2-2b-it-cpu-int4", "name": "Gemma 2 2B", "size": "~1.5GB" },
+      { "id": "phi-3.5-mini-cpu-int4", "name": "Phi 3.5 Mini", "size": "~2.3GB" },
+      { "id": "qwen2.5-3b-cpu-int4", "name": "Qwen 2.5 3B", "size": "~2.0GB" }
+    ],
+    "defaultModelName": "Gemma 2 2B"
+  },
+  "prompts": {
+    "interpretation": {
+      "systemKey": "ai.systemPrompt",
+      "systemParams": ["spreadName"],
+      "userKey": "ai.userPrompt",
+      "userParams": ["question", "cardDescriptions"],
+      "cardDescription": {
+        "uprightKey": "ai.cardDescUpright",
+        "reversedKey": "ai.cardDescReversed",
+        "params": ["position", "name", "meaning"],
+        "joinSeparator": "\n"
+      }
+    },
+    "recommendation": {
+      "systemParts": [
+        { "key": "ai.recommendSystemIntro" },
+        { "literal": "" },
+        { "key": "ai.recommendChoice" },
+        { "literal": "" },
+        { "key": "ai.recommendExistingSpreads", "params": ["spreadList"] },
+        { "literal": "" },
+        { "key": "ai.recommendFormat" }
+      ],
+      "systemJoin": "\n",
+      "userKey": "ai.recommendUserPrompt",
+      "userParams": ["question"]
+    }
+  }
+}

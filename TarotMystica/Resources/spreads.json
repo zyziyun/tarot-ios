@@ -1,0 +1,40 @@
+{
+  "$schema": "tarot-spreads-v1",
+  "spreads": [
+    { "key": "single", "icon": "\u25c7", "positionCount": 1 },
+    { "key": "threeCard", "icon": "\u25c7\u25c7\u25c7", "positionCount": 3 },
+    { "key": "mindBodySpirit", "icon": "\u25b3", "positionCount": 3 },
+    { "key": "fiveCard", "icon": "\u271a", "positionCount": 5 },
+    { "key": "relationship", "icon": "\u2661", "positionCount": 5 },
+    { "key": "horseshoe", "icon": "\u2294", "positionCount": 7 },
+    { "key": "celtic", "icon": "\u2726", "positionCount": 10 },
+    { "key": "twoPaths", "icon": "\u2442", "positionCount": 5 },
+    { "key": "hexagram", "icon": "\u2721", "positionCount": 7 },
+    { "key": "treeOfLife", "icon": "\ud83c\udf33", "positionCount": 10 },
+    { "key": "zodiac", "icon": "\u2609", "positionCount": 12 },
+    { "key": "yearAhead", "icon": "\ud83d\udcc5", "positionCount": 13 },
+    { "key": "career", "icon": "\ud83d\udcbc", "positionCount": 6 },
+    { "key": "gypsyCross", "icon": "\u256c", "positionCount": 5 },
+    { "key": "loversTree", "icon": "\ud83d\udc95", "positionCount": 7 },
+    { "key": "mirrorOfSelf", "icon": "\ud83e\ude9e", "positionCount": 5 },
+    { "key": "pentagram", "icon": "\u26e4", "positionCount": 5 }
+  ],
+  "phaseFlow": {
+    "phases": ["hero", "question", "choose", "draw", "result"],
+    "backTransitions": {
+      "question": "hero",
+      "choose": "question",
+      "draw": "choose"
+    }
+  },
+  "aiTriggers": {
+    "recommendation": {
+      "triggerPhase": "choose",
+      "requires": ["llm.isReady", "question"]
+    },
+    "interpretation": {
+      "triggerPhase": "result",
+      "requires": ["llm.isReady", "drawnCards"]
+    }
+  }
+}

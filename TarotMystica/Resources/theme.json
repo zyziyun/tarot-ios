@@ -1,0 +1,109 @@
+{
+  "$schema": "tarot-theme-v1",
+  "colors": {
+    "background": "#faf6f0",
+    "foreground": "#2d2926",
+    "muted": "#78716c",
+    "subtle": "#f5f0e8",
+    "surface": "#fffdf9",
+    "surfaceElevated": "#fffcf5",
+    "border": "#e8e0d4",
+    "borderLight": "#d6cec2",
+    "accent": "#7c3aed",
+    "accentDim": "rgba(124, 58, 237, 0.1)",
+    "accentGlow": "rgba(124, 58, 237, 0.05)",
+    "accentSecondary": "#06b6d4",
+    "accentPink": "#ec4899",
+    "gold": "#c9a84c",
+    "goldDim": "rgba(201, 168, 76, 0.15)",
+    "goldGlow": "rgba(201, 168, 76, 0.08)",
+    "selection": "rgba(124, 58, 237, 0.2)",
+    "selectionText": "#1c1917"
+  },
+  "fonts": {
+    "body": "system-sans",
+    "heading": "Playfair Display",
+    "mono": "Geist Mono"
+  },
+  "cardBack": {
+    "gradient": ["#f5f0ff", "#ede9fe", "#f8f0e3"],
+    "gradientAngle": 145,
+    "borderColor": "rgba(201, 168, 76, 0.3)",
+    "shadow": "0 4px 20px rgba(201, 168, 76, 0.12), 0 2px 8px rgba(124, 58, 237, 0.06)",
+    "innerBorder": {
+      "inset": 6,
+      "color": "rgba(201, 168, 76, 0.25)"
+    },
+    "centerSymbol": {
+      "character": "\u2726",
+      "fontSize": "1.5rem",
+      "color": "rgba(201, 168, 76, 0.5)"
+    }
+  },
+  "cardGlow": {
+    "default": "0 4px 24px rgba(201, 168, 76, 0.15), 0 2px 12px rgba(124, 58, 237, 0.08)",
+    "hover": "0 8px 32px rgba(201, 168, 76, 0.25), 0 4px 16px rgba(124, 58, 237, 0.12)",
+    "flip": [
+      "0 4px 24px rgba(201, 168, 76, 0.15), 0 2px 12px rgba(124, 58, 237, 0.08)",
+      "0 8px 40px rgba(201, 168, 76, 0.4), 0 4px 20px rgba(124, 58, 237, 0.2)",
+      "0 4px 24px rgba(201, 168, 76, 0.15), 0 2px 12px rgba(124, 58, 237, 0.08)"
+    ],
+    "transitionDuration": 0.3
+  },
+  "animations": {
+    "shuffle": {
+      "cardCount": 10,
+      "cardSize": { "width": 140, "height": 217 },
+      "containerSize": { "width": 420, "height": 380 },
+      "duration": 2.4,
+      "easing": [0.4, 0, 0.2, 1],
+      "keyframeTimes": [0, 0.2, 0.4, 0.55, 0.8, 1],
+      "staggerDelay": 0.01,
+      "totalDelay": 2800,
+      "xSpread": 36,
+      "xSplit": 90,
+      "ySpread": 10,
+      "scales": [1, 0.92, 0.95, 0.97, 1.01, 1]
+    },
+    "cardFlip": {
+      "duration": 0.8,
+      "type": "spring",
+      "stiffness": 80,
+      "damping": 15
+    },
+    "draw": {
+      "flipDelay": 500,
+      "completeDelay": 600
+    },
+    "progressDots": {
+      "scalePulseDuration": 1.5
+    },
+    "progressShimmer": {
+      "duration": 1.5
+    },
+    "cursorBlink": {
+      "duration": 1.0
+    }
+  },
+  "prose": {
+    "fontSize": "0.875rem",
+    "lineHeight": 1.85,
+    "textColor": "rgba(45, 41, 38, 0.9)",
+    "headingColor": "#2d2926",
+    "emphasisColor": "#7c3aed",
+    "markerColor": "#c9a84c",
+    "blockquoteBorder": "rgba(201, 168, 76, 0.4)",
+    "blockquoteColor": "rgba(45, 41, 38, 0.7)",
+    "hrGradient": ["transparent", "rgba(201, 168, 76, 0.3)", "transparent"]
+  },
+  "ambientGlow": {
+    "colors": ["rgba(201, 168, 76, 0.06)", "rgba(124, 58, 237, 0.03)"],
+    "stops": [0, 40, 70]
+  },
+  "deck": {
+    "stackCount": 5,
+    "cardSize": { "width": 160, "height": 248 },
+    "stackOffset": { "top": -3, "left": 1.5, "z": -4 },
+    "stackOpacityStep": 0.06
+  }
+}

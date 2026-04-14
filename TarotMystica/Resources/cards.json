@@ -1,0 +1,35 @@
+{
+  "$schema": "tarot-cards-v1",
+  "majorArcana": [
+    { "id": 0, "image": "00-fool.webp" },
+    { "id": 1, "image": "01-magician.webp" },
+    { "id": 2, "image": "02-high-priestess.webp" },
+    { "id": 3, "image": "03-empress.webp" },
+    { "id": 4, "image": "04-emperor.webp" },
+    { "id": 5, "image": "05-hierophant.webp" },
+    { "id": 6, "image": "06-lovers.webp" },
+    { "id": 7, "image": "07-chariot.webp" },
+    { "id": 8, "image": "08-strength.webp" },
+    { "id": 9, "image": "09-hermit.webp" },
+    { "id": 10, "image": "10-wheel.webp" },
+    { "id": 11, "image": "11-justice.webp" },
+    { "id": 12, "image": "12-hanged-man.webp" },
+    { "id": 13, "image": "13-death.webp" },
+    { "id": 14, "image": "14-temperance.webp" },
+    { "id": 15, "image": "15-devil.webp" },
+    { "id": 16, "image": "16-tower.webp" },
+    { "id": 17, "image": "17-star.webp" },
+    { "id": 18, "image": "18-moon.webp" },
+    { "id": 19, "image": "19-sun.webp" },
+    { "id": 20, "image": "20-judgement.webp" },
+    { "id": 21, "image": "21-world.webp" }
+  ],
+  "minorArcana": {
+    "suits": ["wands", "cups", "swords", "pentacles"],
+    "ranks": ["ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "page", "knight", "queen", "king"],
+    "startId": 22,
+    "imagePattern": "{suit}-{rank}.webp"
+  },
+  "reversalChance": 0.3,
+  "totalCount": 78
+}
